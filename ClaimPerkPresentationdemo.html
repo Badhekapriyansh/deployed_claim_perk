@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claim Perks — Final Project Presentation</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#12241F;
+    --ink-soft:#2E4941;
+    --paper:#F3F0E4;
+    --paper-2:#EAE5D3;
+    --gold:#C89B3C;
+    --gold-deep:#9C7626;
+    --stamp:#B23A2E;
+    --teal:#1F6F5C;
+    --line:#C9C2A8;
+    --white:#FCFBF6;
+    --shadow: 0 12px 30px rgba(18,36,31,0.12);
+    --font-display: 'Fraunces', serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--font-body);
+    -webkit-font-smoothing:antialiased;
+  }
+  body::before{
+    content:"";
+    position:fixed; inset:0;
+    pointer-events:none;
+    opacity:0.035;
+    z-index:999;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  @media (prefers-reduced-motion: no-preference){
+    html{scroll-behavior:smooth;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important;}
+  }
+  a{color:inherit;}
+  button{font-family:inherit;}
+  :focus-visible{outline:3px solid var(--teal); outline-offset:3px;}
+
+  .slide{
+    min-height:100vh;
+    width:100%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding: 7vh 8vw;
+    scroll-snap-align:start;
+    position:relative;
+    border-bottom:1px solid var(--line);
+  }
+  .slide-inner{ max-width:1100px; margin:0 auto; width:100%; }
+  .wrap{ scroll-snap-type: y proximity; }
+
+  .eyebrow{
+    font-family:var(--font-mono);
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    font-size:0.72rem;
+    color:var(--teal);
+    display:flex; align-items:center; gap:10px;
+    margin-bottom:22px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:22px; height:1px; background:var(--teal); display:inline-block;
+  }
+
+  h1,h2,h3{ font-family:var(--font-display); margin:0; line-height:1.05; letter-spacing:-0.01em;}
+  h2{ font-size:clamp(2rem, 4.2vw, 3.3rem); font-weight:600; }
+  h3{ font-size:1.3rem; font-weight:600; }
+  p{ line-height:1.6; color:var(--ink-soft); font-size:1.05rem; }
+  .lede{ font-size:1.2rem; max-width:640px; }
+
+  /* ---------- NAV DOTS ---------- */
+  .navdots{
+    position:fixed; right:22px; top:50%; transform:translateY(-50%);
+    display:flex; flex-direction:column; gap:14px; z-index:60;
+  }
+  .navdots button{
+    width:9px; height:9px; border-radius:50%;
+    background:transparent; border:1.5px solid var(--ink-soft);
+    cursor:pointer; padding:0; opacity:0.55; transition:all .25s ease;
+  }
+  .navdots button.active{ background:var(--stamp); border-color:var(--stamp); opacity:1; width:11px; height:11px;}
+  @media (max-width:760px){ .navdots{ right:10px; gap:10px; } }
+
+  .brandbar{
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    display:flex; justify-content:space-between; align-items:center;
+    padding:16px 8vw; font-family:var(--font-mono); font-size:0.72rem;
+    letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-soft);
+    pointer-events:none; mix-blend-mode:multiply;
+  }
+  /* ---------- HERO ---------- */
+  #hero{ background:radial-gradient(ellipse at 75% 20%, rgba(200,155,60,0.16), transparent 55%); }
+  .hero-title{
+    font-size:clamp(3.2rem, 10vw, 7.5rem);
+    font-weight:700;
+    font-style:italic;
+    letter-spacing:-0.02em;
+  }
+  .hero-sub{
+    font-family:var(--font-mono);
+    font-size:clamp(1rem, 1.6vw, 1.25rem);
+    color:var(--ink-soft);
+    margin-top:18px;
+    max-width:560px;
+  }
+  .hero-bottom{
+    display:flex; justify-content:space-between; align-items:flex-end;
+    margin-top:8vh; gap:24px; flex-wrap:wrap;
+  }
+  .stamp-badge{
+    font-family:var(--font-mono); font-size:0.68rem; letter-spacing:0.1em;
+    border:1.5px dashed var(--stamp); color:var(--stamp);
+    border-radius:50%; width:96px; height:96px;
+    display:flex; align-items:center; justify-content:center; text-align:center;
+    transform:rotate(-11deg); text-transform:uppercase; line-height:1.3;
+    flex-shrink:0;
+  }
+  .scrollcue{ font-family:var(--font-mono); font-size:0.7rem; color:var(--ink-soft); letter-spacing:0.1em; }
+  .scrollcue span{ display:block; animation:bob 1.8s ease-in-out infinite; }
+  @keyframes bob{ 0%,100%{transform:translateY(0);} 50%{transform:translateY(6px);} }
+
+  /* ---------- PROBLEM: scattered fragments ---------- */
+  .scatter{
+    position:relative; margin-top:6vh; height:280px;
+  }
+  .fragment{
+    position:absolute; background:var(--white); border:1px solid var(--line);
+    box-shadow:var(--shadow); padding:14px 18px; border-radius:2px;
+    font-family:var(--font-mono); font-size:0.85rem; width:200px;
+  }
+  .fragment strong{ display:block; font-family:var(--font-body); font-weight:600; font-size:0.95rem; margin-bottom:4px;}
+  .f1{ top:0; left:2%; transform:rotate(-6deg); }
+  .f2{ top:18%; left:29%; transform:rotate(4deg); }
+  .f3{ top:2%; left:58%; transform:rotate(-3deg); }
+  .f4{ top:34%; left:80%; transform:rotate(7deg); }
+  @media (max-width:820px){
+    .scatter{ height:auto; display:flex; flex-direction:column; gap:14px; position:static;}
+    .fragment{ position:static; width:100%; transform:none !important; }
+  }
+
+  /* ---------- SOLUTION ---------- */
+  .value-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:6vh; }
+  .value-card{ border-top:2px solid var(--gold); padding-top:16px; }
+  .value-card .idx{ font-family:var(--font-mono); color:var(--gold-deep); font-size:0.78rem; }
+  @media (max-width:820px){ .value-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- DEMO / RECEIPT ---------- */
+  .demo-layout{ display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:start; margin-top:5vh; }
+  @media (max-width:900px){ .demo-layout{ grid-template-columns:1fr; } }
+  .product-card{
+    background:var(--white); border:1px solid var(--line); box-shadow:var(--shadow);
+    padding:22px; border-radius:4px;
+  }
+  .product-card .plat{ font-family:var(--font-mono); font-size:0.7rem; color:var(--teal); text-transform:uppercase; letter-spacing:0.08em;}
+  .product-card h3{ margin:8px 0 4px; }
+  .product-card .price{ font-family:var(--font-mono); font-size:1.6rem; font-weight:600; }
+  .cta-btn{
+    margin-top:18px; background:var(--ink); color:var(--paper); border:none;
+    padding:13px 22px; font-family:var(--font-mono); font-size:0.85rem;
+    letter-spacing:0.05em; text-transform:uppercase; cursor:pointer; border-radius:2px;
+    transition:background .2s ease;
+  }
+  .cta-btn:hover{ background:var(--teal); }
+  .cta-btn:disabled{ opacity:0.5; cursor:default; }
+
+  .receipt{
+    background:var(--white); border:1px solid var(--line);
+    box-shadow:var(--shadow); padding:26px 24px 20px; font-family:var(--font-mono);
+    clip-path: polygon(
+      0% 0%, 100% 0%, 100% 96%,
+      95% 100%, 90% 96%, 85% 100%, 80% 96%, 75% 100%, 70% 96%, 65% 100%,
+      60% 96%, 55% 100%, 50% 96%, 45% 100%, 40% 96%, 35% 100%, 30% 96%,
+      25% 100%, 20% 96%, 15% 100%, 10% 96%, 5% 100%, 0% 96%
+    );
+    min-height:340px;
+  }
+  .receipt-head{ text-align:center; border-bottom:1px dashed var(--line); padding-bottom:12px; margin-bottom:6px; }
+  .receipt-head .t1{ font-size:0.75rem; letter-spacing:0.18em; text-transform:uppercase; color:var(--ink-soft); }
+  .receipt-head .t2{ font-size:1.1rem; font-weight:600; margin-top:4px; }
+  .r-line{
+    display:flex; justify-content:space-between; font-size:0.88rem;
+    padding:7px 0; opacity:0; transform:translateY(6px);
+    transition:opacity .35s ease, transform .35s ease;
+  }
+  .r-line.show{ opacity:1; transform:translateY(0); }
+  .r-line .amt{ color:var(--stamp); }
+  .r-sub{ display:flex; justify-content:space-between; border-top:1px dashed var(--line); margin-top:8px; padding-top:8px; font-size:0.85rem; opacity:0; transition:opacity .3s ease;}
+  .r-sub.show{ opacity:1; }
+  .r-final{
+    margin-top:14px; padding-top:14px; border-top:1.5px solid var(--ink);
+    display:flex; justify-content:space-between; align-items:baseline;
+    opacity:0; transform:translateY(6px); transition:opacity .4s ease, transform .4s ease;
+  }
+  .r-final.show{ opacity:1; transform:translateY(0); }
+  .r-final .label{ font-family:var(--font-body); font-weight:600; font-size:1rem; }
+  .r-final .val{ font-size:1.6rem; font-weight:700; }
+  .saved-tag{
+    margin-top:16px; text-align:center; font-family:var(--font-body); font-weight:600;
+    background:var(--teal); color:var(--white); padding:9px; border-radius:2px;
+    opacity:0; transform:scale(0.95); transition:opacity .4s ease .1s, transform .4s ease .1s;
+  }
+  .saved-tag.show{ opacity:1; transform:scale(1); }
+  .receipt-empty{ font-size:0.85rem; color:var(--ink-soft); text-align:center; padding:60px 0; }
+
+  /* ---------- MODULES ---------- */
+  .mod-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:2px; background:var(--line); margin-top:6vh; border:1px solid var(--line); }
+  .mod-card{ background:var(--paper); padding:30px; }
+  .mod-card .idx{ font-family:var(--font-mono); font-size:0.75rem; color:var(--gold-deep); }
+  .mod-card h3{ margin-top:8px; margin-bottom:8px; }
+  @media (max-width:760px){ .mod-grid{ grid-template-columns:1fr; } }
+
+  /* ---------- AUDIENCE ---------- */
+  .aud-split{ display:grid; grid-template-columns:1fr 1fr; gap:0; margin-top:6vh; border:1px solid var(--line); }
+  .aud-col{ padding:32px; }
+  .aud-col:first-child{ border-right:1px solid var(--line); }
+  .aud-col h3{ font-family:var(--font-mono); text-transform:uppercase; font-size:0.85rem; letter-spacing:0.08em; color:var(--teal); font-weight:600; margin-bottom:16px;}
+  .aud-col ul{ margin:0; padding:0; list-style:none; }
+  .aud-col li{ padding:9px 0; border-top:1px dashed var(--line); font-size:1rem; }
+  .aud-col li:first-child{ border-top:none; }
+  @media (max-width:760px){ .aud-split{ grid-template-columns:1fr; } .aud-col:first-child{ border-right:none; border-bottom:1px solid var(--line);} }
+
+  /* ---------- REVENUE ---------- */
+  .rev-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:6vh; }
+  .rev-cell{ background:var(--paper); padding:22px; font-family:var(--font-mono); font-size:0.85rem; }
+  .rev-cell b{ display:block; font-family:var(--font-body); font-size:1rem; font-weight:600; margin-bottom:6px; }
+
+  /* ---------- STACK ---------- */
+  .stack-layers{ margin-top:6vh; display:flex; flex-direction:column; gap:10px; max-width:640px; }
+  .layer{ background:var(--white); border:1px solid var(--line); padding:16px 20px; display:flex; justify-content:space-between; align-items:center; }
+  .layer .l-name{ font-weight:600; }
+  .layer .l-detail{ font-family:var(--font-mono); font-size:0.8rem; color:var(--ink-soft); text-align:right; }
+
+  /* ---------- ROADMAP ---------- */
+  .road{ display:grid; grid-template-columns:1fr 1fr; gap:40px; margin-top:6vh; }
+  @media (max-width:820px){ .road{ grid-template-columns:1fr; } }
+  .road-col{ border-left:2px solid var(--gold); padding-left:22px; }
+  .road-col .phase{ font-family:var(--font-mono); font-size:0.75rem; text-transform:uppercase; letter-spacing:0.1em; color:var(--gold-deep); margin-bottom:10px;}
+  .road-col ul{ margin:0; padding-left:18px; color:var(--ink-soft); }
+  .road-col li{ margin-bottom:8px; }
+
+  /* ---------- CLOSING ---------- */
+  #closing{ background:var(--ink); color:var(--paper); border-bottom:none;}
+  #closing .eyebrow{ color:var(--gold); }
+  #closing .eyebrow::before{ background:var(--gold); }
+  #closing p{ color:#C9CFC9; }
+  #closing h2{ color:var(--white); }
+  .note-box{ margin-top:5vh; border:1px solid rgba(255,255,255,0.2); padding:24px; max-width:640px; font-family:var(--font-mono); font-size:0.88rem; line-height:1.7; color:#D8DCD3; }
+</style>
+</head>
+<body>
+
+<div class="brandbar"><span>Claim Perks</span><span>Final Project — 2026</span></div>
+
+<nav class="navdots" aria-label="Slide navigation">
+  <button data-target="hero" class="active" aria-label="Go to intro"></button>
+  <button data-target="problem" aria-label="Go to problem"></button>
+  <button data-target="solution" aria-label="Go to solution"></button>
+  <button data-target="demo" aria-label="Go to demo"></button>
+  <button data-target="modules" aria-label="Go to modules"></button>
+  <button data-target="audience" aria-label="Go to audience"></button>
+  <button data-target="revenue" aria-label="Go to revenue"></button>
+  <button data-target="stack" aria-label="Go to tech stack"></button>
+  <button data-target="roadmap" aria-label="Go to roadmap"></button>
+  <button data-target="closing" aria-label="Go to closing"></button>
+</nav>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <section class="slide" id="hero">
+    <div class="slide-inner">
+      <div class="eyebrow">Final Project · Smart Shopping &amp; Savings Platform</div>
+      <h1 class="hero-title">Claim Perks</h1>
+      <p class="hero-sub">Every coupon, cashback offer, referral reward and bank deal — found and stacked automatically, so you always see the real price before you pay.</p>
+      <div class="hero-bottom">
+        <div class="scrollcue">Scroll to begin<span>↓</span></div>
+        <div class="stamp-badge">one<br>final<br>price</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="slide" id="problem">
+    <div class="slide-inner">
+      <div class="eyebrow">01 · The Problem</div>
+      <h2>Your discount is real. It's just scattered across six different apps.</h2>
+      <p class="lede">A bank offer sits in one app, a coupon code in a browser tab, a cashback percentage in another, a referral reward somewhere else entirely. Almost nobody applies all of them — most shoppers just take whichever one they remember.</p>
+      <div class="scatter">
+        <div class="fragment f1"><strong>Bank / UPI offer</strong>10% off, buried in your card app</div>
+        <div class="fragment f2"><strong>Coupon code</strong>Copied, then forgotten at checkout</div>
+        <div class="fragment f3"><strong>Cashback app</strong>Needs its own separate click-through</div>
+        <div class="fragment f4"><strong>Referral reward</strong>Sitting unused in a rewards wallet</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOLUTION -->
+  <section class="slide" id="solution">
+    <div class="slide-inner">
+      <div class="eyebrow">02 · The Solution</div>
+      <h2>Claim Perks reads every offer for you — then does the math.</h2>
+      <p class="lede">It aggregates coupons, cashback, referral rewards, affiliate deals, and bank/UPI offers across Amazon, Flipkart, Myntra, Paytm, PhonePe and CRED, then calculates the final payable price before you buy.</p>
+      <div class="value-grid">
+        <div class="value-card"><div class="idx">Compare</div><h3>Across every platform</h3><p>See the same product's real price across marketplaces, not just one.</p></div>
+        <div class="value-card"><div class="idx">Stack</div><h3>Every offer, automatically</h3><p>Bank discount, coupon, cashback and referral reward combined — not just the biggest one.</p></div>
+        <div class="value-card"><div class="idx">Decide</div><h3>Before you pay, not after</h3><p>The final payable price is shown upfront, so nothing is left un-claimed.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEMO -->
+  <section class="slide" id="demo">
+    <div class="slide-inner">
+      <div class="eyebrow">03 · How It Works</div>
+      <h2>This is the product. Try it.</h2>
+      <p class="lede">A live walkthrough of what the app does when a shopper adds a product — offers stack in real time into one final number.</p>
+      <div class="demo-layout">
+        <div class="product-card">
+          <div class="plat">Amazon.in</div>
+          <h3>Sony WH-CH520 Wireless Headphones</h3>
+          <div class="price">₹4,999</div>
+          <p style="margin-top:14px; font-size:0.92rem;">Claim Perks has already found 4 offers on this item across your linked cards and accounts.</p>
+          <button class="cta-btn" id="findBtn">Find my savings</button>
+        </div>
+        <div class="receipt" id="receipt">
+          <div class="receipt-head">
+            <div class="t1">Claim Perks · Price Breakdown</div>
+            <div class="t2">Sony WH-CH520</div>
+          </div>
+          <div id="receiptBody">
+            <div class="receipt-empty">Press "Find my savings" to see it stack up.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MODULES -->
+  <section class="slide" id="modules">
+    <div class="slide-inner">
+      <div class="eyebrow">04 · What's Being Built</div>
+      <h2>Four modules make up the platform.</h2>
+      <div class="mod-grid">
+        <div class="mod-card"><div class="idx">User Module</div><h3>For the shopper</h3><p>Search, compare, and check out with every applicable offer already stacked.</p></div>
+        <div class="mod-card"><div class="idx">Business Module</div><h3>For brands &amp; sellers</h3><p>List offers, run campaigns, and reach shoppers actively looking to save.</p></div>
+        <div class="mod-card"><div class="idx">Admin Module</div><h3>For the platform</h3><p>Manage offers, users, and businesses; keep offer data accurate and current.</p></div>
+        <div class="mod-card"><div class="idx">Future AI</div><h3>What's next</h3><p>AI shopping assistant, price-drop prediction, a browser extension, and smart notifications.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUDIENCE -->
+  <section class="slide" id="audience">
+    <div class="slide-inner">
+      <div class="eyebrow">05 · Who It's For</div>
+      <h2>Built for people who shop, and businesses who sell to them.</h2>
+      <div class="aud-split">
+        <div class="aud-col">
+          <h3>Individuals</h3>
+          <ul>
+            <li>Online shoppers</li>
+            <li>Students</li>
+            <li>Working professionals</li>
+            <li>Frequent e-commerce users</li>
+          </ul>
+        </div>
+        <div class="aud-col">
+          <h3>Businesses</h3>
+          <ul>
+            <li>Small businesses</li>
+            <li>Brands</li>
+            <li>Affiliate marketers</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVENUE -->
+  <section class="slide" id="revenue">
+    <div class="slide-inner">
+      <div class="eyebrow">06 · How It Makes Money</div>
+      <h2>Seven revenue streams, one platform.</h2>
+      <div class="rev-grid">
+        <div class="rev-cell"><b>Affiliate commission</b>On completed purchases through the platform</div>
+        <div class="rev-cell"><b>Referral rewards</b>Shared value from user-driven growth</div>
+        <div class="rev-cell"><b>Sponsored listings</b>Paid visibility for business offers</div>
+        <div class="rev-cell"><b>Premium membership</b>Extra features for individual users</div>
+        <div class="rev-cell"><b>Business subscriptions</b>Ongoing access for sellers &amp; brands</div>
+        <div class="rev-cell"><b>Campaign charges</b>Businesses running targeted offer campaigns</div>
+        <div class="rev-cell"><b>Offer API subscription</b>Third parties consuming offer data directly</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STACK -->
+  <section class="slide" id="stack">
+    <div class="slide-inner">
+      <div class="eyebrow">07 · Under the Hood</div>
+      <h2>What it's actually built with.</h2>
+      <div class="stack-layers">
+        <div class="layer"><span class="l-name">Frontend</span><span class="l-detail">React.js + Tailwind CSS + Axios</span></div>
+        <div class="layer"><span class="l-name">Backend</span><span class="l-detail">Node.js + Express.js</span></div>
+        <div class="layer"><span class="l-name">Database</span><span class="l-detail">MongoDB</span></div>
+        <div class="layer"><span class="l-name">Auth</span><span class="l-detail">JWT + bcrypt</span></div>
+        <div class="layer"><span class="l-name">Deployment</span><span class="l-detail">Vercel · Render · MongoDB Atlas</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ROADMAP -->
+  <section class="slide" id="roadmap">
+    <div class="slide-inner">
+      <div class="eyebrow">08 · Roadmap</div>
+      <h2>Where it starts, and where it's going.</h2>
+      <div class="road">
+        <div class="road-col">
+          <div class="phase">Phase 1 — Now</div>
+          <ul>
+            <li>Aggregate offers from major e-commerce &amp; financial platforms</li>
+            <li>Compare prices across marketplaces</li>
+            <li>Calculate final payable price at checkout</li>
+          </ul>
+        </div>
+        <div class="road-col">
+          <div class="phase">Phase 2 — Next</div>
+          <ul>
+            <li>AI shopping intelligence &amp; price-drop prediction</li>
+            <li>Browser extension for real-time offers</li>
+            <li>Business APIs &amp; personalized recommendations</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CLOSING -->
+  <section class="slide" id="closing">
+    <div class="slide-inner">
+      <div class="eyebrow">Thank You</div>
+      <h2>Claim Perks — every offer, one final price.</h2>
+      <p class="lede">Questions welcome.</p>
+      <div class="note-box">
+        <b>Note on this demo build —</b> what you saw stack live in the earlier slide runs on a React frontend and a Node/Express backend with mock JSON data, deliberately scoped down for a judged prototype. The architecture — MongoDB, JWT auth, and a modular User / Business / Admin split — is built to carry straight into the full version described here.
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  // Nav dot active state via IntersectionObserver
+  const sections = document.querySelectorAll('.slide');
+  const dots = document.querySelectorAll('.navdots button');
+  const dotMap = {};
+  dots.forEach(d => dotMap[d.dataset.target] = d);
+  dots.forEach(d => d.addEventListener('click', () => {
+    document.getElementById(d.dataset.target).scrollIntoView({behavior:'smooth'});
+  }));
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if(e.isIntersecting){
+        dots.forEach(d => d.classList.remove('active'));
+        if(dotMap[e.target.id]) dotMap[e.target.id].classList.add('active');
+      }
+    });
+  }, {threshold:0.5});
+  sections.forEach(s => io.observe(s));
+
+  // Receipt demo
+  const findBtn = document.getElementById('findBtn');
+  const receiptBody = document.getElementById('receiptBody');
+
+  const offers = [
+    {label:'Item price', amount:4999, kind:'base'},
+    {label:'SBI Card instant discount', amount:-500, kind:'line'},
+    {label:'Coupon CLAIM200', amount:-200, kind:'line'},
+    {label:'CRED cashback (3%)', amount:-150, kind:'line'},
+    {label:'Referral reward', amount:-100, kind:'line'},
+  ];
+
+  findBtn.addEventListener('click', () => {
+    findBtn.disabled = true;
+    findBtn.textContent = 'Stacking offers…';
+    receiptBody.innerHTML = '';
+
+    const base = offers[0].amount;
+    let running = base;
+
+    const baseLine = document.createElement('div');
+    baseLine.className = 'r-line show';
+    baseLine.innerHTML = `<span>${offers[0].label}</span><span>₹${base.toLocaleString('en-IN')}</span>`;
+    receiptBody.appendChild(baseLine);
+
+    const lines = offers.slice(1);
+    let delay = 400;
+
+    lines.forEach((o, i) => {
+      setTimeout(() => {
+        const row = document.createElement('div');
+        row.className = 'r-line';
+        row.innerHTML = `<span>${o.label}</span><span class="amt">− ₹${Math.abs(o.amount).toLocaleString('en-IN')}</span>`;
+        receiptBody.appendChild(row);
+        requestAnimationFrame(() => row.classList.add('show'));
+        running += o.amount;
+      }, delay);
+      delay += 450;
+    });
+
+    setTimeout(() => {
+      const finalRow = document.createElement('div');
+      finalRow.className = 'r-final';
+      finalRow.innerHTML = `<span class="label">You pay</span><span class="val">₹${running.toLocaleString('en-IN')}</span>`;
+      receiptBody.appendChild(finalRow);
+      requestAnimationFrame(() => finalRow.classList.add('show'));
+
+      const saved = base - running;
+      const pct = Math.round((saved/base)*100);
+      const tag = document.createElement('div');
+      tag.className = 'saved-tag';
+      tag.textContent = `You saved ₹${saved.toLocaleString('en-IN')} (${pct}%)`;
+      receiptBody.appendChild(tag);
+      requestAnimationFrame(() => tag.classList.add('show'));
+
+      findBtn.textContent = 'Recalculate';
+      findBtn.disabled = false;
+    }, delay + 200);
+  });
+</script>
+</body>
+</html>

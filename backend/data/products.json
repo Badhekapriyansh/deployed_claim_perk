@@ -1,0 +1,1058 @@
+[
+  {
+    "id": "p1",
+    "name": "Apple iPhone 15",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 70184
+  },
+  {
+    "id": "p2",
+    "name": "Apple iPhone 15 Pro",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 76983
+  },
+  {
+    "id": "p3",
+    "name": "Samsung Galaxy S24",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 62847
+  },
+  {
+    "id": "p4",
+    "name": "Samsung Galaxy A55",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 37740
+  },
+  {
+    "id": "p5",
+    "name": "OnePlus 12",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 20304
+  },
+  {
+    "id": "p6",
+    "name": "Xiaomi Redmi Note 13",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 61153
+  },
+  {
+    "id": "p7",
+    "name": "Google Pixel 8",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 99521
+  },
+  {
+    "id": "p8",
+    "name": "Dell XPS 13 Laptop",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 67580
+  },
+  {
+    "id": "p9",
+    "name": "HP Pavilion 15 Laptop",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 117139
+  },
+  {
+    "id": "p10",
+    "name": "Lenovo IdeaPad Slim 5",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 82020
+  },
+  {
+    "id": "p11",
+    "name": "Apple MacBook Air M2",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 7591
+  },
+  {
+    "id": "p12",
+    "name": "Sony WH-1000XM5 Headphones",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 41251
+  },
+  {
+    "id": "p13",
+    "name": "boAt Airdopes 141",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 31684
+  },
+  {
+    "id": "p14",
+    "name": "JBL Tune 720BT",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 50941
+  },
+  {
+    "id": "p15",
+    "name": "Apple AirPods Pro",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 7695
+  },
+  {
+    "id": "p16",
+    "name": "Apple Watch SE",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 110710
+  },
+  {
+    "id": "p17",
+    "name": "Samsung Galaxy Watch 6",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 25848
+  },
+  {
+    "id": "p18",
+    "name": "Noise ColorFit Pro 4",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 39480
+  },
+  {
+    "id": "p19",
+    "name": "Canon EOS 1500D Camera",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 97545
+  },
+  {
+    "id": "p20",
+    "name": "Fujifilm Instax Mini 12",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 38671
+  },
+  {
+    "id": "p21",
+    "name": "Sony Alpha a6400",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 51848
+  },
+  {
+    "id": "p22",
+    "name": "Sony PlayStation 5",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 22539
+  },
+  {
+    "id": "p23",
+    "name": "Xbox Series S",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 87203
+  },
+  {
+    "id": "p24",
+    "name": "Logitech G Pro Gaming Mouse",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 30943
+  },
+  {
+    "id": "p25",
+    "name": "Razer BlackWidow Keyboard",
+    "category": "Electronics",
+    "image": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 29067
+  },
+  {
+    "id": "p26",
+    "name": "Nike Air Zoom Pegasus",
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 9505
+  },
+  {
+    "id": "p27",
+    "name": "Adidas Ultraboost 22",
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=80",
+    "platform": "Ajio",
+    "basePrice": 2074
+  },
+  {
+    "id": "p28",
+    "name": "Puma RS-X Sneakers",
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 4026
+  },
+  {
+    "id": "p29",
+    "name": "Bata Comfort Loafers",
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=80",
+    "platform": "Ajio",
+    "basePrice": 8442
+  },
+  {
+    "id": "p30",
+    "name": "Woodland Casual Boots",
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=80",
+    "platform": "Myntra",
+    "basePrice": 4563
+  },
+  {
+    "id": "p31",
+    "name": "Zara Floral Summer Dress",
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80",
+    "platform": "Ajio",
+    "basePrice": 9758
+  },
+  {
+    "id": "p32",
+    "name": "H&M Cotton Kurta Set",
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80",
+    "platform": "Myntra",
+    "basePrice": 4175
+  },
+  {
+    "id": "p33",
+    "name": "Levi's 511 Slim Jeans",
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80",
+    "platform": "Ajio",
+    "basePrice": 1604
+  },
+  {
+    "id": "p34",
+    "name": "Van Heusen Formal Shirt",
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 2815
+  },
+  {
+    "id": "p35",
+    "name": "Allen Solly Chinos",
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80",
+    "platform": "Myntra",
+    "basePrice": 10363
+  },
+  {
+    "id": "p36",
+    "name": "Fabindia Cotton Kurti",
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80",
+    "platform": "Myntra",
+    "basePrice": 6929
+  },
+  {
+    "id": "p37",
+    "name": "Biba Printed Anarkali",
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80",
+    "platform": "Myntra",
+    "basePrice": 3107
+  },
+  {
+    "id": "p38",
+    "name": "W for Woman Ethnic Set",
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80",
+    "platform": "Myntra",
+    "basePrice": 476
+  },
+  {
+    "id": "p39",
+    "name": "US Polo Assn Polo T-Shirt",
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 6731
+  },
+  {
+    "id": "p40",
+    "name": "Roadster Denim Jacket",
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80",
+    "platform": "Myntra",
+    "basePrice": 8768
+  },
+  {
+    "id": "p41",
+    "name": "Caprese Structured Handbag",
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&auto=format&fit=crop&q=80",
+    "platform": "Myntra",
+    "basePrice": 10275
+  },
+  {
+    "id": "p42",
+    "name": "Baggit Sling Bag",
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 3254
+  },
+  {
+    "id": "p43",
+    "name": "Wildcraft Travel Backpack",
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 7622
+  },
+  {
+    "id": "p44",
+    "name": "American Tourister Duffel",
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&auto=format&fit=crop&q=80",
+    "platform": "Ajio",
+    "basePrice": 3311
+  },
+  {
+    "id": "p45",
+    "name": "Fossil Analog Watch",
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80",
+    "platform": "Myntra",
+    "basePrice": 2229
+  },
+  {
+    "id": "p46",
+    "name": "Titan Raga Watch",
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 7201
+  },
+  {
+    "id": "p47",
+    "name": "Fastrack Chronograph Watch",
+    "category": "Fashion",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80",
+    "platform": "Myntra",
+    "basePrice": 8840
+  },
+  {
+    "id": "p48",
+    "name": "Instant Pot Duo 6L",
+    "category": "Home & Kitchen",
+    "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 12419
+  },
+  {
+    "id": "p49",
+    "name": "Prestige Induction Cooktop",
+    "category": "Home & Kitchen",
+    "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 13004
+  },
+  {
+    "id": "p50",
+    "name": "Philips Air Fryer HD9200",
+    "category": "Home & Kitchen",
+    "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 2890
+  },
+  {
+    "id": "p51",
+    "name": "Bajaj Mixer Grinder",
+    "category": "Home & Kitchen",
+    "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 6654
+  },
+  {
+    "id": "p52",
+    "name": "Wonderchef Nutri-Blend",
+    "category": "Home & Kitchen",
+    "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 9777
+  },
+  {
+    "id": "p53",
+    "name": "Milton Thermosteel Flask",
+    "category": "Home & Kitchen",
+    "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 23891
+  },
+  {
+    "id": "p54",
+    "name": "IKEA Storage Ottoman",
+    "category": "Home & Kitchen",
+    "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 20899
+  },
+  {
+    "id": "p55",
+    "name": "Urban Ladder Bookshelf",
+    "category": "Home & Kitchen",
+    "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 19295
+  },
+  {
+    "id": "p56",
+    "name": "Nilkamal Plastic Chair",
+    "category": "Home & Kitchen",
+    "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 5576
+  },
+  {
+    "id": "p57",
+    "name": "Godrej Interio Wardrobe",
+    "category": "Home & Kitchen",
+    "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 20139
+  },
+  {
+    "id": "p58",
+    "name": "Philips LED Bulb Pack",
+    "category": "Home & Kitchen",
+    "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 13660
+  },
+  {
+    "id": "p59",
+    "name": "Havells Ceiling Fan",
+    "category": "Home & Kitchen",
+    "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 10564
+  },
+  {
+    "id": "p60",
+    "name": "Hindware Water Purifier",
+    "category": "Home & Kitchen",
+    "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 15691
+  },
+  {
+    "id": "p61",
+    "name": "Butterfly Pressure Cooker",
+    "category": "Home & Kitchen",
+    "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 8711
+  },
+  {
+    "id": "p62",
+    "name": "Cello Dinner Set",
+    "category": "Home & Kitchen",
+    "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 9110
+  },
+  {
+    "id": "p63",
+    "name": "Bombay Dyeing Bedsheet Set",
+    "category": "Home & Kitchen",
+    "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 10255
+  },
+  {
+    "id": "p64",
+    "name": "Spaces Cotton Towel Set",
+    "category": "Home & Kitchen",
+    "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 10324
+  },
+  {
+    "id": "p65",
+    "name": "Ajanta Wall Clock",
+    "category": "Home & Kitchen",
+    "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 13653
+  },
+  {
+    "id": "p66",
+    "name": "Solimo Storage Boxes",
+    "category": "Home & Kitchen",
+    "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 5375
+  },
+  {
+    "id": "p67",
+    "name": "Amazon Basics Curtain Set",
+    "category": "Home & Kitchen",
+    "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 3192
+  },
+  {
+    "id": "p68",
+    "name": "Lakme Absolute Foundation",
+    "category": "Beauty",
+    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Nykaa",
+    "basePrice": 2365
+  },
+  {
+    "id": "p69",
+    "name": "Maybelline Fit Me Concealer",
+    "category": "Beauty",
+    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Nykaa",
+    "basePrice": 3105
+  },
+  {
+    "id": "p70",
+    "name": "Nykaa Matte Lipstick",
+    "category": "Beauty",
+    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Myntra",
+    "basePrice": 2976
+  },
+  {
+    "id": "p71",
+    "name": "MAC Ruby Woo Lipstick",
+    "category": "Beauty",
+    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 481
+  },
+  {
+    "id": "p72",
+    "name": "The Ordinary Niacinamide Serum",
+    "category": "Beauty",
+    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Myntra",
+    "basePrice": 1723
+  },
+  {
+    "id": "p73",
+    "name": "Minimalist Vitamin C Serum",
+    "category": "Beauty",
+    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Nykaa",
+    "basePrice": 1692
+  },
+  {
+    "id": "p74",
+    "name": "Mamaearth Onion Hair Oil",
+    "category": "Beauty",
+    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Nykaa",
+    "basePrice": 3247
+  },
+  {
+    "id": "p75",
+    "name": "WOW Skin Science Shampoo",
+    "category": "Beauty",
+    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 4459
+  },
+  {
+    "id": "p76",
+    "name": "L'Oreal Paris Hair Serum",
+    "category": "Beauty",
+    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Nykaa",
+    "basePrice": 3177
+  },
+  {
+    "id": "p77",
+    "name": "Dove Body Wash",
+    "category": "Beauty",
+    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Nykaa",
+    "basePrice": 3885
+  },
+  {
+    "id": "p78",
+    "name": "Neutrogena Sunscreen SPF 50",
+    "category": "Beauty",
+    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Myntra",
+    "basePrice": 3599
+  },
+  {
+    "id": "p79",
+    "name": "Cetaphil Gentle Cleanser",
+    "category": "Beauty",
+    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 515
+  },
+  {
+    "id": "p80",
+    "name": "Plum Green Tea Face Wash",
+    "category": "Beauty",
+    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Myntra",
+    "basePrice": 1458
+  },
+  {
+    "id": "p81",
+    "name": "Biotique Bio Almond Moisturizer",
+    "category": "Beauty",
+    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Myntra",
+    "basePrice": 3789
+  },
+  {
+    "id": "p82",
+    "name": "Sugar Cosmetics Eyeliner",
+    "category": "Beauty",
+    "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 1518
+  },
+  {
+    "id": "p83",
+    "name": "Tata Sampann Toor Dal 1kg",
+    "category": "Grocery",
+    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
+    "platform": "BigBasket",
+    "basePrice": 1147
+  },
+  {
+    "id": "p84",
+    "name": "Fortune Sunflower Oil 1L",
+    "category": "Grocery",
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80",
+    "platform": "BigBasket",
+    "basePrice": 178
+  },
+  {
+    "id": "p85",
+    "name": "India Gate Basmati Rice 5kg",
+    "category": "Grocery",
+    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
+    "platform": "BigBasket",
+    "basePrice": 262
+  },
+  {
+    "id": "p86",
+    "name": "Nescafe Classic Coffee 200g",
+    "category": "Grocery",
+    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 565
+  },
+  {
+    "id": "p87",
+    "name": "Bru Instant Coffee 100g",
+    "category": "Grocery",
+    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 1228
+  },
+  {
+    "id": "p88",
+    "name": "Amul Butter 500g",
+    "category": "Grocery",
+    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 965
+  },
+  {
+    "id": "p89",
+    "name": "Britannia Marie Gold Biscuits",
+    "category": "Grocery",
+    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
+    "platform": "BigBasket",
+    "basePrice": 1263
+  },
+  {
+    "id": "p90",
+    "name": "Haldiram's Namkeen Mix",
+    "category": "Grocery",
+    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 994
+  },
+  {
+    "id": "p91",
+    "name": "Cadbury Dairy Milk Pack",
+    "category": "Grocery",
+    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 269
+  },
+  {
+    "id": "p92",
+    "name": "Nestle Munch Chocolate Box",
+    "category": "Grocery",
+    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 500
+  },
+  {
+    "id": "p93",
+    "name": "Kellogg's Corn Flakes 500g",
+    "category": "Grocery",
+    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
+    "platform": "BigBasket",
+    "basePrice": 1095
+  },
+  {
+    "id": "p94",
+    "name": "Saffola Gold Oil 1L",
+    "category": "Grocery",
+    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
+    "platform": "BigBasket",
+    "basePrice": 1168
+  },
+  {
+    "id": "p95",
+    "name": "Real Fruit Juice Mixed Fruit",
+    "category": "Grocery",
+    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 448
+  },
+  {
+    "id": "p96",
+    "name": "Bournvita Health Drink 500g",
+    "category": "Grocery",
+    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
+    "platform": "BigBasket",
+    "basePrice": 627
+  },
+  {
+    "id": "p97",
+    "name": "MTR Ready to Eat Meal Pack",
+    "category": "Grocery",
+    "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 973
+  },
+  {
+    "id": "p98",
+    "name": "Decathlon Yoga Mat",
+    "category": "Sports & Fitness",
+    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 10103
+  },
+  {
+    "id": "p99",
+    "name": "Kore Adjustable Dumbbells Set",
+    "category": "Sports & Fitness",
+    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 2432
+  },
+  {
+    "id": "p100",
+    "name": "Cosco Resistance Bands Set",
+    "category": "Sports & Fitness",
+    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
+    "platform": "Decathlon",
+    "basePrice": 24114
+  },
+  {
+    "id": "p101",
+    "name": "boldfit Gym Gloves",
+    "category": "Sports & Fitness",
+    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
+    "platform": "Decathlon",
+    "basePrice": 10006
+  },
+  {
+    "id": "p102",
+    "name": "Nivia Football",
+    "category": "Sports & Fitness",
+    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 17270
+  },
+  {
+    "id": "p103",
+    "name": "Yonex Badminton Racket",
+    "category": "Sports & Fitness",
+    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 26692
+  },
+  {
+    "id": "p104",
+    "name": "Cosco Table Tennis Kit",
+    "category": "Sports & Fitness",
+    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
+    "platform": "Decathlon",
+    "basePrice": 3359
+  },
+  {
+    "id": "p105",
+    "name": "Firefox Cricket Bat",
+    "category": "Sports & Fitness",
+    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 32590
+  },
+  {
+    "id": "p106",
+    "name": "Hero Sprint Mountain Bike",
+    "category": "Sports & Fitness",
+    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 8403
+  },
+  {
+    "id": "p107",
+    "name": "Btwin Cycling Helmet",
+    "category": "Sports & Fitness",
+    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 27668
+  },
+  {
+    "id": "p108",
+    "name": "Puma Running Shoes",
+    "category": "Sports & Fitness",
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 13763
+  },
+  {
+    "id": "p109",
+    "name": "Nike Dri-FIT Training Shirt",
+    "category": "Sports & Fitness",
+    "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 26969
+  },
+  {
+    "id": "p110",
+    "name": "Domyos Skipping Rope",
+    "category": "Sports & Fitness",
+    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 18524
+  },
+  {
+    "id": "p111",
+    "name": "Kobo Speed Rope Pro",
+    "category": "Sports & Fitness",
+    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 8647
+  },
+  {
+    "id": "p112",
+    "name": "Strauss Yoga Block Set",
+    "category": "Sports & Fitness",
+    "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 4998
+  },
+  {
+    "id": "p113",
+    "name": "Atomic Habits by James Clear",
+    "category": "Books & Stationery",
+    "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 523
+  },
+  {
+    "id": "p114",
+    "name": "The Alchemist by Paulo Coelho",
+    "category": "Books & Stationery",
+    "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 510
+  },
+  {
+    "id": "p115",
+    "name": "Ikigai by Hector Garcia",
+    "category": "Books & Stationery",
+    "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 333
+  },
+  {
+    "id": "p116",
+    "name": "Rich Dad Poor Dad",
+    "category": "Books & Stationery",
+    "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 314
+  },
+  {
+    "id": "p117",
+    "name": "NCERT Physics Class 12 Set",
+    "category": "Books & Stationery",
+    "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 301
+  },
+  {
+    "id": "p118",
+    "name": "Classmate Notebook Pack",
+    "category": "Books & Stationery",
+    "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 534
+  },
+  {
+    "id": "p119",
+    "name": "Parker Jotter Ballpoint Pen",
+    "category": "Books & Stationery",
+    "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 537
+  },
+  {
+    "id": "p120",
+    "name": "Faber-Castell Colour Pencils",
+    "category": "Books & Stationery",
+    "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 947
+  },
+  {
+    "id": "p121",
+    "name": "Camlin Geometry Box",
+    "category": "Books & Stationery",
+    "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 466
+  },
+  {
+    "id": "p122",
+    "name": "Apsara Pencil Pack of 20",
+    "category": "Books & Stationery",
+    "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 1164
+  },
+  {
+    "id": "p123",
+    "name": "LEGO Classic Bricks Set",
+    "category": "Toys & Baby",
+    "image": "https://images.unsplash.com/photo-1558060370-d644479be6e7?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 1012
+  },
+  {
+    "id": "p124",
+    "name": "Hot Wheels 5-Car Pack",
+    "category": "Toys & Baby",
+    "image": "https://images.unsplash.com/photo-1558060370-d644479be6e7?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 3522
+  },
+  {
+    "id": "p125",
+    "name": "Funskool Monopoly Board Game",
+    "category": "Toys & Baby",
+    "image": "https://images.unsplash.com/photo-1558060370-d644479be6e7?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 3019
+  },
+  {
+    "id": "p126",
+    "name": "Fisher-Price Rock-a-Stack",
+    "category": "Toys & Baby",
+    "image": "https://images.unsplash.com/photo-1558060370-d644479be6e7?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 1221
+  },
+  {
+    "id": "p127",
+    "name": "Barbie Dreamhouse Doll Set",
+    "category": "Toys & Baby",
+    "image": "https://images.unsplash.com/photo-1558060370-d644479be6e7?w=600&auto=format&fit=crop&q=80",
+    "platform": "FirstCry",
+    "basePrice": 5939
+  },
+  {
+    "id": "p128",
+    "name": "Nerf Elite Blaster",
+    "category": "Toys & Baby",
+    "image": "https://images.unsplash.com/photo-1558060370-d644479be6e7?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 3977
+  },
+  {
+    "id": "p129",
+    "name": "Pampers Baby Diapers Pack",
+    "category": "Toys & Baby",
+    "image": "https://images.unsplash.com/photo-1558060370-d644479be6e7?w=600&auto=format&fit=crop&q=80",
+    "platform": "Amazon",
+    "basePrice": 2924
+  },
+  {
+    "id": "p130",
+    "name": "Johnson's Baby Care Combo",
+    "category": "Toys & Baby",
+    "image": "https://images.unsplash.com/photo-1558060370-d644479be6e7?w=600&auto=format&fit=crop&q=80",
+    "platform": "FirstCry",
+    "basePrice": 5491
+  },
+  {
+    "id": "p131",
+    "name": "Chicco Baby Feeding Bottle",
+    "category": "Toys & Baby",
+    "image": "https://images.unsplash.com/photo-1558060370-d644479be6e7?w=600&auto=format&fit=crop&q=80",
+    "platform": "FirstCry",
+    "basePrice": 4194
+  },
+  {
+    "id": "p132",
+    "name": "Mothercare Stroller",
+    "category": "Toys & Baby",
+    "image": "https://images.unsplash.com/photo-1558060370-d644479be6e7?w=600&auto=format&fit=crop&q=80",
+    "platform": "Flipkart",
+    "basePrice": 2865
+  }
+]

@@ -1,0 +1,97 @@
+[
+  {
+    "id": "02b7b3db-84ca-40e6-8e99-56151d489f48",
+    "name": "Claim Perks Admin",
+    "email": "admin@claimperks.com",
+    "passwordHash": "$2a$10$deMkAN5m1hiMvG2rlLELue3375cyor0eZVpHVOJC3wVGfAoZr88wW",
+    "role": "admin",
+    "favorites": [],
+    "history": [
+      {
+        "productId": "p2",
+        "viewedAt": "2026-08-07T09:24:05.678Z"
+      },
+      {
+        "productId": "p1",
+        "viewedAt": "2026-08-07T13:03:42.752Z"
+      }
+    ],
+    "createdAt": "2026-07-31T10:42:08.818Z",
+    "redirects": [
+      {
+        "id": "RED-1786094652471",
+        "productId": "p2",
+        "productName": "Apple iPhone 15 Pro",
+        "productImage": "📱",
+        "platform": "Croma",
+        "basePrice": 107674,
+        "finalPrice": 101214,
+        "totalDiscount": 6460,
+        "affiliateUrl": "https://www.croma.com/p/p2?affid=claimperks",
+        "timestamp": "2026-08-07T09:24:12.471Z"
+      }
+    ],
+    "wallet": {
+      "balance": 300,
+      "transactions": [
+        {
+          "id": "TXN-1786094652471",
+          "type": "credit",
+          "title": "Perks Bonus: Jumped to Croma",
+          "amount": 50,
+          "date": "2026-08-07T09:24:12.471Z"
+        }
+      ]
+    }
+  },
+  {
+    "id": "a0488f5a-0702-4b70-8533-4c486b4aa2bb",
+    "name": "badheka priyansh",
+    "email": "badheka.priyansh2409@gmail.com",
+    "passwordHash": "$2a$10$F6ZGSMljboXTNHk21rgkbOloq1FngdOQoJhOKroquBwTZMZJUW1kK",
+    "role": "user",
+    "favorites": [],
+    "history": [],
+    "createdAt": "2026-07-31T10:52:36.547Z",
+    "orders": [
+      {
+        "id": "ORD-1785495443269-252",
+        "invoiceId": "CP-INV-176012",
+        "productId": "p1",
+        "productName": "Apple iPhone 15",
+        "productImage": "📱",
+        "platform": "Amazon",
+        "basePrice": 50177,
+        "totalDiscount": 1753,
+        "finalPrice": 48424,
+        "paymentMethod": "Google Pay UPI",
+        "shippingAddress": "123 Green Avenue, Sector 4, Mumbai - 400001 (Ph: 9876543210)",
+        "cardOrUpi": "•••• •••• •••• 4242",
+        "createdAt": "2026-07-31T10:57:23.269Z"
+      }
+    ],
+    "redirects": [],
+    "wallet": {
+      "balance": 350,
+      "transactions": [
+        {
+          "id": "TXN-1785497680683",
+          "type": "credit",
+          "title": "Perks Bonus: Jumped to Croma",
+          "amount": 50,
+          "date": "2026-07-31T11:34:40.683Z"
+        },
+        {
+          "id": "TXN-1785497616038",
+          "type": "credit",
+          "title": "Perks Bonus: Jumped to Flipkart",
+          "amount": 50,
+          "date": "2026-07-31T11:33:36.038Z"
+        }
+      ]
+    },
+    "preferredBank": "Axis Bank",
+    "preferredUpi": "",
+    "address": ""
+  }
+]

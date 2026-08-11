@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #fbfaf6;
+  color: #1c2321;
+  font-family: "Inter", sans-serif;
+}
+
+/* Torn / perforated receipt edge, used at the bottom of the price breakdown card */
+.receipt-edge {
+  height: 14px;
+  background: repeating-linear-gradient(
+    -45deg,
+    #fbfaf6 0,
+    #fbfaf6 5px,
+    transparent 5px,
+    transparent 10px
+  );
+  mask-image: radial-gradient(circle at 7px 0, transparent 6px, black 7px);
+  -webkit-mask-image: radial-gradient(circle at 7px 0, transparent 6px, black 7px);
+  mask-size: 14px 14px;
+  -webkit-mask-size: 14px 14px;
+  mask-repeat: repeat-x;
+  -webkit-mask-repeat: repeat-x;
+}
+
+.dotted-leader {
+  border-bottom: 1.5px dotted #b8b2a2;
+  flex: 1;
+  margin: 0 8px;
+  height: 1px;
+  transform: translateY(-4px);
+}

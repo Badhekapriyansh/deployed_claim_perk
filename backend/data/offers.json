@@ -1,0 +1,3389 @@
+{
+  "p1": {
+    "coupons": [
+      {
+        "id": "2c",
+        "code": "FLAT196",
+        "type": "flat",
+        "value": 90,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "2cb",
+        "provider": "Paytm",
+        "type": "percent",
+        "value": 2,
+        "maxValue": 4211
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p2": {
+    "coupons": [
+      {
+        "id": "3c",
+        "code": "SAVE18",
+        "type": "percent",
+        "value": 16,
+        "maxValue": 11547,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "3cb",
+        "provider": "CRED",
+        "type": "percent",
+        "value": 3,
+        "maxValue": 4619
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "3b",
+        "bank": "HDFC Credit Card",
+        "type": "percent",
+        "value": 12,
+        "maxValue": 6159
+      }
+    ],
+    "upiOffers": []
+  },
+  "p3": {
+    "coupons": [],
+    "cashback": [
+      {
+        "id": "4cb",
+        "provider": "CRED",
+        "type": "percent",
+        "value": 4,
+        "maxValue": 3771
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "4b",
+        "bank": "ICICI Debit Card",
+        "type": "percent",
+        "value": 12,
+        "maxValue": 5028
+      }
+    ],
+    "upiOffers": []
+  },
+  "p4": {
+    "coupons": [
+      {
+        "id": "5c",
+        "code": "FLAT102",
+        "type": "flat",
+        "value": 457,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "5cb",
+        "provider": "Google Pay Rewards",
+        "type": "percent",
+        "value": 4,
+        "maxValue": 2264
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "5b",
+        "bank": "HDFC Credit Card",
+        "type": "percent",
+        "value": 9,
+        "maxValue": 3019
+      }
+    ],
+    "upiOffers": []
+  },
+  "p5": {
+    "coupons": [],
+    "cashback": [
+      {
+        "id": "6cb",
+        "provider": "Amazon Pay",
+        "type": "percent",
+        "value": 4,
+        "maxValue": 1218
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "6b",
+        "bank": "ICICI Debit Card",
+        "type": "percent",
+        "value": 8,
+        "maxValue": 1624
+      }
+    ],
+    "upiOffers": []
+  },
+  "p6": {
+    "coupons": [],
+    "cashback": [],
+    "bankOffers": [
+      {
+        "id": "7b",
+        "bank": "Axis Credit Card",
+        "type": "percent",
+        "value": 9,
+        "maxValue": 4892
+      }
+    ],
+    "upiOffers": []
+  },
+  "p7": {
+    "coupons": [
+      {
+        "id": "8c",
+        "code": "SAVE9",
+        "type": "percent",
+        "value": 7,
+        "maxValue": 14928,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p8": {
+    "coupons": [
+      {
+        "id": "9c",
+        "code": "FLAT261",
+        "type": "flat",
+        "value": 265,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p9": {
+    "coupons": [
+      {
+        "id": "10c",
+        "code": "SAVE9",
+        "type": "percent",
+        "value": 14,
+        "maxValue": 17571,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "10cb",
+        "provider": "Google Pay Rewards",
+        "type": "percent",
+        "value": 4,
+        "maxValue": 7028
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "10b",
+        "bank": "ICICI Debit Card",
+        "type": "percent",
+        "value": 8,
+        "maxValue": 9371
+      }
+    ],
+    "upiOffers": []
+  },
+  "p10": {
+    "coupons": [],
+    "cashback": [],
+    "bankOffers": [
+      {
+        "id": "11b",
+        "bank": "Kotak Credit Card",
+        "type": "percent",
+        "value": 10,
+        "maxValue": 6562
+      }
+    ],
+    "upiOffers": []
+  },
+  "p11": {
+    "coupons": [
+      {
+        "id": "12c",
+        "code": "FLAT191",
+        "type": "flat",
+        "value": 183,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "12cb",
+        "provider": "Paytm",
+        "type": "percent",
+        "value": 2,
+        "maxValue": 455
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "12b",
+        "bank": "SBI Credit Card",
+        "type": "percent",
+        "value": 8,
+        "maxValue": 607
+      }
+    ],
+    "upiOffers": []
+  },
+  "p12": {
+    "coupons": [
+      {
+        "id": "13c",
+        "code": "SAVE8",
+        "type": "percent",
+        "value": 5,
+        "maxValue": 6188,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "13cb",
+        "provider": "PhonePe",
+        "type": "percent",
+        "value": 4,
+        "maxValue": 2475
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "13b",
+        "bank": "SBI Credit Card",
+        "type": "percent",
+        "value": 12,
+        "maxValue": 3300
+      }
+    ],
+    "upiOffers": []
+  },
+  "p13": {
+    "coupons": [
+      {
+        "id": "14c",
+        "code": "FLAT299",
+        "type": "flat",
+        "value": 376,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [
+      {
+        "id": "14b",
+        "bank": "ICICI Debit Card",
+        "type": "percent",
+        "value": 11,
+        "maxValue": 2535
+      }
+    ],
+    "upiOffers": []
+  },
+  "p14": {
+    "coupons": [
+      {
+        "id": "15c",
+        "code": "FLAT326",
+        "type": "flat",
+        "value": 157,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [
+      {
+        "id": "15b",
+        "bank": "SBI Credit Card",
+        "type": "percent",
+        "value": 8,
+        "maxValue": 4075
+      }
+    ],
+    "upiOffers": []
+  },
+  "p15": {
+    "coupons": [
+      {
+        "id": "16c",
+        "code": "FLAT346",
+        "type": "flat",
+        "value": 432,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "16cb",
+        "provider": "CRED",
+        "type": "percent",
+        "value": 3,
+        "maxValue": 462
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "16b",
+        "bank": "Axis Credit Card",
+        "type": "percent",
+        "value": 12,
+        "maxValue": 616
+      }
+    ],
+    "upiOffers": []
+  },
+  "p16": {
+    "coupons": [],
+    "cashback": [
+      {
+        "id": "17cb",
+        "provider": "Google Pay Rewards",
+        "type": "percent",
+        "value": 2,
+        "maxValue": 6643
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "17b",
+        "bank": "SBI Credit Card",
+        "type": "percent",
+        "value": 12,
+        "maxValue": 8857
+      }
+    ],
+    "upiOffers": []
+  },
+  "p17": {
+    "coupons": [
+      {
+        "id": "18c",
+        "code": "FLAT302",
+        "type": "flat",
+        "value": 167,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "18cb",
+        "provider": "Paytm",
+        "type": "percent",
+        "value": 2,
+        "maxValue": 1551
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p18": {
+    "coupons": [
+      {
+        "id": "19c",
+        "code": "FLAT259",
+        "type": "flat",
+        "value": 308,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "19cb",
+        "provider": "PhonePe",
+        "type": "percent",
+        "value": 6,
+        "maxValue": 2369
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p19": {
+    "coupons": [
+      {
+        "id": "20c",
+        "code": "FLAT373",
+        "type": "flat",
+        "value": 58,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [
+      {
+        "id": "20b",
+        "bank": "Axis Credit Card",
+        "type": "percent",
+        "value": 9,
+        "maxValue": 7804
+      }
+    ],
+    "upiOffers": []
+  },
+  "p20": {
+    "coupons": [
+      {
+        "id": "21c",
+        "code": "SAVE18",
+        "type": "percent",
+        "value": 9,
+        "maxValue": 5801,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "21cb",
+        "provider": "Paytm",
+        "type": "percent",
+        "value": 5,
+        "maxValue": 2320
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "21b",
+        "bank": "HDFC Credit Card",
+        "type": "percent",
+        "value": 11,
+        "maxValue": 3094
+      }
+    ],
+    "upiOffers": []
+  },
+  "p21": {
+    "coupons": [
+      {
+        "id": "22c",
+        "code": "FLAT330",
+        "type": "flat",
+        "value": 422,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "22cb",
+        "provider": "Google Pay Rewards",
+        "type": "percent",
+        "value": 5,
+        "maxValue": 3111
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p22": {
+    "coupons": [],
+    "cashback": [
+      {
+        "id": "23cb",
+        "provider": "PhonePe",
+        "type": "percent",
+        "value": 6,
+        "maxValue": 1352
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p23": {
+    "coupons": [
+      {
+        "id": "24c",
+        "code": "FLAT230",
+        "type": "flat",
+        "value": 500,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "24cb",
+        "provider": "Google Pay Rewards",
+        "type": "percent",
+        "value": 2,
+        "maxValue": 5232
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p24": {
+    "coupons": [],
+    "cashback": [
+      {
+        "id": "25cb",
+        "provider": "CRED",
+        "type": "percent",
+        "value": 4,
+        "maxValue": 1857
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p25": {
+    "coupons": [
+      {
+        "id": "26c",
+        "code": "FLAT198",
+        "type": "flat",
+        "value": 157,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "26cb",
+        "provider": "Amazon Pay",
+        "type": "percent",
+        "value": 3,
+        "maxValue": 1744
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p26": {
+    "coupons": [
+      {
+        "id": "27c",
+        "code": "SAVE11",
+        "type": "percent",
+        "value": 5,
+        "maxValue": 1426,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [
+      {
+        "id": "27b",
+        "bank": "Axis Credit Card",
+        "type": "percent",
+        "value": 8,
+        "maxValue": 760
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "27u",
+        "app": "Amazon Pay UPI",
+        "type": "flat",
+        "value": 58
+      }
+    ]
+  },
+  "p27": {
+    "coupons": [
+      {
+        "id": "28c",
+        "code": "SAVE13",
+        "type": "percent",
+        "value": 12,
+        "maxValue": 311,
+        "source": "Ajio"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "28cb",
+        "provider": "Paytm",
+        "type": "percent",
+        "value": 6,
+        "maxValue": 124
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "28b",
+        "bank": "SBI Credit Card",
+        "type": "percent",
+        "value": 9,
+        "maxValue": 166
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "28u",
+        "app": "Paytm UPI",
+        "type": "flat",
+        "value": 124
+      }
+    ]
+  },
+  "p28": {
+    "coupons": [
+      {
+        "id": "29c",
+        "code": "SAVE17",
+        "type": "percent",
+        "value": 6,
+        "maxValue": 604,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "29cb",
+        "provider": "Paytm",
+        "type": "percent",
+        "value": 6,
+        "maxValue": 242
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "29b",
+        "bank": "Axis Credit Card",
+        "type": "percent",
+        "value": 8,
+        "maxValue": 322
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "29u",
+        "app": "Google Pay",
+        "type": "flat",
+        "value": 145
+      }
+    ]
+  },
+  "p29": {
+    "coupons": [
+      {
+        "id": "30c",
+        "code": "SAVE18",
+        "type": "percent",
+        "value": 11,
+        "maxValue": 1266,
+        "source": "Ajio"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "30cb",
+        "provider": "Amazon Pay",
+        "type": "percent",
+        "value": 5,
+        "maxValue": 507
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": [
+      {
+        "id": "30u",
+        "app": "Google Pay",
+        "type": "flat",
+        "value": 62
+      }
+    ]
+  },
+  "p30": {
+    "coupons": [],
+    "cashback": [
+      {
+        "id": "31cb",
+        "provider": "Amazon Pay",
+        "type": "percent",
+        "value": 3,
+        "maxValue": 274
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "31b",
+        "bank": "ICICI Debit Card",
+        "type": "percent",
+        "value": 11,
+        "maxValue": 365
+      }
+    ],
+    "upiOffers": []
+  },
+  "p31": {
+    "coupons": [
+      {
+        "id": "32c",
+        "code": "SAVE5",
+        "type": "percent",
+        "value": 16,
+        "maxValue": 1464,
+        "source": "Ajio"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "32cb",
+        "provider": "CRED",
+        "type": "percent",
+        "value": 4,
+        "maxValue": 585
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "32b",
+        "bank": "ICICI Debit Card",
+        "type": "percent",
+        "value": 11,
+        "maxValue": 781
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "32u",
+        "app": "Google Pay",
+        "type": "flat",
+        "value": 227
+      }
+    ]
+  },
+  "p32": {
+    "coupons": [],
+    "cashback": [
+      {
+        "id": "33cb",
+        "provider": "Google Pay Rewards",
+        "type": "percent",
+        "value": 6,
+        "maxValue": 251
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p33": {
+    "coupons": [
+      {
+        "id": "34c",
+        "code": "SAVE9",
+        "type": "percent",
+        "value": 14,
+        "maxValue": 241,
+        "source": "Ajio"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "34cb",
+        "provider": "Google Pay Rewards",
+        "type": "percent",
+        "value": 4,
+        "maxValue": 96
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "34b",
+        "bank": "Axis Credit Card",
+        "type": "percent",
+        "value": 9,
+        "maxValue": 128
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "34u",
+        "app": "Google Pay",
+        "type": "flat",
+        "value": 96
+      }
+    ]
+  },
+  "p34": {
+    "coupons": [
+      {
+        "id": "35c",
+        "code": "SAVE17",
+        "type": "percent",
+        "value": 9,
+        "maxValue": 422,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [
+      {
+        "id": "35b",
+        "bank": "ICICI Debit Card",
+        "type": "percent",
+        "value": 8,
+        "maxValue": 225
+      }
+    ],
+    "upiOffers": []
+  },
+  "p35": {
+    "coupons": [],
+    "cashback": [
+      {
+        "id": "36cb",
+        "provider": "Amazon Pay",
+        "type": "percent",
+        "value": 4,
+        "maxValue": 622
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "36b",
+        "bank": "HDFC Credit Card",
+        "type": "percent",
+        "value": 11,
+        "maxValue": 829
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "36u",
+        "app": "Paytm UPI",
+        "type": "flat",
+        "value": 125
+      }
+    ]
+  },
+  "p36": {
+    "coupons": [],
+    "cashback": [],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p37": {
+    "coupons": [
+      {
+        "id": "38c",
+        "code": "SAVE10",
+        "type": "percent",
+        "value": 14,
+        "maxValue": 466,
+        "source": "Myntra"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "38cb",
+        "provider": "Google Pay Rewards",
+        "type": "percent",
+        "value": 5,
+        "maxValue": 186
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "38b",
+        "bank": "ICICI Debit Card",
+        "type": "percent",
+        "value": 8,
+        "maxValue": 249
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "38u",
+        "app": "PhonePe UPI",
+        "type": "flat",
+        "value": 186
+      }
+    ]
+  },
+  "p38": {
+    "coupons": [
+      {
+        "id": "39c",
+        "code": "SAVE11",
+        "type": "percent",
+        "value": 5,
+        "maxValue": 71,
+        "source": "Myntra"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "39cb",
+        "provider": "PhonePe",
+        "type": "percent",
+        "value": 3,
+        "maxValue": 29
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": [
+      {
+        "id": "39u",
+        "app": "Amazon Pay UPI",
+        "type": "flat",
+        "value": 29
+      }
+    ]
+  },
+  "p39": {
+    "coupons": [
+      {
+        "id": "40c",
+        "code": "FLAT401",
+        "type": "flat",
+        "value": 105,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [
+      {
+        "id": "40b",
+        "bank": "HDFC Credit Card",
+        "type": "percent",
+        "value": 12,
+        "maxValue": 538
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "40u",
+        "app": "Google Pay",
+        "type": "flat",
+        "value": 160
+      }
+    ]
+  },
+  "p40": {
+    "coupons": [
+      {
+        "id": "41c",
+        "code": "SAVE10",
+        "type": "percent",
+        "value": 7,
+        "maxValue": 1315,
+        "source": "Myntra"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "41cb",
+        "provider": "Google Pay Rewards",
+        "type": "percent",
+        "value": 5,
+        "maxValue": 526
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "41b",
+        "bank": "Axis Credit Card",
+        "type": "percent",
+        "value": 8,
+        "maxValue": 701
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "41u",
+        "app": "PhonePe UPI",
+        "type": "flat",
+        "value": 224
+      }
+    ]
+  },
+  "p41": {
+    "coupons": [
+      {
+        "id": "42c",
+        "code": "SAVE15",
+        "type": "percent",
+        "value": 17,
+        "maxValue": 1541,
+        "source": "Myntra"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [],
+    "upiOffers": [
+      {
+        "id": "42u",
+        "app": "Paytm UPI",
+        "type": "flat",
+        "value": 148
+      }
+    ]
+  },
+  "p42": {
+    "coupons": [
+      {
+        "id": "43c",
+        "code": "FLAT87",
+        "type": "flat",
+        "value": 265,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p43": {
+    "coupons": [
+      {
+        "id": "44c",
+        "code": "SAVE17",
+        "type": "percent",
+        "value": 14,
+        "maxValue": 1143,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "44cb",
+        "provider": "CRED",
+        "type": "percent",
+        "value": 6,
+        "maxValue": 457
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "44b",
+        "bank": "HDFC Credit Card",
+        "type": "percent",
+        "value": 10,
+        "maxValue": 610
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "44u",
+        "app": "Google Pay",
+        "type": "flat",
+        "value": 242
+      }
+    ]
+  },
+  "p44": {
+    "coupons": [
+      {
+        "id": "45c",
+        "code": "FLAT289",
+        "type": "flat",
+        "value": 358,
+        "source": "Ajio"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "45cb",
+        "provider": "PhonePe",
+        "type": "percent",
+        "value": 5,
+        "maxValue": 199
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "45b",
+        "bank": "ICICI Debit Card",
+        "type": "percent",
+        "value": 10,
+        "maxValue": 265
+      }
+    ],
+    "upiOffers": []
+  },
+  "p45": {
+    "coupons": [
+      {
+        "id": "46c",
+        "code": "SAVE8",
+        "type": "percent",
+        "value": 20,
+        "maxValue": 334,
+        "source": "Myntra"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [
+      {
+        "id": "46b",
+        "bank": "Axis Credit Card",
+        "type": "percent",
+        "value": 10,
+        "maxValue": 178
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "46u",
+        "app": "PhonePe UPI",
+        "type": "flat",
+        "value": 134
+      }
+    ]
+  },
+  "p46": {
+    "coupons": [
+      {
+        "id": "47c",
+        "code": "FLAT149",
+        "type": "flat",
+        "value": 106,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "47cb",
+        "provider": "CRED",
+        "type": "percent",
+        "value": 2,
+        "maxValue": 432
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "47b",
+        "bank": "Kotak Credit Card",
+        "type": "percent",
+        "value": 9,
+        "maxValue": 576
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "47u",
+        "app": "Amazon Pay UPI",
+        "type": "flat",
+        "value": 138
+      }
+    ]
+  },
+  "p47": {
+    "coupons": [
+      {
+        "id": "48c",
+        "code": "FLAT206",
+        "type": "flat",
+        "value": 119,
+        "source": "Myntra"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [],
+    "upiOffers": [
+      {
+        "id": "48u",
+        "app": "Amazon Pay UPI",
+        "type": "flat",
+        "value": 272
+      }
+    ]
+  },
+  "p48": {
+    "coupons": [
+      {
+        "id": "49c",
+        "code": "FLAT154",
+        "type": "flat",
+        "value": 336,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "49cb",
+        "provider": "Paytm",
+        "type": "percent",
+        "value": 3,
+        "maxValue": 745
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": [
+      {
+        "id": "49u",
+        "app": "PhonePe UPI",
+        "type": "flat",
+        "value": 67
+      }
+    ]
+  },
+  "p49": {
+    "coupons": [],
+    "cashback": [],
+    "bankOffers": [
+      {
+        "id": "50b",
+        "bank": "SBI Credit Card",
+        "type": "percent",
+        "value": 11,
+        "maxValue": 1040
+      }
+    ],
+    "upiOffers": []
+  },
+  "p50": {
+    "coupons": [
+      {
+        "id": "51c",
+        "code": "SAVE7",
+        "type": "percent",
+        "value": 12,
+        "maxValue": 434,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "51cb",
+        "provider": "Amazon Pay",
+        "type": "percent",
+        "value": 2,
+        "maxValue": 173
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "51b",
+        "bank": "Axis Credit Card",
+        "type": "percent",
+        "value": 9,
+        "maxValue": 231
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "51u",
+        "app": "Amazon Pay UPI",
+        "type": "flat",
+        "value": 97
+      }
+    ]
+  },
+  "p51": {
+    "coupons": [
+      {
+        "id": "52c",
+        "code": "FLAT106",
+        "type": "flat",
+        "value": 188,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "52cb",
+        "provider": "Amazon Pay",
+        "type": "percent",
+        "value": 6,
+        "maxValue": 399
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": [
+      {
+        "id": "52u",
+        "app": "PhonePe UPI",
+        "type": "flat",
+        "value": 299
+      }
+    ]
+  },
+  "p52": {
+    "coupons": [],
+    "cashback": [
+      {
+        "id": "53cb",
+        "provider": "CRED",
+        "type": "percent",
+        "value": 3,
+        "maxValue": 587
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "53b",
+        "bank": "Kotak Credit Card",
+        "type": "percent",
+        "value": 12,
+        "maxValue": 782
+      }
+    ],
+    "upiOffers": []
+  },
+  "p53": {
+    "coupons": [
+      {
+        "id": "54c",
+        "code": "FLAT448",
+        "type": "flat",
+        "value": 329,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "54cb",
+        "provider": "CRED",
+        "type": "percent",
+        "value": 6,
+        "maxValue": 1433
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p54": {
+    "coupons": [
+      {
+        "id": "55c",
+        "code": "SAVE13",
+        "type": "percent",
+        "value": 8,
+        "maxValue": 3135,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "55cb",
+        "provider": "PhonePe",
+        "type": "percent",
+        "value": 5,
+        "maxValue": 1254
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "55b",
+        "bank": "Kotak Credit Card",
+        "type": "percent",
+        "value": 11,
+        "maxValue": 1672
+      }
+    ],
+    "upiOffers": []
+  },
+  "p55": {
+    "coupons": [
+      {
+        "id": "56c",
+        "code": "FLAT437",
+        "type": "flat",
+        "value": 185,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [
+      {
+        "id": "56b",
+        "bank": "ICICI Debit Card",
+        "type": "percent",
+        "value": 9,
+        "maxValue": 1544
+      }
+    ],
+    "upiOffers": []
+  },
+  "p56": {
+    "coupons": [
+      {
+        "id": "57c",
+        "code": "SAVE8",
+        "type": "percent",
+        "value": 17,
+        "maxValue": 836,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "57cb",
+        "provider": "PhonePe",
+        "type": "percent",
+        "value": 6,
+        "maxValue": 335
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p57": {
+    "coupons": [
+      {
+        "id": "58c",
+        "code": "FLAT305",
+        "type": "flat",
+        "value": 423,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "58cb",
+        "provider": "Google Pay Rewards",
+        "type": "percent",
+        "value": 3,
+        "maxValue": 1208
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "58b",
+        "bank": "ICICI Debit Card",
+        "type": "percent",
+        "value": 11,
+        "maxValue": 1611
+      }
+    ],
+    "upiOffers": []
+  },
+  "p58": {
+    "coupons": [
+      {
+        "id": "59c",
+        "code": "FLAT92",
+        "type": "flat",
+        "value": 477,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "59cb",
+        "provider": "PhonePe",
+        "type": "percent",
+        "value": 5,
+        "maxValue": 820
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "59b",
+        "bank": "HDFC Credit Card",
+        "type": "percent",
+        "value": 8,
+        "maxValue": 1093
+      }
+    ],
+    "upiOffers": []
+  },
+  "p59": {
+    "coupons": [
+      {
+        "id": "60c",
+        "code": "FLAT309",
+        "type": "flat",
+        "value": 349,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "60cb",
+        "provider": "Paytm",
+        "type": "percent",
+        "value": 4,
+        "maxValue": 634
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "60b",
+        "bank": "Kotak Credit Card",
+        "type": "percent",
+        "value": 8,
+        "maxValue": 845
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "60u",
+        "app": "Amazon Pay UPI",
+        "type": "flat",
+        "value": 249
+      }
+    ]
+  },
+  "p60": {
+    "coupons": [
+      {
+        "id": "61c",
+        "code": "FLAT338",
+        "type": "flat",
+        "value": 438,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "61cb",
+        "provider": "PhonePe",
+        "type": "percent",
+        "value": 3,
+        "maxValue": 941
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p61": {
+    "coupons": [
+      {
+        "id": "62c",
+        "code": "FLAT460",
+        "type": "flat",
+        "value": 439,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "62cb",
+        "provider": "PhonePe",
+        "type": "percent",
+        "value": 5,
+        "maxValue": 523
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": [
+      {
+        "id": "62u",
+        "app": "Amazon Pay UPI",
+        "type": "flat",
+        "value": 35
+      }
+    ]
+  },
+  "p62": {
+    "coupons": [
+      {
+        "id": "63c",
+        "code": "SAVE18",
+        "type": "percent",
+        "value": 6,
+        "maxValue": 1367,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [],
+    "upiOffers": [
+      {
+        "id": "63u",
+        "app": "PhonePe UPI",
+        "type": "flat",
+        "value": 268
+      }
+    ]
+  },
+  "p63": {
+    "coupons": [
+      {
+        "id": "64c",
+        "code": "FLAT226",
+        "type": "flat",
+        "value": 146,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "64cb",
+        "provider": "Amazon Pay",
+        "type": "percent",
+        "value": 3,
+        "maxValue": 615
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "64b",
+        "bank": "HDFC Credit Card",
+        "type": "percent",
+        "value": 11,
+        "maxValue": 820
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "64u",
+        "app": "Google Pay",
+        "type": "flat",
+        "value": 272
+      }
+    ]
+  },
+  "p64": {
+    "coupons": [
+      {
+        "id": "65c",
+        "code": "SAVE16",
+        "type": "percent",
+        "value": 10,
+        "maxValue": 1549,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [
+      {
+        "id": "65b",
+        "bank": "ICICI Debit Card",
+        "type": "percent",
+        "value": 10,
+        "maxValue": 826
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "65u",
+        "app": "Google Pay",
+        "type": "flat",
+        "value": 145
+      }
+    ]
+  },
+  "p65": {
+    "coupons": [
+      {
+        "id": "66c",
+        "code": "FLAT267",
+        "type": "flat",
+        "value": 213,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "66cb",
+        "provider": "CRED",
+        "type": "percent",
+        "value": 3,
+        "maxValue": 819
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p66": {
+    "coupons": [
+      {
+        "id": "67c",
+        "code": "FLAT413",
+        "type": "flat",
+        "value": 405,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "67cb",
+        "provider": "Paytm",
+        "type": "percent",
+        "value": 5,
+        "maxValue": 323
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p67": {
+    "coupons": [
+      {
+        "id": "68c",
+        "code": "FLAT417",
+        "type": "flat",
+        "value": 65,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "68cb",
+        "provider": "PhonePe",
+        "type": "percent",
+        "value": 6,
+        "maxValue": 192
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "68b",
+        "bank": "SBI Credit Card",
+        "type": "percent",
+        "value": 11,
+        "maxValue": 255
+      }
+    ],
+    "upiOffers": []
+  },
+  "p68": {
+    "coupons": [
+      {
+        "id": "69c",
+        "code": "FLAT68",
+        "type": "flat",
+        "value": 133,
+        "source": "Nykaa"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [],
+    "upiOffers": [
+      {
+        "id": "69u",
+        "app": "Google Pay",
+        "type": "flat",
+        "value": 68
+      }
+    ]
+  },
+  "p69": {
+    "coupons": [
+      {
+        "id": "70c",
+        "code": "SAVE7",
+        "type": "percent",
+        "value": 8,
+        "maxValue": 466,
+        "source": "Nykaa"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "70cb",
+        "provider": "Amazon Pay",
+        "type": "percent",
+        "value": 3,
+        "maxValue": 186
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p70": {
+    "coupons": [
+      {
+        "id": "71c",
+        "code": "SAVE5",
+        "type": "percent",
+        "value": 18,
+        "maxValue": 446,
+        "source": "Myntra"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "71cb",
+        "provider": "PhonePe",
+        "type": "percent",
+        "value": 4,
+        "maxValue": 179
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": [
+      {
+        "id": "71u",
+        "app": "Google Pay",
+        "type": "flat",
+        "value": 147
+      }
+    ]
+  },
+  "p71": {
+    "coupons": [
+      {
+        "id": "72c",
+        "code": "SAVE8",
+        "type": "percent",
+        "value": 18,
+        "maxValue": 72,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [],
+    "upiOffers": [
+      {
+        "id": "72u",
+        "app": "Paytm UPI",
+        "type": "flat",
+        "value": 29
+      }
+    ]
+  },
+  "p72": {
+    "coupons": [
+      {
+        "id": "73c",
+        "code": "SAVE11",
+        "type": "percent",
+        "value": 14,
+        "maxValue": 258,
+        "source": "Myntra"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "73cb",
+        "provider": "PhonePe",
+        "type": "percent",
+        "value": 6,
+        "maxValue": 103
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "73b",
+        "bank": "Axis Credit Card",
+        "type": "percent",
+        "value": 9,
+        "maxValue": 138
+      }
+    ],
+    "upiOffers": []
+  },
+  "p73": {
+    "coupons": [
+      {
+        "id": "74c",
+        "code": "SAVE12",
+        "type": "percent",
+        "value": 18,
+        "maxValue": 254,
+        "source": "Nykaa"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "74cb",
+        "provider": "PhonePe",
+        "type": "percent",
+        "value": 2,
+        "maxValue": 102
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "74b",
+        "bank": "SBI Credit Card",
+        "type": "percent",
+        "value": 10,
+        "maxValue": 135
+      }
+    ],
+    "upiOffers": []
+  },
+  "p74": {
+    "coupons": [
+      {
+        "id": "75c",
+        "code": "SAVE18",
+        "type": "percent",
+        "value": 17,
+        "maxValue": 487,
+        "source": "Nykaa"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "75cb",
+        "provider": "Amazon Pay",
+        "type": "percent",
+        "value": 2,
+        "maxValue": 195
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "75b",
+        "bank": "SBI Credit Card",
+        "type": "percent",
+        "value": 12,
+        "maxValue": 260
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "75u",
+        "app": "Google Pay",
+        "type": "flat",
+        "value": 190
+      }
+    ]
+  },
+  "p75": {
+    "coupons": [
+      {
+        "id": "76c",
+        "code": "SAVE19",
+        "type": "percent",
+        "value": 11,
+        "maxValue": 669,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "76cb",
+        "provider": "Google Pay Rewards",
+        "type": "percent",
+        "value": 2,
+        "maxValue": 268
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "76b",
+        "bank": "SBI Credit Card",
+        "type": "percent",
+        "value": 11,
+        "maxValue": 357
+      }
+    ],
+    "upiOffers": []
+  },
+  "p76": {
+    "coupons": [],
+    "cashback": [],
+    "bankOffers": [
+      {
+        "id": "77b",
+        "bank": "Axis Credit Card",
+        "type": "percent",
+        "value": 8,
+        "maxValue": 254
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "77u",
+        "app": "Amazon Pay UPI",
+        "type": "flat",
+        "value": 120
+      }
+    ]
+  },
+  "p77": {
+    "coupons": [
+      {
+        "id": "78c",
+        "code": "SAVE10",
+        "type": "percent",
+        "value": 7,
+        "maxValue": 583,
+        "source": "Nykaa"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "78cb",
+        "provider": "PhonePe",
+        "type": "percent",
+        "value": 3,
+        "maxValue": 233
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p78": {
+    "coupons": [
+      {
+        "id": "79c",
+        "code": "SAVE7",
+        "type": "percent",
+        "value": 13,
+        "maxValue": 540,
+        "source": "Myntra"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "79cb",
+        "provider": "PhonePe",
+        "type": "percent",
+        "value": 6,
+        "maxValue": 216
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "79b",
+        "bank": "Axis Credit Card",
+        "type": "percent",
+        "value": 12,
+        "maxValue": 288
+      }
+    ],
+    "upiOffers": []
+  },
+  "p79": {
+    "coupons": [
+      {
+        "id": "80c",
+        "code": "SAVE14",
+        "type": "percent",
+        "value": 9,
+        "maxValue": 77,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "80cb",
+        "provider": "CRED",
+        "type": "percent",
+        "value": 2,
+        "maxValue": 31
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p80": {
+    "coupons": [
+      {
+        "id": "81c",
+        "code": "SAVE20",
+        "type": "percent",
+        "value": 8,
+        "maxValue": 219,
+        "source": "Myntra"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "81cb",
+        "provider": "PhonePe",
+        "type": "percent",
+        "value": 6,
+        "maxValue": 87
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": [
+      {
+        "id": "81u",
+        "app": "Google Pay",
+        "type": "flat",
+        "value": 87
+      }
+    ]
+  },
+  "p81": {
+    "coupons": [
+      {
+        "id": "82c",
+        "code": "SAVE8",
+        "type": "percent",
+        "value": 12,
+        "maxValue": 568,
+        "source": "Myntra"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "82cb",
+        "provider": "Amazon Pay",
+        "type": "percent",
+        "value": 6,
+        "maxValue": 227
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "82b",
+        "bank": "ICICI Debit Card",
+        "type": "percent",
+        "value": 8,
+        "maxValue": 303
+      }
+    ],
+    "upiOffers": []
+  },
+  "p82": {
+    "coupons": [
+      {
+        "id": "83c",
+        "code": "SAVE6",
+        "type": "percent",
+        "value": 17,
+        "maxValue": 228,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [
+      {
+        "id": "83b",
+        "bank": "SBI Credit Card",
+        "type": "percent",
+        "value": 9,
+        "maxValue": 121
+      }
+    ],
+    "upiOffers": []
+  },
+  "p83": {
+    "coupons": [
+      {
+        "id": "84c",
+        "code": "FLAT312",
+        "type": "flat",
+        "value": 172,
+        "source": "BigBasket"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [
+      {
+        "id": "84b",
+        "bank": "Kotak Credit Card",
+        "type": "percent",
+        "value": 12,
+        "maxValue": 92
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "84u",
+        "app": "Google Pay",
+        "type": "flat",
+        "value": 42
+      }
+    ]
+  },
+  "p84": {
+    "coupons": [
+      {
+        "id": "85c",
+        "code": "FLAT262",
+        "type": "flat",
+        "value": 27,
+        "source": "BigBasket"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "85cb",
+        "provider": "Paytm",
+        "type": "percent",
+        "value": 3,
+        "maxValue": 11
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p85": {
+    "coupons": [
+      {
+        "id": "86c",
+        "code": "SAVE10",
+        "type": "percent",
+        "value": 19,
+        "maxValue": 39,
+        "source": "BigBasket"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p86": {
+    "coupons": [
+      {
+        "id": "87c",
+        "code": "SAVE20",
+        "type": "percent",
+        "value": 10,
+        "maxValue": 85,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "87cb",
+        "provider": "PhonePe",
+        "type": "percent",
+        "value": 3,
+        "maxValue": 34
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": [
+      {
+        "id": "87u",
+        "app": "PhonePe UPI",
+        "type": "flat",
+        "value": 34
+      }
+    ]
+  },
+  "p87": {
+    "coupons": [
+      {
+        "id": "88c",
+        "code": "FLAT71",
+        "type": "flat",
+        "value": 108,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [
+      {
+        "id": "88b",
+        "bank": "HDFC Credit Card",
+        "type": "percent",
+        "value": 11,
+        "maxValue": 98
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "88u",
+        "app": "PhonePe UPI",
+        "type": "flat",
+        "value": 29
+      }
+    ]
+  },
+  "p88": {
+    "coupons": [
+      {
+        "id": "89c",
+        "code": "FLAT494",
+        "type": "flat",
+        "value": 125,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [
+      {
+        "id": "89b",
+        "bank": "ICICI Debit Card",
+        "type": "percent",
+        "value": 9,
+        "maxValue": 77
+      }
+    ],
+    "upiOffers": []
+  },
+  "p89": {
+    "coupons": [
+      {
+        "id": "90c",
+        "code": "FLAT360",
+        "type": "flat",
+        "value": 189,
+        "source": "BigBasket"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "90cb",
+        "provider": "Paytm",
+        "type": "percent",
+        "value": 2,
+        "maxValue": 76
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "90b",
+        "bank": "ICICI Debit Card",
+        "type": "percent",
+        "value": 9,
+        "maxValue": 101
+      }
+    ],
+    "upiOffers": []
+  },
+  "p90": {
+    "coupons": [
+      {
+        "id": "91c",
+        "code": "FLAT75",
+        "type": "flat",
+        "value": 134,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "91cb",
+        "provider": "CRED",
+        "type": "percent",
+        "value": 6,
+        "maxValue": 60
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "91b",
+        "bank": "HDFC Credit Card",
+        "type": "percent",
+        "value": 10,
+        "maxValue": 80
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "91u",
+        "app": "Amazon Pay UPI",
+        "type": "flat",
+        "value": 60
+      }
+    ]
+  },
+  "p91": {
+    "coupons": [],
+    "cashback": [
+      {
+        "id": "92cb",
+        "provider": "Paytm",
+        "type": "percent",
+        "value": 5,
+        "maxValue": 16
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p92": {
+    "coupons": [
+      {
+        "id": "93c",
+        "code": "SAVE8",
+        "type": "percent",
+        "value": 9,
+        "maxValue": 75,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "93cb",
+        "provider": "CRED",
+        "type": "percent",
+        "value": 2,
+        "maxValue": 30
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p93": {
+    "coupons": [],
+    "cashback": [
+      {
+        "id": "94cb",
+        "provider": "CRED",
+        "type": "percent",
+        "value": 5,
+        "maxValue": 66
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": [
+      {
+        "id": "94u",
+        "app": "Amazon Pay UPI",
+        "type": "flat",
+        "value": 66
+      }
+    ]
+  },
+  "p94": {
+    "coupons": [
+      {
+        "id": "95c",
+        "code": "FLAT109",
+        "type": "flat",
+        "value": 175,
+        "source": "BigBasket"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "95cb",
+        "provider": "Paytm",
+        "type": "percent",
+        "value": 5,
+        "maxValue": 70
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p95": {
+    "coupons": [
+      {
+        "id": "96c",
+        "code": "FLAT90",
+        "type": "flat",
+        "value": 67,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "96cb",
+        "provider": "PhonePe",
+        "type": "percent",
+        "value": 6,
+        "maxValue": 27
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p96": {
+    "coupons": [
+      {
+        "id": "97c",
+        "code": "FLAT460",
+        "type": "flat",
+        "value": 51,
+        "source": "BigBasket"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [],
+    "upiOffers": [
+      {
+        "id": "97u",
+        "app": "Amazon Pay UPI",
+        "type": "flat",
+        "value": 38
+      }
+    ]
+  },
+  "p97": {
+    "coupons": [
+      {
+        "id": "98c",
+        "code": "FLAT188",
+        "type": "flat",
+        "value": 146,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [
+      {
+        "id": "98b",
+        "bank": "ICICI Debit Card",
+        "type": "percent",
+        "value": 11,
+        "maxValue": 78
+      }
+    ],
+    "upiOffers": []
+  },
+  "p98": {
+    "coupons": [
+      {
+        "id": "99c",
+        "code": "SAVE11",
+        "type": "percent",
+        "value": 9,
+        "maxValue": 1515,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [
+      {
+        "id": "99b",
+        "bank": "HDFC Credit Card",
+        "type": "percent",
+        "value": 8,
+        "maxValue": 808
+      }
+    ],
+    "upiOffers": []
+  },
+  "p99": {
+    "coupons": [
+      {
+        "id": "100c",
+        "code": "SAVE15",
+        "type": "percent",
+        "value": 11,
+        "maxValue": 365,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "100cb",
+        "provider": "Amazon Pay",
+        "type": "percent",
+        "value": 4,
+        "maxValue": 146
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p100": {
+    "coupons": [
+      {
+        "id": "101c",
+        "code": "SAVE10",
+        "type": "percent",
+        "value": 12,
+        "maxValue": 3617,
+        "source": "Decathlon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "101cb",
+        "provider": "Amazon Pay",
+        "type": "percent",
+        "value": 3,
+        "maxValue": 1447
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p101": {
+    "coupons": [
+      {
+        "id": "102c",
+        "code": "FLAT247",
+        "type": "flat",
+        "value": 111,
+        "source": "Decathlon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "102cb",
+        "provider": "Google Pay Rewards",
+        "type": "percent",
+        "value": 6,
+        "maxValue": 600
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p102": {
+    "coupons": [
+      {
+        "id": "103c",
+        "code": "FLAT382",
+        "type": "flat",
+        "value": 252,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "103cb",
+        "provider": "Amazon Pay",
+        "type": "percent",
+        "value": 4,
+        "maxValue": 1036
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "103b",
+        "bank": "ICICI Debit Card",
+        "type": "percent",
+        "value": 11,
+        "maxValue": 1382
+      }
+    ],
+    "upiOffers": []
+  },
+  "p103": {
+    "coupons": [
+      {
+        "id": "104c",
+        "code": "SAVE16",
+        "type": "percent",
+        "value": 9,
+        "maxValue": 4004,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "104cb",
+        "provider": "Paytm",
+        "type": "percent",
+        "value": 3,
+        "maxValue": 1602
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "104b",
+        "bank": "Axis Credit Card",
+        "type": "percent",
+        "value": 10,
+        "maxValue": 2135
+      }
+    ],
+    "upiOffers": []
+  },
+  "p104": {
+    "coupons": [],
+    "cashback": [],
+    "bankOffers": [
+      {
+        "id": "105b",
+        "bank": "Kotak Credit Card",
+        "type": "percent",
+        "value": 8,
+        "maxValue": 269
+      }
+    ],
+    "upiOffers": []
+  },
+  "p105": {
+    "coupons": [
+      {
+        "id": "106c",
+        "code": "FLAT278",
+        "type": "flat",
+        "value": 427,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "106cb",
+        "provider": "Amazon Pay",
+        "type": "percent",
+        "value": 6,
+        "maxValue": 1955
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p106": {
+    "coupons": [
+      {
+        "id": "107c",
+        "code": "FLAT412",
+        "type": "flat",
+        "value": 83,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "107cb",
+        "provider": "PhonePe",
+        "type": "percent",
+        "value": 3,
+        "maxValue": 504
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "107b",
+        "bank": "HDFC Credit Card",
+        "type": "percent",
+        "value": 12,
+        "maxValue": 672
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "107u",
+        "app": "Google Pay",
+        "type": "flat",
+        "value": 267
+      }
+    ]
+  },
+  "p107": {
+    "coupons": [],
+    "cashback": [
+      {
+        "id": "108cb",
+        "provider": "Paytm",
+        "type": "percent",
+        "value": 6,
+        "maxValue": 1660
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p108": {
+    "coupons": [
+      {
+        "id": "109c",
+        "code": "SAVE7",
+        "type": "percent",
+        "value": 12,
+        "maxValue": 2064,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "109cb",
+        "provider": "PhonePe",
+        "type": "percent",
+        "value": 2,
+        "maxValue": 826
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "109b",
+        "bank": "HDFC Credit Card",
+        "type": "percent",
+        "value": 11,
+        "maxValue": 1101
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "109u",
+        "app": "Google Pay",
+        "type": "flat",
+        "value": 48
+      }
+    ]
+  },
+  "p109": {
+    "coupons": [
+      {
+        "id": "110c",
+        "code": "SAVE17",
+        "type": "percent",
+        "value": 9,
+        "maxValue": 4045,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "110cb",
+        "provider": "CRED",
+        "type": "percent",
+        "value": 4,
+        "maxValue": 1618
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p110": {
+    "coupons": [
+      {
+        "id": "111c",
+        "code": "FLAT421",
+        "type": "flat",
+        "value": 362,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "111cb",
+        "provider": "Google Pay Rewards",
+        "type": "percent",
+        "value": 5,
+        "maxValue": 1111
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p111": {
+    "coupons": [
+      {
+        "id": "112c",
+        "code": "SAVE14",
+        "type": "percent",
+        "value": 10,
+        "maxValue": 1297,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "112cb",
+        "provider": "Google Pay Rewards",
+        "type": "percent",
+        "value": 4,
+        "maxValue": 519
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "112b",
+        "bank": "Kotak Credit Card",
+        "type": "percent",
+        "value": 9,
+        "maxValue": 692
+      }
+    ],
+    "upiOffers": []
+  },
+  "p112": {
+    "coupons": [
+      {
+        "id": "113c",
+        "code": "SAVE20",
+        "type": "percent",
+        "value": 12,
+        "maxValue": 750,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "113cb",
+        "provider": "PhonePe",
+        "type": "percent",
+        "value": 4,
+        "maxValue": 300
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "113b",
+        "bank": "SBI Credit Card",
+        "type": "percent",
+        "value": 11,
+        "maxValue": 400
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "113u",
+        "app": "Google Pay",
+        "type": "flat",
+        "value": 158
+      }
+    ]
+  },
+  "p113": {
+    "coupons": [
+      {
+        "id": "114c",
+        "code": "SAVE17",
+        "type": "percent",
+        "value": 11,
+        "maxValue": 78,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "114cb",
+        "provider": "Paytm",
+        "type": "percent",
+        "value": 5,
+        "maxValue": 31
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p114": {
+    "coupons": [
+      {
+        "id": "115c",
+        "code": "FLAT482",
+        "type": "flat",
+        "value": 77,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p115": {
+    "coupons": [
+      {
+        "id": "116c",
+        "code": "FLAT281",
+        "type": "flat",
+        "value": 50,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "116cb",
+        "provider": "Paytm",
+        "type": "percent",
+        "value": 6,
+        "maxValue": 20
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": [
+      {
+        "id": "116u",
+        "app": "PhonePe UPI",
+        "type": "flat",
+        "value": 20
+      }
+    ]
+  },
+  "p116": {
+    "coupons": [
+      {
+        "id": "117c",
+        "code": "SAVE7",
+        "type": "percent",
+        "value": 17,
+        "maxValue": 47,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "117cb",
+        "provider": "CRED",
+        "type": "percent",
+        "value": 3,
+        "maxValue": 19
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p117": {
+    "coupons": [],
+    "cashback": [
+      {
+        "id": "118cb",
+        "provider": "CRED",
+        "type": "percent",
+        "value": 4,
+        "maxValue": 18
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p118": {
+    "coupons": [],
+    "cashback": [],
+    "bankOffers": [],
+    "upiOffers": [
+      {
+        "id": "119u",
+        "app": "Amazon Pay UPI",
+        "type": "flat",
+        "value": 32
+      }
+    ]
+  },
+  "p119": {
+    "coupons": [
+      {
+        "id": "120c",
+        "code": "FLAT175",
+        "type": "flat",
+        "value": 65,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "120cb",
+        "provider": "PhonePe",
+        "type": "percent",
+        "value": 3,
+        "maxValue": 32
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p120": {
+    "coupons": [
+      {
+        "id": "121c",
+        "code": "FLAT130",
+        "type": "flat",
+        "value": 142,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "121cb",
+        "provider": "Paytm",
+        "type": "percent",
+        "value": 4,
+        "maxValue": 57
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": [
+      {
+        "id": "121u",
+        "app": "PhonePe UPI",
+        "type": "flat",
+        "value": 57
+      }
+    ]
+  },
+  "p121": {
+    "coupons": [
+      {
+        "id": "122c",
+        "code": "SAVE20",
+        "type": "percent",
+        "value": 5,
+        "maxValue": 70,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [],
+    "upiOffers": []
+  },
+  "p122": {
+    "coupons": [],
+    "cashback": [],
+    "bankOffers": [
+      {
+        "id": "123b",
+        "bank": "SBI Credit Card",
+        "type": "percent",
+        "value": 12,
+        "maxValue": 93
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "123u",
+        "app": "Paytm UPI",
+        "type": "flat",
+        "value": 70
+      }
+    ]
+  },
+  "p123": {
+    "coupons": [
+      {
+        "id": "124c",
+        "code": "FLAT112",
+        "type": "flat",
+        "value": 152,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "124cb",
+        "provider": "PhonePe",
+        "type": "percent",
+        "value": 5,
+        "maxValue": 61
+      }
+    ],
+    "bankOffers": [],
+    "upiOffers": [
+      {
+        "id": "124u",
+        "app": "PhonePe UPI",
+        "type": "flat",
+        "value": 61
+      }
+    ]
+  },
+  "p124": {
+    "coupons": [
+      {
+        "id": "125c",
+        "code": "SAVE9",
+        "type": "percent",
+        "value": 5,
+        "maxValue": 528,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [
+      {
+        "id": "125b",
+        "bank": "HDFC Credit Card",
+        "type": "percent",
+        "value": 8,
+        "maxValue": 282
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "125u",
+        "app": "PhonePe UPI",
+        "type": "flat",
+        "value": 211
+      }
+    ]
+  },
+  "p125": {
+    "coupons": [
+      {
+        "id": "126c",
+        "code": "FLAT62",
+        "type": "flat",
+        "value": 169,
+        "source": "Amazon"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "126cb",
+        "provider": "Google Pay Rewards",
+        "type": "percent",
+        "value": 3,
+        "maxValue": 181
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "126b",
+        "bank": "Axis Credit Card",
+        "type": "percent",
+        "value": 9,
+        "maxValue": 242
+      }
+    ],
+    "upiOffers": []
+  },
+  "p126": {
+    "coupons": [
+      {
+        "id": "127c",
+        "code": "FLAT363",
+        "type": "flat",
+        "value": 183,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "127cb",
+        "provider": "Amazon Pay",
+        "type": "percent",
+        "value": 5,
+        "maxValue": 73
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "127b",
+        "bank": "ICICI Debit Card",
+        "type": "percent",
+        "value": 12,
+        "maxValue": 98
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "127u",
+        "app": "Paytm UPI",
+        "type": "flat",
+        "value": 73
+      }
+    ]
+  },
+  "p127": {
+    "coupons": [
+      {
+        "id": "128c",
+        "code": "SAVE9",
+        "type": "percent",
+        "value": 17,
+        "maxValue": 891,
+        "source": "FirstCry"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "128cb",
+        "provider": "Amazon Pay",
+        "type": "percent",
+        "value": 2,
+        "maxValue": 356
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "128b",
+        "bank": "HDFC Credit Card",
+        "type": "percent",
+        "value": 11,
+        "maxValue": 475
+      }
+    ],
+    "upiOffers": []
+  },
+  "p128": {
+    "coupons": [
+      {
+        "id": "129c",
+        "code": "FLAT398",
+        "type": "flat",
+        "value": 185,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [
+      {
+        "id": "129cb",
+        "provider": "Google Pay Rewards",
+        "type": "percent",
+        "value": 6,
+        "maxValue": 239
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "129b",
+        "bank": "HDFC Credit Card",
+        "type": "percent",
+        "value": 10,
+        "maxValue": 318
+      }
+    ],
+    "upiOffers": []
+  },
+  "p129": {
+    "coupons": [],
+    "cashback": [
+      {
+        "id": "130cb",
+        "provider": "Paytm",
+        "type": "percent",
+        "value": 2,
+        "maxValue": 175
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "130b",
+        "bank": "SBI Credit Card",
+        "type": "percent",
+        "value": 9,
+        "maxValue": 234
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "130u",
+        "app": "PhonePe UPI",
+        "type": "flat",
+        "value": 99
+      }
+    ]
+  },
+  "p130": {
+    "coupons": [],
+    "cashback": [],
+    "bankOffers": [
+      {
+        "id": "131b",
+        "bank": "SBI Credit Card",
+        "type": "percent",
+        "value": 8,
+        "maxValue": 439
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "131u",
+        "app": "Paytm UPI",
+        "type": "flat",
+        "value": 79
+      }
+    ]
+  },
+  "p131": {
+    "coupons": [],
+    "cashback": [
+      {
+        "id": "132cb",
+        "provider": "CRED",
+        "type": "percent",
+        "value": 6,
+        "maxValue": 252
+      }
+    ],
+    "bankOffers": [
+      {
+        "id": "132b",
+        "bank": "ICICI Debit Card",
+        "type": "percent",
+        "value": 11,
+        "maxValue": 336
+      }
+    ],
+    "upiOffers": []
+  },
+  "p132": {
+    "coupons": [
+      {
+        "id": "133c",
+        "code": "FLAT161",
+        "type": "flat",
+        "value": 327,
+        "source": "Flipkart"
+      }
+    ],
+    "cashback": [],
+    "bankOffers": [
+      {
+        "id": "133b",
+        "bank": "SBI Credit Card",
+        "type": "percent",
+        "value": 8,
+        "maxValue": 229
+      }
+    ],
+    "upiOffers": [
+      {
+        "id": "133u",
+        "app": "Paytm UPI",
+        "type": "flat",
+        "value": 172
+      }
+    ]
+  }
+}
