@@ -1,1 +1,24 @@
-[]
+[
+  {
+    "id": "7feffa0a-551e-424e-b22b-369941c653dc",
+    "businessId": "4ea7ce6e-2b36-4c3c-b1ba-27d08283b75b",
+    "businessName": "TechStore India",
+    "productId": "p1",
+    "code": "SPECIAL869",
+    "type": "flat",
+    "value": 500,
+    "status": "approved",
+    "createdAt": "2026-08-13T16:03:54.009Z"
+  },
+  {
+    "id": "2192db6f-e27b-404c-b29c-e1c1ce5af6b9",
+    "businessId": "5def848c-36b7-4bc5-b91e-7231d56d2a32",
+    "businessName": "SuperDeals Ltd",
+    "productId": "p84",
+    "code": "OFFER6718",
+    "type": "flat",
+    "value": 300,
+    "status": "approved",
+    "createdAt": "2026-08-13T16:06:30.658Z"
+  }
+]

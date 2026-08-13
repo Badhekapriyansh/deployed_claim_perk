@@ -3,6 +3,7 @@ const crypto = require("crypto");
 const router = express.Router();
 const { requireAuth, requireRole } = require("../middleware/auth");
 const { readCoupons, addCoupon, deleteCoupon, findById } = require("../utils/couponStore");
+const { findById: findUserById } = require("../utils/userStore");
 const products = require("../data/products.json");
 
 router.use(requireAuth, requireRole("business"));
@@ -29,10 +30,12 @@ router.post("/coupons", (req, res) => {
   const product = products.find((p) => p.id === productId);
   if (!product) return res.status(404).json({ error: "Product not found" });
 
+  const bizUser = findUserById(req.user.id);
+
   const coupon = {
     id: crypto.randomUUID(),
     businessId: req.user.id,
-    businessName: req.user.businessName || req.user.name,
+    businessName: bizUser?.businessName || bizUser?.name || "Business",
     productId,
     code,
     type,

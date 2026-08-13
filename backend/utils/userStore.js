@@ -13,9 +13,11 @@ function writeUsers(users) {
 }
 
 function findByEmail(email) {
-  return readUsers().find((u) => u.email.toLowerCase() === email.toLowerCase());
+  if (!email) return null;
+  const target = String(email).toLowerCase();
+  return readUsers().find((u) => u && u.email && u.email.toLowerCase() === target);
 }
-
+1
 function findById(id) {
   return readUsers().find((u) => u.id === id);
 }

@@ -1,6 +1,15 @@
-// NOTE: hardcoded for prototype simplicity. Before any real deployment,
-// move this to an environment variable (process.env.JWT_SECRET).
-const JWT_SECRET = "claim-perks-prototype-secret-change-in-production";
-const TOKEN_EXPIRY = "7d";
+require("dotenv").config();
 
-module.exports = { JWT_SECRET, TOKEN_EXPIRY };
+const JWT_SECRET = process.env.JWT_SECRET;
+const JWT_EXPIRES_IN = process.env.JWT_EXPIRES_IN || "7d";
+
+if (!JWT_SECRET) {
+  throw new Error("JWT_SECRET environment variable is missing!");
+}
+
+module.exports = {
+  JWT_SECRET,
+  JWT_EXPIRES_IN,
+  TOKEN_EXPIRY: JWT_EXPIRES_IN
+};
+

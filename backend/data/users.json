@@ -93,5 +93,213 @@
     "preferredBank": "Axis Bank",
     "preferredUpi": "",
     "address": ""
+  },
+  {
+    "id": "35e79a50-531f-421a-9ffc-2451fef199eb",
+    "name": "JWT Test User",
+    "email": "jwt_test_1786636107454@example.com",
+    "passwordHash": "$2a$10$Y9PIgyKxrtLDGnj0NtBbFefgwujMFizvWy9rwEgroZTPvciBMsuvu",
+    "role": "user",
+    "favorites": [],
+    "history": [],
+    "createdAt": "2026-08-13T15:48:27.639Z"
+  },
+  {
+    "id": "d9e0bcbb-6a38-49cd-a0b4-e2325455fee4",
+    "name": "User B",
+    "email": "jwt_userb_1786636108109@example.com",
+    "passwordHash": "$2a$10$AmvJvYzjkeS3lQR4ooPNIeCFpynJyhCOGTN/zJXwDmuSlSOG73c7G",
+    "role": "user",
+    "favorites": [],
+    "history": [],
+    "createdAt": "2026-08-13T15:48:28.235Z"
+  },
+  {
+    "id": "f4fb41b3-18c1-466e-a406-df73f4eba780",
+    "name": "JWT Test User",
+    "email": "jwt_test_1786636976859@example.com",
+    "passwordHash": "$2a$10$SSh2e/TE7aLHQtj.hrv/8.mvkKK1qj7ZYLoYlD7ybFwAut/vditLG",
+    "role": "user",
+    "favorites": [],
+    "history": [],
+    "createdAt": "2026-08-13T16:02:57.063Z"
+  },
+  {
+    "id": "33cb6116-128d-417c-85db-a126062f0896",
+    "name": "User B",
+    "email": "jwt_userb_1786636977573@example.com",
+    "passwordHash": "$2a$10$h21.sdhHLlQVLTi3s73/0uX3jr4iLSGN/WBpPeB.E/dGP9ZImF6wS",
+    "role": "user",
+    "favorites": [],
+    "history": [],
+    "createdAt": "2026-08-13T16:02:57.710Z"
+  },
+  {
+    "id": "2497cf2f-b7da-49e0-a300-9fd40d38f41f",
+    "name": "JWT Test User",
+    "email": "jwt_test_1786637000996@example.com",
+    "passwordHash": "$2a$10$KDkXR4y3S.PTbBpbrKEIHO/GX2NQ4XDLZjFfs5MW.DiDIg8z.7bBK",
+    "role": "user",
+    "favorites": [],
+    "history": [],
+    "createdAt": "2026-08-13T16:03:21.194Z"
+  },
+  {
+    "id": "b26cdb9f-344a-4175-b287-8bff1b5465d2",
+    "name": "User B",
+    "email": "jwt_userb_1786637001698@example.com",
+    "passwordHash": "$2a$10$uujvXRoxE3xbJTpSwRXIh.wGWgqMxcCHoPhUJ7x6JDDB9IeVqgz.e",
+    "role": "user",
+    "favorites": [],
+    "history": [],
+    "createdAt": "2026-08-13T16:03:21.831Z"
+  },
+  {
+    "id": "23ffe32f-d1c7-4850-9bc1-5e24581a4f7c",
+    "name": "Mongo Test User",
+    "email": "mongo_jwt_test_1786637033318@example.com",
+    "passwordHash": "$2a$10$6yiSWa9xpLM/MC.Vo0lNdOqFnRzOK5twYSFqDDqHsGS/HWRMvIBTe",
+    "role": "user",
+    "favorites": [
+      "p1"
+    ],
+    "history": [
+      {
+        "productId": "p1",
+        "viewedAt": "2026-08-13T16:03:53.832Z"
+      }
+    ],
+    "createdAt": "2026-08-13T16:03:53.514Z",
+    "orders": [
+      {
+        "id": "ORD-1786637033845-179",
+        "invoiceId": "CP-INV-532119",
+        "productId": "p1",
+        "productName": "Apple iPhone 15",
+        "productImage": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
+        "platform": "Flipkart",
+        "basePrice": 70184,
+        "totalDiscount": 1494,
+        "finalPrice": 68690,
+        "paymentMethod": "Credit Card",
+        "shippingAddress": "123 Main St",
+        "cardOrUpi": "•••• 4242",
+        "createdAt": "2026-08-13T16:03:53.845Z"
+      }
+    ],
+    "wallet": {
+      "balance": 3685,
+      "transactions": [
+        {
+          "id": "TXN-1786637033845",
+          "type": "credit",
+          "title": "Cashback: Apple iPhone 15",
+          "amount": 3435,
+          "date": "2026-08-13T16:03:53.845Z"
+        }
+      ]
+    },
+    "notifications": [
+      {
+        "id": "NOTIF-1786637033845",
+        "title": "Order Placed & Cashback Earned! 🎉",
+        "message": "You earned ₹3435 cashback in your Perks Wallet for ordering Apple iPhone 15!",
+        "date": "2026-08-13T16:03:53.845Z",
+        "read": false
+      }
+    ]
+  },
+  {
+    "id": "4ea7ce6e-2b36-4c3c-b1ba-27d08283b75b",
+    "name": "Biz User",
+    "email": "mongo_biz_1786637033858@example.com",
+    "passwordHash": "$2a$10$Z9P9WzKR0NkE6bfQJf3bl.AYOL/15IHxNUvaJyX5pAmSOxm4ADqly",
+    "role": "business",
+    "businessName": "TechStore India",
+    "favorites": [],
+    "history": [],
+    "createdAt": "2026-08-13T16:03:53.999Z"
+  },
+  {
+    "id": "86e5b348-de8a-44e5-b46b-c95856ec6ed2",
+    "name": "E2E User Updated",
+    "email": "e2e_user_1786637189837@example.com",
+    "passwordHash": "$2a$10$DV9FN1AbEVh7blqexEOSWuRibtTY7BqtwYW2.zcp6xYT/NaYQjqgS",
+    "role": "user",
+    "favorites": [],
+    "history": [],
+    "createdAt": "2026-08-13T16:06:29.991Z",
+    "address": "456 Park Ave",
+    "redirects": [],
+    "wallet": {
+      "balance": 297,
+      "transactions": [
+        {
+          "id": "WD-1786637190408",
+          "type": "debit",
+          "title": "UPI Transfer to user@upi",
+          "amount": 10,
+          "date": "2026-08-13T16:06:30.408Z"
+        },
+        {
+          "id": "TXN-1786637190391",
+          "type": "credit",
+          "title": "Cashback: Fortune Sunflower Oil 1L",
+          "amount": 7,
+          "date": "2026-08-13T16:06:30.391Z"
+        },
+        {
+          "id": "TXN-1786637190362",
+          "type": "credit",
+          "title": "Perks Bonus: Jumped to Amazon",
+          "amount": 50,
+          "date": "2026-08-13T16:06:30.362Z"
+        }
+      ]
+    },
+    "orders": [
+      {
+        "id": "ORD-1786637190391-770",
+        "invoiceId": "CP-INV-446099",
+        "productId": "p84",
+        "productName": "Fortune Sunflower Oil 1L",
+        "productImage": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80",
+        "platform": "BigBasket",
+        "basePrice": 178,
+        "totalDiscount": 32,
+        "finalPrice": 146,
+        "paymentMethod": "UPI",
+        "shippingAddress": "456 Park Ave",
+        "cardOrUpi": "user@upi",
+        "createdAt": "2026-08-13T16:06:30.391Z"
+      }
+    ],
+    "notifications": [
+      {
+        "id": "NOTIF-1786637190391",
+        "title": "Order Placed & Cashback Earned! 🎉",
+        "message": "You earned ₹7 cashback in your Perks Wallet for ordering Fortune Sunflower Oil 1L!",
+        "date": "2026-08-13T16:06:30.391Z",
+        "read": false
+      }
+    ],
+    "priceAlerts": [
+      {
+        "productId": "p84",
+        "targetPrice": 50000,
+        "createdAt": "2026-08-13T16:06:30.420Z"
+      }
+    ]
+  },
+  {
+    "id": "5def848c-36b7-4bc5-b91e-7231d56d2a32",
+    "name": "Business Partner",
+    "email": "e2e_biz_1786637190433@example.com",
+    "passwordHash": "$2a$10$CEqb1a//oX1CCM0V//QBk.S6LnMGUL4pyE/5hTyAu25Jahr1LpTuC",
+    "role": "business",
+    "businessName": "SuperDeals Ltd",
+    "favorites": [],
+    "history": [],
+    "createdAt": "2026-08-13T16:06:30.631Z"
   }
 ]

@@ -1,8 +1,8 @@
 const jwt = require("jsonwebtoken");
 const { JWT_SECRET } = require("../config");
 
-// Reads "Authorization: Bearer <token>", verifies it, and attaches
-// { id, email, name } to req.user. Rejects with 401 if missing/invalid.
+// Reads "Authorization: Bearer <token>", verifies it using JWT_SECRET from .env,
+// and attaches { id, userId, role } to req.user. Rejects with 401 if missing/invalid/expired.
 function requireAuth(req, res, next) {
   const header = req.headers.authorization;
   if (!header || !header.startsWith("Bearer ")) {
@@ -10,9 +10,21 @@ function requireAuth(req, res, next) {
   }
 
   const token = header.split(" ")[1];
+  if (!token) {
+    return res.status(401).json({ error: "No token provided" });
+  }
+
   try {
     const payload = jwt.verify(token, JWT_SECRET);
-    req.user = payload;
+    const userId = payload.userId || payload.id;
+    if (!userId) {
+      return res.status(401).json({ error: "Invalid token payload" });
+    }
+    req.user = {
+      id: userId,
+      userId: userId,
+      role: payload.role
+    };
     next();
   } catch (err) {
     return res.status(401).json({ error: "Invalid or expired token" });
@@ -20,7 +32,7 @@ function requireAuth(req, res, next) {
 }
 
 // Use after requireAuth. Pass one or more allowed roles, e.g. requireRole("admin")
-// or requireRole("business", "admin").
+// or requireRole("business", "admin"). Unauthorized access returns 403 Forbidden.
 function requireRole(...allowedRoles) {
   return (req, res, next) => {
     if (!req.user || !allowedRoles.includes(req.user.role)) {
@@ -31,3 +43,4 @@ function requireRole(...allowedRoles) {
 }
 
 module.exports = { requireAuth, requireRole };
+

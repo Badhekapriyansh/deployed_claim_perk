@@ -1,4 +1,5 @@
 require("dotenv").config();
+const connectDB = require("./db");
 const express = require("express");
 const cors = require("cors");
 const bcrypt = require("bcryptjs");
@@ -64,8 +65,10 @@ app.get("/", (req, res) => {
   });
 });
 
-seedAdmin().then(() => {
-  app.listen(PORT, () => {
-    console.log(`Claim Perks API running on http://localhost:${PORT}`);
+connectDB().then(() => {
+  seedAdmin().then(() => {
+    app.listen(PORT, () => {
+      console.log(`Claim Perks API running on http://localhost:${PORT}`);
+    });
   });
 });
