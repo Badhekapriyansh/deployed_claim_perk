@@ -4,51 +4,70 @@ const router = express.Router();
 const { requireAuth, requireRole } = require("../middleware/auth");
 const { readCoupons, addCoupon, deleteCoupon, findById } = require("../utils/couponStore");
 const { findById: findUserById } = require("../utils/userStore");
-const products = require("../data/products.json");
+const Product = require("../models/product");
+const productsJSON = require("../data/products.json");
+
+async function findProductById(id) {
+  let product = await Product.findOne({ id }).lean();
+  if (!product) {
+    product = productsJSON.find((p) => p.id === id);
+  }
+  return product;
+}
 
 router.use(requireAuth, requireRole("business"));
 
 // GET /api/business/coupons -> only this business's own campaigns
-router.get("/coupons", (req, res) => {
-  const mine = readCoupons()
-    .filter((c) => c.businessId === req.user.id)
-    .map((c) => ({ ...c, product: products.find((p) => p.id === c.productId) }));
-  res.json({ coupons: mine });
+router.get("/coupons", async (req, res) => {
+  try {
+    const mine = readCoupons().filter((c) => c.businessId === req.user.id);
+    const result = [];
+    for (const c of mine) {
+      const product = await findProductById(c.productId);
+      result.push({ ...c, product });
+    }
+    res.json({ coupons: result });
+  } catch (err) {
+    res.status(500).json({ error: "Failed to fetch coupons", details: err.message });
+  }
 });
 
-// POST /api/business/coupons  { productId, code, type, value, maxValue }
-// New campaigns start "pending" and only apply to users once an admin approves them.
-router.post("/coupons", (req, res) => {
-  const { productId, code, type, value, maxValue } = req.body;
+// POST /api/business/coupons { productId, code, type, value, maxValue }
+router.post("/coupons", async (req, res) => {
+  try {
+    const { productId, code, type, value, maxValue } = req.body;
 
-  if (!productId || !code || !type || value === undefined) {
-    return res.status(400).json({ error: "productId, code, type and value are required" });
+    if (!productId || !code || !type || value === undefined) {
+      return res.status(400).json({ error: "productId, code, type and value are required" });
+    }
+    if (!["flat", "percent"].includes(type)) {
+      return res.status(400).json({ error: "type must be 'flat' or 'percent'" });
+    }
+    const product = await findProductById(productId);
+    if (!product) return res.status(404).json({ error: "Product not found" });
+
+    const bizUser = findUserById(req.user.id);
+
+    const coupon = {
+      id: crypto.randomUUID(),
+      businessId: req.user.id,
+      businessName: bizUser?.businessName || bizUser?.name || "Business",
+      productId,
+      code,
+      type,
+      value: Number(value),
+      maxValue: maxValue ? Number(maxValue) : undefined,
+      status: "pending",
+      createdAt: new Date().toISOString()
+    };
+    addCoupon(coupon);
+    res.status(201).json({ coupon });
+  } catch (err) {
+    res.status(500).json({ error: "Failed to create coupon", details: err.message });
   }
-  if (!["flat", "percent"].includes(type)) {
-    return res.status(400).json({ error: "type must be 'flat' or 'percent'" });
-  }
-  const product = products.find((p) => p.id === productId);
-  if (!product) return res.status(404).json({ error: "Product not found" });
-
-  const bizUser = findUserById(req.user.id);
-
-  const coupon = {
-    id: crypto.randomUUID(),
-    businessId: req.user.id,
-    businessName: bizUser?.businessName || bizUser?.name || "Business",
-    productId,
-    code,
-    type,
-    value: Number(value),
-    maxValue: maxValue ? Number(maxValue) : undefined,
-    status: "pending",
-    createdAt: new Date().toISOString()
-  };
-  addCoupon(coupon);
-  res.status(201).json({ coupon });
 });
 
-// DELETE /api/business/coupons/:id -> a business can withdraw its own campaign
+// DELETE /api/business/coupons/:id
 router.delete("/coupons/:id", (req, res) => {
   const coupon = findById(req.params.id);
   if (!coupon) return res.status(404).json({ error: "Coupon not found" });
@@ -59,7 +78,7 @@ router.delete("/coupons/:id", (req, res) => {
   res.json({ success: true });
 });
 
-// GET /api/business/analytics -> return CTR, impressions, and discount ROI
+// GET /api/business/analytics
 router.get("/analytics", (req, res) => {
   const mine = readCoupons().filter((c) => c.businessId === req.user.id);
   const activeCount = mine.filter((c) => c.status === "approved").length;

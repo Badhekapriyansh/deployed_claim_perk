@@ -2,11 +2,20 @@ const express = require("express");
 const router = express.Router();
 const { requireAuth } = require("../middleware/auth");
 const { findById, updateUser } = require("../utils/userStore");
-const products = require("../data/products.json");
+const Product = require("../models/product");
+const productsJSON = require("../data/products.json");
 
 function publicUser(user) {
   const { passwordHash, ...rest } = user;
   return rest;
+}
+
+async function findProductById(id) {
+  let product = await Product.findOne({ id }).lean();
+  if (!product) {
+    product = productsJSON.find((p) => p.id === id);
+  }
+  return product;
 }
 
 // All routes below require a valid JWT (Authorization: Bearer <token>)
@@ -20,57 +29,81 @@ router.get("/me", (req, res) => {
 });
 
 // GET /api/user/favorites -> full product objects, not just ids
-router.get("/favorites", (req, res) => {
-  const user = findById(req.user.id);
-  const favoriteProducts = products.filter((p) => user.favorites.includes(p.id));
-  res.json({ favorites: favoriteProducts });
+router.get("/favorites", async (req, res) => {
+  try {
+    const user = findById(req.user.id);
+    if (!user) return res.status(404).json({ error: "User not found" });
+    const favoriteProducts = [];
+    for (const favId of (user.favorites || [])) {
+      const p = await findProductById(favId);
+      if (p) favoriteProducts.push(p);
+    }
+    res.json({ favorites: favoriteProducts });
+  } catch (err) {
+    res.status(500).json({ error: "Failed to fetch favorites", details: err.message });
+  }
 });
 
 // POST /api/user/favorites/:productId -> toggle a product as favorite
-router.post("/favorites/:productId", (req, res) => {
-  const user = findById(req.user.id);
-  const { productId } = req.params;
-  const product = products.find((p) => p.id === productId);
-  if (!product) return res.status(404).json({ error: "Product not found" });
+router.post("/favorites/:productId", async (req, res) => {
+  try {
+    const user = findById(req.user.id);
+    const { productId } = req.params;
+    const product = await findProductById(productId);
+    if (!product) return res.status(404).json({ error: "Product not found" });
 
-  const alreadyFavorited = user.favorites.includes(productId);
-  const favorites = alreadyFavorited
-    ? user.favorites.filter((id) => id !== productId)
-    : [...user.favorites, productId];
+    const alreadyFavorited = user.favorites.includes(productId);
+    const favorites = alreadyFavorited
+      ? user.favorites.filter((id) => id !== productId)
+      : [...user.favorites, productId];
 
-  const updated = updateUser(user.id, { favorites });
-  res.json({ favorites: updated.favorites, favorited: !alreadyFavorited });
+    const updated = updateUser(user.id, { favorites });
+    res.json({ favorites: updated.favorites, favorited: !alreadyFavorited });
+  } catch (err) {
+    res.status(500).json({ error: "Failed to toggle favorite", details: err.message });
+  }
 });
 
 // GET /api/user/history -> recent products viewed, most recent first
-router.get("/history", (req, res) => {
-  const user = findById(req.user.id);
-  const historyWithProducts = [...user.history]
-    .sort((a, b) => new Date(b.viewedAt) - new Date(a.viewedAt))
-    .slice(0, 20)
-    .map((entry) => ({
-      ...entry,
-      product: products.find((p) => p.id === entry.productId)
-    }))
-    .filter((entry) => entry.product);
+router.get("/history", async (req, res) => {
+  try {
+    const user = findById(req.user.id);
+    if (!user) return res.status(404).json({ error: "User not found" });
+    
+    const sortedHistory = [...user.history]
+      .sort((a, b) => new Date(b.viewedAt) - new Date(a.viewedAt))
+      .slice(0, 20);
 
-  res.json({ history: historyWithProducts });
+    const historyWithProducts = [];
+    for (const entry of sortedHistory) {
+      const product = await findProductById(entry.productId);
+      if (product) {
+        historyWithProducts.push({ ...entry, product });
+      }
+    }
+
+    res.json({ history: historyWithProducts });
+  } catch (err) {
+    res.status(500).json({ error: "Failed to fetch history", details: err.message });
+  }
 });
 
 // POST /api/user/history/:productId -> log a product view
-router.post("/history/:productId", (req, res) => {
-  const user = findById(req.user.id);
-  const { productId } = req.params;
-  const product = products.find((p) => p.id === productId);
-  if (!product) return res.status(404).json({ error: "Product not found" });
+router.post("/history/:productId", async (req, res) => {
+  try {
+    const user = findById(req.user.id);
+    const { productId } = req.params;
+    const product = await findProductById(productId);
+    if (!product) return res.status(404).json({ error: "Product not found" });
 
-  // Avoid piling up duplicate entries for repeated views in the same session;
-  // just move the existing entry to the front with a fresh timestamp.
-  const history = user.history.filter((h) => h.productId !== productId);
-  history.push({ productId, viewedAt: new Date().toISOString() });
+    const history = user.history.filter((h) => h.productId !== productId);
+    history.push({ productId, viewedAt: new Date().toISOString() });
 
-  const updated = updateUser(user.id, { history });
-  res.json({ history: updated.history });
+    const updated = updateUser(user.id, { history });
+    res.json({ history: updated.history });
+  } catch (err) {
+    res.status(500).json({ error: "Failed to log history", details: err.message });
+  }
 });
 
 // DELETE /api/user/history -> clear all viewing history
@@ -114,46 +147,49 @@ router.get("/redirects", (req, res) => {
 });
 
 // POST /api/user/redirects -> log when a user redirects to a store platform
-router.post("/redirects", (req, res) => {
-  const user = findById(req.user.id);
-  if (!user) return res.status(404).json({ error: "User not found" });
+router.post("/redirects", async (req, res) => {
+  try {
+    const user = findById(req.user.id);
+    if (!user) return res.status(404).json({ error: "User not found" });
 
-  const { productId, platform, basePrice, finalPrice, totalDiscount, affiliateUrl } = req.body;
-  const product = products.find((p) => p.id === productId);
-  if (!product) return res.status(404).json({ error: "Product not found" });
+    const { productId, platform, basePrice, finalPrice, totalDiscount, affiliateUrl } = req.body;
+    const product = await findProductById(productId);
+    if (!product) return res.status(404).json({ error: "Product not found" });
 
-  const redirectEntry = {
-    id: `RED-${Date.now()}`,
-    productId,
-    productName: product.name,
-    productImage: product.image,
-    platform: platform || product.platform,
-    basePrice: basePrice || product.basePrice,
-    finalPrice: finalPrice || product.basePrice,
-    totalDiscount: totalDiscount || 0,
-    affiliateUrl: affiliateUrl || `https://www.${(platform || "amazon").toLowerCase()}.com`,
-    timestamp: new Date().toISOString()
-  };
+    const redirectEntry = {
+      id: `RED-${Date.now()}`,
+      productId,
+      productName: product.name,
+      productImage: product.image,
+      platform: platform || product.platform,
+      basePrice: basePrice || product.basePrice,
+      finalPrice: finalPrice || product.basePrice,
+      totalDiscount: totalDiscount || 0,
+      affiliateUrl: affiliateUrl || null,
+      timestamp: new Date().toISOString()
+    };
 
-  const redirects = [redirectEntry, ...(user.redirects || [])].slice(0, 25);
+    const redirects = [redirectEntry, ...(user.redirects || [])].slice(0, 25);
 
-  // Award ₹50 Cashback Perks Wallet Bonus for exploring deal via Claim Perks
-  const currentWallet = user.wallet || { balance: 250, transactions: [] };
-  const walletTransaction = {
-    id: `TXN-${Date.now()}`,
-    type: "credit",
-    title: `Perks Bonus: Jumped to ${platform || "Store"}`,
-    amount: 50,
-    date: new Date().toISOString()
-  };
-  const updatedWallet = {
-    balance: (currentWallet.balance || 0) + 50,
-    transactions: [walletTransaction, ...(currentWallet.transactions || [])]
-  };
+    const currentWallet = user.wallet || { balance: 250, transactions: [] };
+    const walletTransaction = {
+      id: `TXN-${Date.now()}`,
+      type: "credit",
+      title: `Perks Bonus: Jumped to ${platform || "Store"}`,
+      amount: 50,
+      date: new Date().toISOString()
+    };
+    const updatedWallet = {
+      balance: (currentWallet.balance || 0) + 50,
+      transactions: [walletTransaction, ...(currentWallet.transactions || [])]
+    };
 
-  updateUser(user.id, { redirects, wallet: updatedWallet });
+    updateUser(user.id, { redirects, wallet: updatedWallet });
 
-  res.status(201).json({ success: true, redirect: redirectEntry, wallet: updatedWallet });
+    res.status(201).json({ success: true, redirect: redirectEntry, wallet: updatedWallet });
+  } catch (err) {
+    res.status(500).json({ error: "Failed to log redirect", details: err.message });
+  }
 });
 
 // DELETE /api/user/redirects -> clear all explored deal redirects
@@ -181,76 +217,77 @@ router.get("/orders", (req, res) => {
 });
 
 // POST /api/user/orders -> create a new order & invoice
-router.post("/orders", (req, res) => {
-  const user = findById(req.user.id);
-  if (!user) return res.status(404).json({ error: "User not found" });
+router.post("/orders", async (req, res) => {
+  try {
+    const user = findById(req.user.id);
+    if (!user) return res.status(404).json({ error: "User not found" });
 
-  const { productId, paymentMethod, shippingAddress, cardOrUpi } = req.body;
-  const product = products.find((p) => p.id === productId);
-  if (!product) return res.status(404).json({ error: "Product not found" });
+    const { productId, paymentMethod, shippingAddress, cardOrUpi } = req.body;
+    const product = await findProductById(productId);
+    if (!product) return res.status(404).json({ error: "Product not found" });
 
-  // Calculate prices
-  const offersData = require("../data/offers.json");
-  const { readCoupons } = require("../utils/couponStore");
-  const { calculateBestPrice } = require("../utils/priceCalculator");
+    const offersData = require("../data/offers.json");
+    const { readCoupons } = require("../utils/couponStore");
+    const { calculateBestPrice } = require("../utils/priceCalculator");
 
-  const baseOffers = offersData[productId] || { coupons: [], cashback: [], bankOffers: [], upiOffers: [] };
-  const approvedCoupons = readCoupons().filter((c) => c.productId === productId && c.status === "approved");
-  const offers = { ...baseOffers, coupons: [...(baseOffers.coupons || []), ...approvedCoupons] };
+    const baseOffers = offersData[productId] || { coupons: [], cashback: [], bankOffers: [], upiOffers: [] };
+    const approvedCoupons = readCoupons().filter((c) => c.productId === productId && c.status === "approved");
+    const offers = { ...baseOffers, coupons: [...(baseOffers.coupons || []), ...approvedCoupons] };
 
-  const priceBreakdown = calculateBestPrice(product.basePrice, offers);
+    const priceBreakdown = calculateBestPrice(product.basePrice, offers);
 
-  const orderId = `ORD-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
-  const invoiceId = `CP-INV-${Math.floor(100000 + Math.random() * 900000)}`;
+    const orderId = `ORD-${Date.now()}-${Math.floor(Math.random() * 1000)}`;
+    const invoiceId = `CP-INV-${Math.floor(100000 + Math.random() * 900000)}`;
 
-  const newOrder = {
-    id: orderId,
-    invoiceId,
-    productId,
-    productName: product.name,
-    productImage: product.image,
-    platform: product.platform,
-    basePrice: priceBreakdown.basePrice,
-    totalDiscount: priceBreakdown.totalDiscount,
-    finalPrice: priceBreakdown.finalPrice,
-    paymentMethod: paymentMethod || "Credit Card",
-    shippingAddress: shippingAddress || user.address || "Main Address",
-    cardOrUpi: cardOrUpi || "•••• 4242",
-    createdAt: new Date().toISOString()
-  };
+    const newOrder = {
+      id: orderId,
+      invoiceId,
+      productId,
+      productName: product.name,
+      productImage: product.image,
+      platform: product.platform,
+      basePrice: priceBreakdown.basePrice,
+      totalDiscount: priceBreakdown.totalDiscount,
+      finalPrice: priceBreakdown.finalPrice,
+      paymentMethod: paymentMethod || "Credit Card",
+      shippingAddress: shippingAddress || user.address || "Main Address",
+      cardOrUpi: cardOrUpi || "•••• 4242",
+      createdAt: new Date().toISOString()
+    };
 
-  const orders = [newOrder, ...(user.orders || [])];
+    const orders = [newOrder, ...(user.orders || [])];
 
-  // Award 5% cashback to user's Perks Wallet for placing an order
-  const earnedCashback = Math.round(priceBreakdown.finalPrice * 0.05);
-  const currentWallet = user.wallet || { balance: 250, transactions: [] };
-  const walletTransaction = {
-    id: `TXN-${Date.now()}`,
-    type: "credit",
-    title: `Cashback: ${product.name}`,
-    amount: earnedCashback,
-    date: new Date().toISOString()
-  };
-  const updatedWallet = {
-    balance: (currentWallet.balance || 0) + earnedCashback,
-    transactions: [walletTransaction, ...(currentWallet.transactions || [])]
-  };
+    const earnedCashback = Math.round(priceBreakdown.finalPrice * 0.05);
+    const currentWallet = user.wallet || { balance: 250, transactions: [] };
+    const walletTransaction = {
+      id: `TXN-${Date.now()}`,
+      type: "credit",
+      title: `Cashback: ${product.name}`,
+      amount: earnedCashback,
+      date: new Date().toISOString()
+    };
+    const updatedWallet = {
+      balance: (currentWallet.balance || 0) + earnedCashback,
+      transactions: [walletTransaction, ...(currentWallet.transactions || [])]
+    };
 
-  // Create notification
-  const notifications = [
-    {
-      id: `NOTIF-${Date.now()}`,
-      title: "Order Placed & Cashback Earned! 🎉",
-      message: `You earned ₹${earnedCashback} cashback in your Perks Wallet for ordering ${product.name}!`,
-      date: new Date().toISOString(),
-      read: false
-    },
-    ...(user.notifications || [])
-  ];
+    const notifications = [
+      {
+        id: `NOTIF-${Date.now()}`,
+        title: "Order Placed & Cashback Earned! 🎉",
+        message: `You earned ₹${earnedCashback} cashback in your Perks Wallet for ordering ${product.name}!`,
+        date: new Date().toISOString(),
+        read: false
+      },
+      ...(user.notifications || [])
+    ];
 
-  updateUser(user.id, { orders, wallet: updatedWallet, notifications });
+    updateUser(user.id, { orders, wallet: updatedWallet, notifications });
 
-  res.status(201).json(newOrder);
+    res.status(201).json(newOrder);
+  } catch (err) {
+    res.status(500).json({ error: "Failed to create order", details: err.message });
+  }
 });
 
 // GET /api/user/wallet -> return wallet balance & transactions

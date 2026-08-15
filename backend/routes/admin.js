@@ -3,17 +3,36 @@ const router = express.Router();
 const { requireAuth, requireRole } = require("../middleware/auth");
 const { readCoupons, updateCoupon } = require("../utils/couponStore");
 const { readUsers } = require("../utils/userStore");
-const products = require("../data/products.json");
+const Product = require("../models/product");
+const productsJSON = require("../data/products.json");
+
+async function findProductById(id) {
+  let product = await Product.findOne({ id }).lean();
+  if (!product) {
+    product = productsJSON.find((p) => p.id === id);
+  }
+  return product;
+}
 
 router.use(requireAuth, requireRole("admin"));
 
-// GET /api/admin/coupons?status=pending  (status optional: pending|approved|rejected)
-router.get("/coupons", (req, res) => {
-  const { status } = req.query;
-  let coupons = readCoupons();
-  if (status) coupons = coupons.filter((c) => c.status === status);
-  const withProduct = coupons.map((c) => ({ ...c, product: products.find((p) => p.id === c.productId) }));
-  res.json({ coupons: withProduct });
+// GET /api/admin/coupons?status=pending
+router.get("/coupons", async (req, res) => {
+  try {
+    const { status } = req.query;
+    let coupons = readCoupons();
+    if (status) coupons = coupons.filter((c) => c.status === status);
+    
+    const withProduct = [];
+    for (const c of coupons) {
+      const product = await findProductById(c.productId);
+      withProduct.push({ ...c, product });
+    }
+
+    res.json({ coupons: withProduct });
+  } catch (err) {
+    res.status(500).json({ error: "Failed to fetch admin coupons", details: err.message });
+  }
 });
 
 // POST /api/admin/coupons/:id/approve
@@ -30,13 +49,13 @@ router.post("/coupons/:id/reject", (req, res) => {
   res.json({ coupon: updated });
 });
 
-// GET /api/admin/users -> user management list (no password hashes)
+// GET /api/admin/users
 router.get("/users", (req, res) => {
   const users = readUsers().map(({ passwordHash, ...rest }) => rest);
   res.json({ users });
 });
 
-// GET /api/admin/stats -> quick counts for the admin analytics dashboard
+// GET /api/admin/stats
 router.get("/stats", (req, res) => {
   const users = readUsers();
   const coupons = readCoupons();

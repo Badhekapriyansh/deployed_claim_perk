@@ -10,6 +10,8 @@ const authRoutes = require("./routes/auth");
 const userRoutes = require("./routes/user");
 const businessRoutes = require("./routes/business");
 const adminRoutes = require("./routes/admin");
+const ingestionRoutes = require("./routes/ingestion");
+const Offer = require("./models/offer");
 const { findByEmail, addUser } = require("./utils/userStore");
 
 const app = express();
@@ -44,6 +46,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/user", userRoutes);
 app.use("/api/business", businessRoutes);
 app.use("/api/admin", adminRoutes);
+app.use("/api/ingestion", ingestionRoutes);
 
 app.get("/", (req, res) => {
   res.json({

@@ -135,10 +135,10 @@ export default function CompareModal({ productIds, onClose, onSelectForCheckout 
                           onClick={() => {
                             onClose();
                             onSelectForCheckout(product, {
-                              platform: product.platform || "Amazon",
+                              platform: product.platform || "Official Store",
                               logo: "🛒",
                               basePrice: priceBreakdown.basePrice,
-                              affiliateUrl: `https://www.amazon.in/dp/${product.id}?tag=claimperks-21`,
+                              affiliateUrl: product.affiliateUrl || product.url || null,
                               priceBreakdown
                             });
                           }}

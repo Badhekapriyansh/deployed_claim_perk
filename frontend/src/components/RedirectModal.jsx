@@ -6,7 +6,16 @@ export default function RedirectModal({ product, deal, onClose, user }) {
   const { platform, logo, basePrice, affiliateUrl, priceBreakdown } = deal;
   const { bestCoupon, bestBankOffer, bestUpiOffer, bestCashback, totalDiscount, finalPrice } = priceBreakdown;
 
+  const isValidUrl = Boolean(
+    affiliateUrl &&
+    typeof affiliateUrl === "string" &&
+    affiliateUrl.trim() !== "" &&
+    affiliateUrl.toLowerCase() !== "null" &&
+    affiliateUrl.toLowerCase() !== "undefined"
+  );
+
   const handleContinue = async () => {
+    if (!isValidUrl) return;
     if (user) {
       logRedirect({
         productId: product.id,
@@ -131,10 +140,15 @@ export default function RedirectModal({ product, deal, onClose, user }) {
             </button>
             <button
               onClick={handleContinue}
-              className="flex-2 bg-forest text-white py-3 px-4 text-xs font-semibold rounded-xl hover:bg-forest-light transition-colors shadow-sm flex items-center justify-center gap-1.5"
+              disabled={!isValidUrl}
+              className={`flex-2 py-3 px-4 text-xs font-semibold rounded-xl transition-colors shadow-sm flex items-center justify-center gap-1.5 ${
+                isValidUrl
+                  ? "bg-forest text-white hover:bg-forest-light cursor-pointer"
+                  : "bg-gray-300 text-gray-600 cursor-not-allowed"
+              }`}
             >
-              <span>Continue to {platform}</span>
-              <span>→</span>
+              <span>{isValidUrl ? `Continue to ${platform}` : "Direct Link Unavailable"}</span>
+              {isValidUrl && <span>→</span>}
             </button>
           </div>
         </div>

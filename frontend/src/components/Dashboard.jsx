@@ -118,14 +118,20 @@ export default function Dashboard({ onSelectProduct }) {
                     <p className="font-mono text-base font-bold text-ink">₹{red.finalPrice.toLocaleString("en-IN")}</p>
                   </div>
 
-                  <a
-                    href={red.affiliateUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-forest text-white text-xs font-semibold px-3 py-2 rounded-lg hover:bg-forest-light transition-colors whitespace-nowrap"
-                  >
-                    Open Store ↗
-                  </a>
+                  {red.affiliateUrl && red.affiliateUrl.toLowerCase() !== "null" && red.affiliateUrl.toLowerCase() !== "undefined" ? (
+                    <a
+                      href={red.affiliateUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-forest text-white text-xs font-semibold px-3 py-2 rounded-lg hover:bg-forest-light transition-colors whitespace-nowrap"
+                    >
+                      Open Store ↗
+                    </a>
+                  ) : (
+                    <span className="bg-gray-200 text-gray-600 text-xs font-semibold px-3 py-2 rounded-lg whitespace-nowrap">
+                      Direct Link Unavailable
+                    </span>
+                  )}
 
                   <button
                     onClick={(e) => handleDeleteRedirectItem(e, red.id)}
