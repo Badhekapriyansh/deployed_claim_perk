@@ -12,6 +12,7 @@ const businessRoutes = require("./routes/business");
 const adminRoutes = require("./routes/admin");
 const ingestionRoutes = require("./routes/ingestion");
 const { findByEmail, addUser } = require("./utils/userStore");
+const Offer = require("./models/offer");
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -68,6 +69,7 @@ app.get("/", (req, res) => {
 });
 
 connectDB().then(() => {
+  Offer.syncIndexes().catch((err) => console.error("Offer index sync error:", err.message));
   seedAdmin().then(() => {
     app.listen(PORT, () => {
       console.log(`Claim Perks API running on http://localhost:${PORT}`);

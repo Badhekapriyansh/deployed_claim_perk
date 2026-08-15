@@ -20,13 +20,14 @@ const validateRow = (row) => {
 const cleanRow = (row) => {
   const name = (row.product_name || row.name || "").trim();
   const price = parseFloat(row.price);
-  
+  const vendor = (row.vendor || "").trim() || "Unknown Vendor";
+
   // Create a normalized object
   const cleaned = {
     ...row,
     product_name: name,
     price: price,
-    vendor: (row.vendor || "").trim(),
+    vendor: vendor,
     url: (row.url || "").trim()
   };
 
@@ -54,7 +55,7 @@ const ingestItems = async (items) => {
 
   for (let i = 0; i < items.length; i++) {
     const rawItem = items[i];
-    
+
     // 1. Validation
     const validationErrors = validateRow(rawItem);
     if (validationErrors.length > 0) {
@@ -73,22 +74,23 @@ const ingestItems = async (items) => {
       if (mappingResult.status === "matched") {
         // 4. Persistence
         const productId = mappingResult.productId;
+        const vendor = cleanedItem.vendor || "Unknown Vendor";
 
-        // Upsert offer (keeping existing logic intact where offer schema has unique productId)
+        // Upsert offer using BOTH productId and vendor
         await Offer.findOneAndUpdate(
-          { productId },
-          { $set: { ...cleanedItem, productId, updatedFromIngestion: true } },
+          { productId, vendor },
+          { $set: { ...cleanedItem, productId, vendor, updatedFromIngestion: true } },
           { upsert: true, new: true }
         );
 
-        // Optionally upsert product if it somehow doesn't exist but mapping matched it
+        // Optionally upsert product if it doesn't exist yet
         await Product.findOneAndUpdate(
           { id: productId },
           { $setOnInsert: { id: productId, name: cleanedItem.product_name, createdFromIngestion: true } },
           { upsert: true }
         );
 
-        result.matched.push({ index: i, item: cleanedItem, productId });
+        result.matched.push({ index: i, item: cleanedItem, productId, vendor });
         result.successCount++;
 
       } else if (mappingResult.status === "review_required") {

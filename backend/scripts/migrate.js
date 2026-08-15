@@ -51,10 +51,12 @@ async function migrate() {
 
     // OFFERS
     await Offer.deleteMany({});
+    await Offer.syncIndexes();
 
     const offerDocuments = Object.entries(offers).map(
       ([productId, offerData]) => ({
         productId,
+        vendor: offerData.vendor || "Unknown Vendor",
         ...offerData
       })
     );
