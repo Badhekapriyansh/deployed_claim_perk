@@ -5,7 +5,7 @@ export default function Header({
   onDashboardClick,
   onHomeClick,
   onProfileClick,
-  // onOpenAi,
+  onOpenAi,
   onOpenWallet,
   currentView
 }) {
@@ -45,7 +45,7 @@ export default function Header({
           <button onClick={onDashboardClick} className={navLinkClass(currentView === "dashboard")}>
             {dashboardLabel}
           </button>
-          {/* {onOpenAi && (
+          {onOpenAi && (
             <button
               onClick={onOpenAi}
               className="text-xs font-semibold text-forest bg-forest/10 hover:bg-forest/20 border border-forest/30 px-3 py-1.5 rounded-full flex items-center gap-1.5 transition-colors shadow-sm"
@@ -53,11 +53,11 @@ export default function Header({
               <span>🤖</span>
               <span>Ask Perks AI</span>
             </button>
-          )} */}
+          )}
         </nav>
 
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-          {user && user.role === "shopper" && onOpenWallet && (
+          {user && user.role === "user" && onOpenWallet && (
             <button
               onClick={onOpenWallet}
               title="Perks Rewards Wallet"
@@ -105,7 +105,7 @@ export default function Header({
             {dashboardLabel}
           </button>
         </div>
-        {/* {onOpenAi && (
+        {onOpenAi && (
           <button
             onClick={onOpenAi}
             className="text-[11px] font-semibold text-forest bg-forest/10 border border-forest/30 px-2.5 py-1 rounded-full flex items-center gap-1"
@@ -113,7 +113,7 @@ export default function Header({
             <span>🤖</span>
             <span>Perks AI</span>
           </button>
-        )} */}
+        )}
       </nav>
     </header>
   );
