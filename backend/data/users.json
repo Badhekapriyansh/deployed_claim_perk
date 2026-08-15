@@ -13,7 +13,7 @@
       },
       {
         "productId": "p1",
-        "viewedAt": "2026-08-07T13:03:42.752Z"
+        "viewedAt": "2026-08-15T11:43:43.826Z"
       }
     ],
     "createdAt": "2026-07-31T10:42:08.818Z",
@@ -472,8 +472,92 @@
     "email": "badheka2409@gmail.com",
     "passwordHash": "$2a$10$Fn3akp68Bms.yltzaWUiBOqe4TgxccR.VXOW.SCYrcRdrP9O7UNSO",
     "role": "user",
-    "favorites": [],
+    "favorites": [
+      "p1"
+    ],
     "history": [],
     "createdAt": "2026-08-13T17:50:06.321Z"
+  },
+  {
+    "id": "07a08099-74e5-4689-9e8a-82446ba7e9a1",
+    "name": "E2E User Updated",
+    "email": "e2e_user_1786791873273@example.com",
+    "passwordHash": "$2a$10$kaWozz/iiT2DzgfNGfEzLeJAAeVKGprwUkY1fifH8ZwFBX8jv3RRS",
+    "role": "user",
+    "favorites": [],
+    "history": [],
+    "createdAt": "2026-08-15T11:04:33.433Z",
+    "address": "456 Park Ave",
+    "redirects": [],
+    "wallet": {
+      "balance": 290,
+      "transactions": [
+        {
+          "id": "WD-1786791873882",
+          "type": "debit",
+          "title": "UPI Transfer to user@upi",
+          "amount": 10,
+          "date": "2026-08-15T11:04:33.882Z"
+        },
+        {
+          "id": "TXN-1786791873864",
+          "type": "credit",
+          "title": "Cashback: Fortune Sunflower Oil 1L",
+          "amount": 0,
+          "date": "2026-08-15T11:04:33.864Z"
+        },
+        {
+          "id": "TXN-1786791873827",
+          "type": "credit",
+          "title": "Perks Bonus: Jumped to Amazon",
+          "amount": 50,
+          "date": "2026-08-15T11:04:33.827Z"
+        }
+      ]
+    },
+    "orders": [
+      {
+        "id": "ORD-1786791873863-328",
+        "invoiceId": "CP-INV-261079",
+        "productId": "p84",
+        "productName": "Fortune Sunflower Oil 1L",
+        "productImage": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80",
+        "platform": "BigBasket",
+        "basePrice": 178,
+        "totalDiscount": 305,
+        "finalPrice": 0,
+        "paymentMethod": "UPI",
+        "shippingAddress": "456 Park Ave",
+        "cardOrUpi": "user@upi",
+        "createdAt": "2026-08-15T11:04:33.863Z"
+      }
+    ],
+    "notifications": [
+      {
+        "id": "NOTIF-1786791873864",
+        "title": "Order Placed & Cashback Earned! 🎉",
+        "message": "You earned ₹0 cashback in your Perks Wallet for ordering Fortune Sunflower Oil 1L!",
+        "date": "2026-08-15T11:04:33.864Z",
+        "read": false
+      }
+    ],
+    "priceAlerts": [
+      {
+        "productId": "p84",
+        "targetPrice": 50000,
+        "createdAt": "2026-08-15T11:04:33.895Z"
+      }
+    ]
+  },
+  {
+    "id": "c0177a9b-8d67-4587-bd39-c4a8fa4ba2f8",
+    "name": "Business Partner",
+    "email": "e2e_biz_1786791873904@example.com",
+    "passwordHash": "$2a$10$iCauTNV/WvFSNtA1kROGTuirbgC3oIRWeGbZCdSXf9M0Fu9jxpJdq",
+    "role": "business",
+    "businessName": "SuperDeals Ltd",
+    "favorites": [],
+    "history": [],
+    "createdAt": "2026-08-15T11:04:34.047Z"
   }
 ]
