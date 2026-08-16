@@ -1,4 +1,5 @@
-require("dotenv").config();
+const path = require("path");
+require("dotenv").config({ path: path.join(__dirname, "../.env") });
 const mongoose = require("mongoose");
 const Product = require("../models/product");
 const Offer = require("../models/offer");
@@ -9,7 +10,8 @@ async function runFullTestSuite() {
   console.log("CLAIMPERKS INGESTION & DATA FLOW QA SUITE");
   console.log("=========================================\n");
 
-  await mongoose.connect(process.env.MONGODB_URI);
+  const mongoUri = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/mydata";
+  await mongoose.connect(mongoUri);
   console.log("Connected to MongoDB:", mongoose.connection.name);
 
   let passed = 0;

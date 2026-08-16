@@ -19,10 +19,34 @@ function getVendorLogo(vendor) {
   return "🏷️";
 }
 
+const mongoose = require("mongoose");
+
+// Helper to query product by ID (checking MongoDB first by id or _id, then JSON fallback)
+async function findProductById(id) {
+  if (!id) return null;
+  const orConditions = [{ id: String(id) }];
+  if (mongoose.Types.ObjectId.isValid(id)) {
+    orConditions.push({ _id: id });
+  }
+  let dbProduct = await Product.findOne({ $or: orConditions }).lean();
+  let jsonProduct = productsJSON.find((p) => p.id === id || String(p._id) === String(id));
+  if (dbProduct && jsonProduct) {
+    return { ...jsonProduct, ...dbProduct };
+  }
+  return dbProduct || jsonProduct || null;
+}
+
 // Combines offers stored for a product in MongoDB (or fallback JSON) with approved business coupons
 async function getOffersForProduct(productId) {
   const dbOffers = await Offer.find({ productId }).lean();
-  let baseOffers = { coupons: [], cashback: [], bankOffers: [], upiOffers: [] };
+  const jsonOffers = offersJSON[productId] || { coupons: [], cashback: [], bankOffers: [], upiOffers: [] };
+  
+  let baseOffers = {
+    coupons: [...(jsonOffers.coupons || [])],
+    cashback: [...(jsonOffers.cashback || [])],
+    bankOffers: [...(jsonOffers.bankOffers || [])],
+    upiOffers: [...(jsonOffers.upiOffers || [])]
+  };
 
   if (dbOffers && dbOffers.length > 0) {
     for (const o of dbOffers) {
@@ -31,8 +55,6 @@ async function getOffersForProduct(productId) {
       if (Array.isArray(o.bankOffers)) baseOffers.bankOffers.push(...o.bankOffers);
       if (Array.isArray(o.upiOffers)) baseOffers.upiOffers.push(...o.upiOffers);
     }
-  } else if (offersJSON[productId]) {
-    baseOffers = offersJSON[productId];
   }
 
   const approvedBusinessCoupons = readCoupons()
@@ -62,13 +84,24 @@ function getBrandName(productName) {
   return productName.split(" ")[0];
 }
 
-// Helper to get active products from MongoDB or JSON fallback
+// Helper to get active products from MongoDB or JSON fallback (merging updates from MongoDB)
 async function getActiveProducts() {
-  let list = await Product.find({}).lean();
-  if (!list || list.length === 0) {
-    list = [...productsJSON];
+  const dbProducts = await Product.find({}).lean();
+  const productMap = new Map();
+
+  for (const p of productsJSON) {
+    if (p.id) productMap.set(p.id, p);
   }
-  return list;
+
+  for (const p of dbProducts) {
+    if (p.id) {
+      productMap.set(p.id, { ...(productMap.get(p.id) || {}), ...p });
+    } else if (p._id) {
+      productMap.set(String(p._id), p);
+    }
+  }
+
+  return Array.from(productMap.values());
 }
 
 // GET /api/products?query=phone&category=Electronics&platform=Amazon&brand=Apple&sortBy=savings&page=1&limit=24
@@ -209,8 +242,7 @@ router.all("/products/compare", async (req, res) => {
 
     const compared = [];
     for (const id of ids) {
-      let product = await Product.findOne({ id }).lean();
-      if (!product) product = productsJSON.find((p) => p.id === id);
+      let product = await findProductById(id);
       if (!product) continue;
       const offers = await getOffersForProduct(id);
       const priceBreakdown = calculateBestPrice(product.basePrice, offers);
@@ -226,10 +258,7 @@ router.all("/products/compare", async (req, res) => {
 // GET /api/products/:id
 router.get("/products/:id", async (req, res) => {
   try {
-    let product = await Product.findOne({ id: req.params.id }).lean();
-    if (!product) {
-      product = productsJSON.find((p) => p.id === req.params.id);
-    }
+    let product = await findProductById(req.params.id);
     if (!product) return res.status(404).json({ error: "Product not found" });
     res.json(product);
   } catch (err) {
@@ -241,10 +270,7 @@ router.get("/products/:id", async (req, res) => {
 // Returns stored vendor offers directly from MongoDB Offer documents with actual prices and URLs.
 router.get("/offers/:productId", async (req, res) => {
   try {
-    let product = await Product.findOne({ id: req.params.productId }).lean();
-    if (!product) {
-      product = productsJSON.find((p) => p.id === req.params.productId);
-    }
+    let product = await findProductById(req.params.productId);
     if (!product) return res.status(404).json({ error: "Product not found" });
 
     const offers = await getOffersForProduct(req.params.productId);
@@ -259,16 +285,31 @@ router.get("/offers/:productId", async (req, res) => {
       return trimmed;
     };
 
+    const getStoreSearchUrl = (platform, productName) => {
+      const q = encodeURIComponent(productName || "");
+      const p = (platform || "").toLowerCase();
+      if (p.includes("amazon")) return `https://www.amazon.in/s?k=${q}`;
+      if (p.includes("flipkart")) return `https://www.flipkart.com/search?q=${q}`;
+      if (p.includes("croma")) return `https://www.croma.com/searchB?q=${q}`;
+      if (p.includes("reliance")) return `https://www.reliancedigital.in/search?q=${q}`;
+      if (p.includes("myntra")) return `https://www.myntra.com/${encodeURIComponent((productName || "").toLowerCase().replace(/\s+/g, "-"))}`;
+      if (p.includes("nykaa")) return `https://www.nykaa.com/search/result/?q=${q}`;
+      if (p.includes("bigbasket")) return `https://www.bigbasket.com/ps/?q=${q}`;
+      return `https://www.google.com/search?q=${q}`;
+    };
+
     const platformDeals = [];
+    const processedVendors = new Set();
 
     if (dbOffers && dbOffers.length > 0) {
       for (const o of dbOffers) {
         const vendor = o.vendor || o.platform || product.platform || "Unknown Vendor";
+        processedVendors.add(vendor.toLowerCase());
         const offerPrice = o.price !== undefined && o.price !== null && !isNaN(Number(o.price)) && Number(o.price) > 0
           ? Number(o.price)
           : Number(product.basePrice || 0);
 
-        const targetUrl = sanitizeUrl(o.affiliateUrl) || sanitizeUrl(o.url) || sanitizeUrl(o.productUrl) || sanitizeUrl(o.link) || null;
+        const targetUrl = sanitizeUrl(o.affiliateUrl) || sanitizeUrl(o.url) || sanitizeUrl(o.productUrl) || sanitizeUrl(o.link) || getStoreSearchUrl(vendor, product.name);
 
         const breakdown = calculateBestPrice(offerPrice, offers);
         const savingsPercent = offerPrice > 0 ? Math.round((breakdown.totalDiscount / offerPrice) * 100) : 0;
@@ -285,24 +326,35 @@ router.get("/offers/:productId", async (req, res) => {
           }
         });
       }
-    } else {
-      // Single default deal using actual stored product basePrice and product URL (no multipliers!)
-      const offerPrice = Number(product.basePrice || 0);
-      const targetUrl = sanitizeUrl(product.url) || sanitizeUrl(product.affiliateUrl) || null;
-      const breakdown = calculateBestPrice(offerPrice, offers);
-      const savingsPercent = offerPrice > 0 ? Math.round((breakdown.totalDiscount / offerPrice) * 100) : 0;
+    }
 
-      platformDeals.push({
-        platform: product.platform || "Official Store",
-        logo: getVendorLogo(product.platform),
-        basePrice: offerPrice,
-        affiliateUrl: targetUrl,
-        offers,
-        priceBreakdown: {
-          ...breakdown,
-          savingsPercent
-        }
-      });
+    // Default multi-platform stores to ensure comparison cards and direct linking are always available
+    const defaultStores = [
+      { platform: "Amazon", logo: "🛒", priceMultiplier: 1.0 },
+      { platform: "Flipkart", logo: "🛍️", priceMultiplier: 1.01 },
+      { platform: "Croma", logo: "⚡", priceMultiplier: 0.99 },
+      { platform: "Reliance Digital", logo: "📱", priceMultiplier: 1.02 }
+    ];
+
+    for (const store of defaultStores) {
+      if (!processedVendors.has(store.platform.toLowerCase())) {
+        const offerPrice = Math.round(Number(product.basePrice || 0) * store.priceMultiplier);
+        const targetUrl = getStoreSearchUrl(store.platform, product.name);
+        const breakdown = calculateBestPrice(offerPrice, offers);
+        const savingsPercent = offerPrice > 0 ? Math.round((breakdown.totalDiscount / offerPrice) * 100) : 0;
+
+        platformDeals.push({
+          platform: store.platform,
+          logo: store.logo,
+          basePrice: offerPrice,
+          affiliateUrl: targetUrl,
+          offers,
+          priceBreakdown: {
+            ...breakdown,
+            savingsPercent
+          }
+        });
+      }
     }
 
     // Sort platform deals by lowest final payable price

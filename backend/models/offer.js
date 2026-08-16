@@ -4,8 +4,10 @@ const offerSchema = new mongoose.Schema(
   {
     productId: {
       type: String,
-      required: true,
-      unique: true
+      required: true
+    },
+    vendor: {
+      type: String
     }
   },
   {
@@ -13,5 +15,7 @@ const offerSchema = new mongoose.Schema(
     collection: "offers"
   }
 );
+
+offerSchema.index({ productId: 1, vendor: 1 });
 
 module.exports = mongoose.model("Offer", offerSchema);

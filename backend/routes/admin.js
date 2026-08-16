@@ -6,10 +6,17 @@ const { readUsers } = require("../utils/userStore");
 const Product = require("../models/product");
 const productsJSON = require("../data/products.json");
 
+const mongoose = require("mongoose");
+
 async function findProductById(id) {
-  let product = await Product.findOne({ id }).lean();
+  if (!id) return null;
+  const orConditions = [{ id: String(id) }];
+  if (mongoose.Types.ObjectId.isValid(id)) {
+    orConditions.push({ _id: id });
+  }
+  let product = await Product.findOne({ $or: orConditions }).lean();
   if (!product) {
-    product = productsJSON.find((p) => p.id === id);
+    product = productsJSON.find((p) => p.id === id || String(p._id) === String(id));
   }
   return product;
 }
