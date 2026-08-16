@@ -303,7 +303,11 @@ router.get("/offers/:productId", async (req, res) => {
 
     if (dbOffers && dbOffers.length > 0) {
       for (const o of dbOffers) {
-        const vendor = o.vendor || o.platform || product.platform || "Unknown Vendor";
+        // Only process as a platform deal if this Offer document is vendor-specific from ingestion
+        if (!o.vendor && !o.price && !o.affiliateUrl && !o.url) {
+          continue;
+        }
+        const vendor = o.vendor || o.platform || "Official Store";
         processedVendors.add(vendor.toLowerCase());
         const offerPrice = o.price !== undefined && o.price !== null && !isNaN(Number(o.price)) && Number(o.price) > 0
           ? Number(o.price)

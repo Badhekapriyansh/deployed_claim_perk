@@ -723,5 +723,169 @@
     "favorites": [],
     "history": [],
     "createdAt": "2026-08-16T12:22:33.208Z"
+  },
+  {
+    "id": "907577b4-0c65-456a-ab81-1bc51fa6810e",
+    "name": "E2E User Updated",
+    "email": "e2e_user_1786883159669@example.com",
+    "passwordHash": "$2a$10$5Qihg0K2QRlMR5rZZNNor.D.VY.cNG9vzhb4k1KraagO.iV8bp/Gi",
+    "role": "user",
+    "favorites": [],
+    "history": [],
+    "createdAt": "2026-08-16T12:25:59.801Z",
+    "address": "456 Park Ave",
+    "redirects": [],
+    "wallet": {
+      "balance": 290,
+      "transactions": [
+        {
+          "id": "WD-1786883160211",
+          "type": "debit",
+          "title": "UPI Transfer to user@upi",
+          "amount": 10,
+          "date": "2026-08-16T12:26:00.211Z"
+        },
+        {
+          "id": "TXN-1786883160195",
+          "type": "credit",
+          "title": "Cashback: Britannia Marie Gold Biscuits",
+          "amount": 0,
+          "date": "2026-08-16T12:26:00.195Z"
+        },
+        {
+          "id": "TXN-1786883160159",
+          "type": "credit",
+          "title": "Perks Bonus: Jumped to Amazon",
+          "amount": 50,
+          "date": "2026-08-16T12:26:00.159Z"
+        }
+      ]
+    },
+    "orders": [
+      {
+        "id": "ORD-1786883160195-833",
+        "invoiceId": "CP-INV-749257",
+        "productId": "p89",
+        "productName": "Britannia Marie Gold Biscuits",
+        "productImage": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
+        "platform": "Amazon",
+        "basePrice": 40,
+        "totalDiscount": 305,
+        "finalPrice": 0,
+        "paymentMethod": "UPI",
+        "shippingAddress": "456 Park Ave",
+        "cardOrUpi": "user@upi",
+        "createdAt": "2026-08-16T12:26:00.195Z"
+      }
+    ],
+    "notifications": [
+      {
+        "id": "NOTIF-1786883160195",
+        "title": "Order Placed & Cashback Earned! 🎉",
+        "message": "You earned ₹0 cashback in your Perks Wallet for ordering Britannia Marie Gold Biscuits!",
+        "date": "2026-08-16T12:26:00.195Z",
+        "read": false
+      }
+    ],
+    "priceAlerts": [
+      {
+        "productId": "p89",
+        "targetPrice": 50000,
+        "createdAt": "2026-08-16T12:26:00.225Z"
+      }
+    ]
+  },
+  {
+    "id": "33a3ed77-789e-4897-ab2c-68195b9dd464",
+    "name": "Business Partner",
+    "email": "e2e_biz_1786883160249@example.com",
+    "passwordHash": "$2a$10$1ozT.LElfYLiQl3rWoZbVeeCbUnNUAGKEHH.L04vizw20kle1PCP2",
+    "role": "business",
+    "businessName": "SuperDeals Ltd",
+    "favorites": [],
+    "history": [],
+    "createdAt": "2026-08-16T12:26:00.393Z"
+  },
+  {
+    "id": "ce8d9698-7d07-4f0c-a6c1-48d267db7a66",
+    "name": "E2E User Updated",
+    "email": "e2e_user_1786883378585@example.com",
+    "passwordHash": "$2a$10$SI8fS1pCRU/0Juvhjoho0.xvqE4MLDBN.LDa.zDR4KqlRQJ3TrZyi",
+    "role": "user",
+    "favorites": [],
+    "history": [],
+    "createdAt": "2026-08-16T12:29:38.713Z",
+    "address": "456 Park Ave",
+    "redirects": [],
+    "wallet": {
+      "balance": 290,
+      "transactions": [
+        {
+          "id": "WD-1786883379180",
+          "type": "debit",
+          "title": "UPI Transfer to user@upi",
+          "amount": 10,
+          "date": "2026-08-16T12:29:39.180Z"
+        },
+        {
+          "id": "TXN-1786883379161",
+          "type": "credit",
+          "title": "Cashback: Britannia Marie Gold Biscuits",
+          "amount": 0,
+          "date": "2026-08-16T12:29:39.161Z"
+        },
+        {
+          "id": "TXN-1786883379128",
+          "type": "credit",
+          "title": "Perks Bonus: Jumped to Amazon",
+          "amount": 50,
+          "date": "2026-08-16T12:29:39.128Z"
+        }
+      ]
+    },
+    "orders": [
+      {
+        "id": "ORD-1786883379161-108",
+        "invoiceId": "CP-INV-946194",
+        "productId": "p89",
+        "productName": "Britannia Marie Gold Biscuits",
+        "productImage": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
+        "platform": "Amazon",
+        "basePrice": 40,
+        "totalDiscount": 305,
+        "finalPrice": 0,
+        "paymentMethod": "UPI",
+        "shippingAddress": "456 Park Ave",
+        "cardOrUpi": "user@upi",
+        "createdAt": "2026-08-16T12:29:39.161Z"
+      }
+    ],
+    "notifications": [
+      {
+        "id": "NOTIF-1786883379161",
+        "title": "Order Placed & Cashback Earned! 🎉",
+        "message": "You earned ₹0 cashback in your Perks Wallet for ordering Britannia Marie Gold Biscuits!",
+        "date": "2026-08-16T12:29:39.161Z",
+        "read": false
+      }
+    ],
+    "priceAlerts": [
+      {
+        "productId": "p89",
+        "targetPrice": 50000,
+        "createdAt": "2026-08-16T12:29:39.199Z"
+      }
+    ]
+  },
+  {
+    "id": "572a1b44-f92d-44dc-9e9a-bce7abb5ce02",
+    "name": "Business Partner",
+    "email": "e2e_biz_1786883379223@example.com",
+    "passwordHash": "$2a$10$Zxh1ZMN84DCy1BiQk6HOeODoPgj50Pw2.EsUMz8RZ896coOD04geG",
+    "role": "business",
+    "businessName": "SuperDeals Ltd",
+    "favorites": [],
+    "history": [],
+    "createdAt": "2026-08-16T12:29:39.353Z"
   }
 ]

@@ -75,5 +75,27 @@
     "value": 300,
     "status": "approved",
     "createdAt": "2026-08-16T12:22:33.220Z"
+  },
+  {
+    "id": "b28428f4-6268-48b9-b413-781e38fff3ee",
+    "businessId": "33a3ed77-789e-4897-ab2c-68195b9dd464",
+    "businessName": "SuperDeals Ltd",
+    "productId": "p89",
+    "code": "OFFER8298",
+    "type": "flat",
+    "value": 300,
+    "status": "approved",
+    "createdAt": "2026-08-16T12:26:00.406Z"
+  },
+  {
+    "id": "82259784-ac79-49cd-bc8d-93922cc8c15c",
+    "businessId": "572a1b44-f92d-44dc-9e9a-bce7abb5ce02",
+    "businessName": "SuperDeals Ltd",
+    "productId": "p89",
+    "code": "OFFER2110",
+    "type": "flat",
+    "value": 300,
+    "status": "approved",
+    "createdAt": "2026-08-16T12:29:39.367Z"
   }
 ]
