@@ -559,5 +559,251 @@
     "favorites": [],
     "history": [],
     "createdAt": "2026-08-15T11:04:34.047Z"
+  },
+  {
+    "id": "bc24bc96-39ba-4fa8-98d8-714125abcb96",
+    "name": "E2E User Updated",
+    "email": "e2e_user_1789120277028@example.com",
+    "passwordHash": "$2a$10$aR3nq3wLLx0PFqVsE8L1ueR2S2ZKa/vzsNWtq79QXfbZ78yUJUiVS",
+    "role": "user",
+    "favorites": [],
+    "history": [],
+    "createdAt": "2026-09-11T09:51:17.189Z",
+    "address": "456 Park Ave",
+    "redirects": [],
+    "wallet": {
+      "balance": 290,
+      "transactions": [
+        {
+          "id": "WD-1789120277656",
+          "type": "debit",
+          "title": "UPI Transfer to user@upi",
+          "amount": 10,
+          "date": "2026-09-11T09:51:17.656Z"
+        },
+        {
+          "id": "TXN-1789120277637",
+          "type": "credit",
+          "title": "Cashback: Britannia Marie Gold Biscuits",
+          "amount": 0,
+          "date": "2026-09-11T09:51:17.637Z"
+        },
+        {
+          "id": "TXN-1789120277604",
+          "type": "credit",
+          "title": "Perks Bonus: Jumped to Amazon",
+          "amount": 50,
+          "date": "2026-09-11T09:51:17.604Z"
+        }
+      ]
+    },
+    "orders": [
+      {
+        "id": "ORD-1789120277637-681",
+        "invoiceId": "CP-INV-778879",
+        "productId": "p89",
+        "productName": "Britannia Marie Gold Biscuits",
+        "productImage": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
+        "platform": "Amazon",
+        "basePrice": 40,
+        "totalDiscount": 194,
+        "finalPrice": 0,
+        "paymentMethod": "UPI",
+        "shippingAddress": "456 Park Ave",
+        "cardOrUpi": "user@upi",
+        "createdAt": "2026-09-11T09:51:17.637Z"
+      }
+    ],
+    "notifications": [
+      {
+        "id": "NOTIF-1789120277637",
+        "title": "Order Placed & Cashback Earned! 🎉",
+        "message": "You earned ₹0 cashback in your Perks Wallet for ordering Britannia Marie Gold Biscuits!",
+        "date": "2026-09-11T09:51:17.637Z",
+        "read": false
+      }
+    ],
+    "priceAlerts": [
+      {
+        "productId": "p89",
+        "targetPrice": 50000,
+        "createdAt": "2026-09-11T09:51:17.668Z"
+      }
+    ]
+  },
+  {
+    "id": "df8f969b-cf70-4e37-8b1a-e27a8ec8dc40",
+    "name": "Business Partner",
+    "email": "e2e_biz_1789120277694@example.com",
+    "passwordHash": "$2a$10$mAkunLDUqOUiL6TdXXlvv.GfoHOCQe1wW/84Skm0J7TmQ2G6wVRCS",
+    "role": "business",
+    "businessName": "SuperDeals Ltd",
+    "favorites": [],
+    "history": [],
+    "createdAt": "2026-09-11T09:51:17.837Z"
+  },
+  {
+    "id": "747a8f9d-b39b-439b-b706-0af196751fd1",
+    "name": "E2E User Updated",
+    "email": "e2e_user_1789120587966@example.com",
+    "passwordHash": "$2a$10$L.kUhXfi0YvWTipCRy0lEulfHXIxZthkxveqTZw/XVkPv7UkI10IC",
+    "role": "user",
+    "favorites": [],
+    "history": [],
+    "createdAt": "2026-09-11T09:56:28.102Z",
+    "address": "456 Park Ave",
+    "redirects": [],
+    "wallet": {
+      "balance": 290,
+      "transactions": [
+        {
+          "id": "WD-1789120588517",
+          "type": "debit",
+          "title": "UPI Transfer to user@upi",
+          "amount": 10,
+          "date": "2026-09-11T09:56:28.517Z"
+        },
+        {
+          "id": "TXN-1789120588501",
+          "type": "credit",
+          "title": "Cashback: Britannia Marie Gold Biscuits",
+          "amount": 0,
+          "date": "2026-09-11T09:56:28.501Z"
+        },
+        {
+          "id": "TXN-1789120588465",
+          "type": "credit",
+          "title": "Perks Bonus: Jumped to Amazon",
+          "amount": 50,
+          "date": "2026-09-11T09:56:28.465Z"
+        }
+      ]
+    },
+    "orders": [
+      {
+        "id": "ORD-1789120588501-920",
+        "invoiceId": "CP-INV-214392",
+        "productId": "p89",
+        "productName": "Britannia Marie Gold Biscuits",
+        "productImage": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
+        "platform": "Amazon",
+        "basePrice": 40,
+        "totalDiscount": 305,
+        "finalPrice": 0,
+        "paymentMethod": "UPI",
+        "shippingAddress": "456 Park Ave",
+        "cardOrUpi": "user@upi",
+        "createdAt": "2026-09-11T09:56:28.501Z"
+      }
+    ],
+    "notifications": [
+      {
+        "id": "NOTIF-1789120588501",
+        "title": "Order Placed & Cashback Earned! 🎉",
+        "message": "You earned ₹0 cashback in your Perks Wallet for ordering Britannia Marie Gold Biscuits!",
+        "date": "2026-09-11T09:56:28.501Z",
+        "read": false
+      }
+    ],
+    "priceAlerts": [
+      {
+        "productId": "p89",
+        "targetPrice": 50000,
+        "createdAt": "2026-09-11T09:56:28.530Z"
+      }
+    ]
+  },
+  {
+    "id": "e085ef26-05fa-46c5-ab16-2415242b5bcb",
+    "name": "Business Partner",
+    "email": "e2e_biz_1789120588554@example.com",
+    "passwordHash": "$2a$10$23OoqNHTvSQRfvXDZHDpAONr09fQorYqvBm7osjCmHWnnymq1rtsG",
+    "role": "business",
+    "businessName": "SuperDeals Ltd",
+    "favorites": [],
+    "history": [],
+    "createdAt": "2026-09-11T09:56:28.709Z"
+  },
+  {
+    "id": "d0547171-8282-4b2f-a255-7b8d21793d52",
+    "name": "E2E User Updated",
+    "email": "e2e_user_1789123658374@example.com",
+    "passwordHash": "$2a$10$DAs9tER5nbp7RJSf8MK9LusL1jaWiJLSUcpVRivblZ68V15Xqzo5W",
+    "role": "user",
+    "favorites": [],
+    "history": [],
+    "createdAt": "2026-09-11T10:47:38.459Z",
+    "address": "456 Park Ave",
+    "redirects": [],
+    "wallet": {
+      "balance": 290,
+      "transactions": [
+        {
+          "id": "WD-1789123658725",
+          "type": "debit",
+          "title": "UPI Transfer to user@upi",
+          "amount": 10,
+          "date": "2026-09-11T10:47:38.725Z"
+        },
+        {
+          "id": "TXN-1789123658713",
+          "type": "credit",
+          "title": "Cashback: Faber-Castell Colour Pencils",
+          "amount": 0,
+          "date": "2026-09-11T10:47:38.713Z"
+        },
+        {
+          "id": "TXN-1789123658691",
+          "type": "credit",
+          "title": "Perks Bonus: Jumped to Amazon",
+          "amount": 50,
+          "date": "2026-09-11T10:47:38.691Z"
+        }
+      ]
+    },
+    "orders": [
+      {
+        "id": "ORD-1789123658712-615",
+        "invoiceId": "CP-INV-920097",
+        "productId": "p120",
+        "productName": "Faber-Castell Colour Pencils",
+        "productImage": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
+        "platform": "Amazon",
+        "basePrice": 108,
+        "totalDiscount": 203,
+        "finalPrice": 0,
+        "paymentMethod": "UPI",
+        "shippingAddress": "456 Park Ave",
+        "cardOrUpi": "user@upi",
+        "createdAt": "2026-09-11T10:47:38.712Z"
+      }
+    ],
+    "notifications": [
+      {
+        "id": "NOTIF-1789123658713",
+        "title": "Order Placed & Cashback Earned! 🎉",
+        "message": "You earned ₹0 cashback in your Perks Wallet for ordering Faber-Castell Colour Pencils!",
+        "date": "2026-09-11T10:47:38.713Z",
+        "read": false
+      }
+    ],
+    "priceAlerts": [
+      {
+        "productId": "p120",
+        "targetPrice": 50000,
+        "createdAt": "2026-09-11T10:47:38.735Z"
+      }
+    ]
+  },
+  {
+    "id": "fa941978-d411-4eab-ac38-2cc0ef229ba7",
+    "name": "Business Partner",
+    "email": "e2e_biz_1789123658750@example.com",
+    "passwordHash": "$2a$10$ERy6Ac87wA7AIRoYIue3WebF60ubfNwTq/U2Rlkb7Aor0DeKsM1TK",
+    "role": "business",
+    "businessName": "SuperDeals Ltd",
+    "favorites": [],
+    "history": [],
+    "createdAt": "2026-09-11T10:47:38.835Z"
   }
 ]

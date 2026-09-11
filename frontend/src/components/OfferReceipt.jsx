@@ -77,7 +77,7 @@ export default function OfferReceipt({
         {/* Body */}
         <div className="p-6 overflow-y-auto flex-1 space-y-5">
           {/* Best Overall Deal Banner */}
-          {bestDeal && (
+          {bestDeal && bestDeal.priceBreakdown ? (
             <div className="bg-forest/10 border border-forest/30 rounded-2xl p-4 flex items-center justify-between">
               <div>
                 <span className="text-[10px] uppercase font-mono font-bold text-forest bg-forest/20 px-2 py-0.5 rounded">
@@ -99,6 +99,15 @@ export default function OfferReceipt({
                 <span>→</span>
               </button>
             </div>
+          ) : (
+            <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-center">
+              <p className="font-display font-semibold text-sm text-amber-900">
+                No verified price currently available for this product
+              </p>
+              <p className="text-xs text-amber-700 mt-0.5">
+                Subscribe to a price drop alert below to receive updates as soon as verified offers are added.
+              </p>
+            </div>
           )}
 
           {/* Coupon Code Banner */}
@@ -118,65 +127,99 @@ export default function OfferReceipt({
           )}
 
           {/* Platform Deals List */}
-          <div className="space-y-3">
-            <h4 className="font-display font-semibold text-xs text-muted uppercase font-mono tracking-wider">
-              Store Price Comparison ({platformDeals.length} Platforms)
-            </h4>
+          {(() => {
+            const uniqueDeals = [];
+            const seenPlatforms = new Set();
+            for (const deal of platformDeals) {
+              const hasValidPrice = deal.isAvailable !== false && deal.basePrice !== null && deal.basePrice > 0 && deal.priceBreakdown;
+              const hasDirectLink = Boolean(
+                deal.affiliateUrl &&
+                typeof deal.affiliateUrl === "string" &&
+                deal.affiliateUrl.trim() !== "" &&
+                deal.affiliateUrl.toLowerCase() !== "null" &&
+                deal.affiliateUrl.toLowerCase() !== "undefined"
+              );
 
-            {platformDeals.map((deal) => (
-              <div
-                key={deal.platform}
-                className={`border rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-all ${
-                  deal.platform === bestDeal?.platform
-                    ? "border-forest bg-forest/5 shadow-sm"
-                    : "border-line bg-white hover:border-forest/50"
-                }`}
-              >
-                <div className="flex items-center gap-3">
-                  <span className="text-3xl">{deal.logo}</span>
-                  <div>
-                    <div className="flex items-center gap-2">
-                      <h4 className="font-display font-bold text-sm text-ink">{deal.platform}</h4>
-                      {deal.platform === bestDeal?.platform && (
-                        <span className="text-[9px] font-mono font-bold uppercase bg-forest text-white px-1.5 py-0.5 rounded">
-                          Best Price
-                        </span>
-                      )}
+              // Strictly filter out any deal without verified pricing or direct link
+              if (!hasValidPrice || !hasDirectLink) continue;
+
+              const pKey = (deal.platform || "").trim().toLowerCase();
+              if (!seenPlatforms.has(pKey)) {
+                seenPlatforms.add(pKey);
+                uniqueDeals.push(deal);
+              }
+            }
+
+            if (uniqueDeals.length === 0) return null;
+
+            return (
+              <div className="space-y-3">
+                <h4 className="font-display font-semibold text-xs text-muted uppercase font-mono tracking-wider">
+                  Store Price Comparison ({uniqueDeals.length} {uniqueDeals.length === 1 ? "Platform" : "Platforms"})
+                </h4>
+
+                {uniqueDeals.map((deal) => {
+                  const isWinningDeal = bestDeal && deal.platform === bestDeal.platform;
+
+                  return (
+                    <div
+                      key={deal.platform}
+                      className={`border rounded-xl p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4 transition-all ${
+                        isWinningDeal
+                          ? "border-forest bg-forest/5 shadow-sm"
+                          : "border-line bg-white hover:border-forest/50"
+                      }`}
+                    >
+                      <div className="flex items-center gap-3">
+                        <span className="text-3xl">{deal.logo}</span>
+                        <div>
+                          <div className="flex items-center gap-2">
+                            <h4 className="font-display font-bold text-sm text-ink">{deal.platform}</h4>
+                            {isWinningDeal && (
+                              <span className="text-[9px] font-mono font-bold uppercase bg-forest text-white px-1.5 py-0.5 rounded">
+                                Best Price
+                              </span>
+                            )}
+                          </div>
+                          <p className="text-xs text-muted font-mono mt-0.5">
+                            List: ₹{deal.basePrice.toLocaleString("en-IN")} · Perks: -₹{deal.priceBreakdown.totalDiscount.toLocaleString("en-IN")}
+                          </p>
+                          {deal.priceBreakdown.bestPaymentMethod && (
+                            <p className="text-[10px] text-forest font-semibold mt-1">
+                              💳 Pay via {deal.priceBreakdown.bestPaymentMethod.label} for max savings
+                            </p>
+                          )}
+                        </div>
+                      </div>
+
+                      <div className="flex items-center justify-between sm:justify-end gap-4 border-t sm:border-t-0 border-line pt-2 sm:pt-0">
+                        <div className="text-left sm:text-right">
+                          <span className="text-[10px] text-forest font-bold font-mono block">
+                            Save {deal.priceBreakdown.savingsPercent}% OFF
+                          </span>
+                          <span className="font-mono text-lg font-bold text-forest">
+                            ₹{deal.priceBreakdown.finalPrice.toLocaleString("en-IN")}
+                          </span>
+                        </div>
+
+                        <button
+                          onClick={() => onSelectDeal(deal)}
+                          className="bg-forest text-white text-xs font-semibold px-4 py-2.5 rounded-xl hover:bg-forest-light transition-colors shadow-sm whitespace-nowrap"
+                        >
+                          View Deal →
+                        </button>
+                      </div>
                     </div>
-                    <p className="text-xs text-muted font-mono mt-0.5">
-                      List: ₹{deal.basePrice.toLocaleString("en-IN")} · Perks: -₹{deal.priceBreakdown.totalDiscount.toLocaleString("en-IN")}
-                    </p>
-                    {deal.priceBreakdown.bestPaymentMethod && (
-                      <p className="text-[10px] text-forest font-semibold mt-1">
-                        💳 Pay via {deal.priceBreakdown.bestPaymentMethod.label} for max savings
-                      </p>
-                    )}
-                  </div>
-                </div>
-
-                <div className="flex items-center justify-between sm:justify-end gap-4 border-t sm:border-t-0 border-line pt-2 sm:pt-0">
-                  <div className="text-left sm:text-right">
-                    <span className="text-[10px] text-forest font-bold font-mono block">
-                      Save {deal.priceBreakdown.savingsPercent}% OFF
-                    </span>
-                    <span className="font-mono text-lg font-bold text-forest">
-                      ₹{deal.priceBreakdown.finalPrice.toLocaleString("en-IN")}
-                    </span>
-                  </div>
-
-                  <button
-                    onClick={() => onSelectDeal(deal)}
-                    className="bg-forest text-white text-xs font-semibold px-4 py-2.5 rounded-xl hover:bg-forest-light transition-colors shadow-sm whitespace-nowrap"
-                  >
-                    View Deal →
-                  </button>
-                </div>
+                  );
+                })}
               </div>
-            ))}
-          </div>
+            );
+          })()}
 
           {/* Price History Trend Chart */}
-          <PriceHistoryChart priceHistory={priceHistory} currentPrice={bestDeal?.priceBreakdown?.finalPrice || product.basePrice} />
+          {priceHistory && priceHistory.length > 0 && (
+            <PriceHistoryChart priceHistory={priceHistory} currentPrice={bestDeal?.priceBreakdown?.finalPrice || product.basePrice || 0} />
+          )}
 
           {/* Price Alert Trigger */}
           <div className="flex items-center justify-between pt-2 border-t border-line">

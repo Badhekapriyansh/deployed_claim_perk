@@ -129,26 +129,34 @@ export default function CompareModal({ productIds, onClose, onSelectForCheckout 
                   </tr>
                   <tr>
                     <td className="py-4 px-4"></td>
-                    {data.map(({ product, priceBreakdown }) => (
-                      <td key={product.id} className="py-4 px-4 text-center">
-                        <button
-                          onClick={() => {
-                            onClose();
-                            onSelectForCheckout(product, {
-                              platform: product.platform || "Official Store",
-                              logo: "🛒",
-                              basePrice: priceBreakdown.basePrice,
-                              affiliateUrl: product.affiliateUrl || product.url || null,
-                              priceBreakdown
-                            });
-                          }}
-                          className="w-full bg-forest text-white text-xs font-semibold py-2 px-3 rounded-lg hover:bg-forest-light transition-colors shadow-sm flex items-center justify-center gap-1"
-                        >
-                          <span>View Deal</span>
-                          <span>→</span>
-                        </button>
-                      </td>
-                    ))}
+                    {data.map(({ product, priceBreakdown }) => {
+                      const affUrl = (product.affiliateUrl && product.affiliateUrl !== "null")
+                        ? product.affiliateUrl
+                        : (product.url && product.url !== "null")
+                        ? product.url
+                        : `https://www.google.com/search?q=${encodeURIComponent(product.name || "")}+buy+online`;
+
+                      return (
+                        <td key={product.id} className="py-4 px-4 text-center">
+                          <button
+                            onClick={() => {
+                              onClose();
+                              onSelectForCheckout(product, {
+                                platform: product.platform || "Official Store",
+                                logo: "🛒",
+                                basePrice: priceBreakdown.basePrice,
+                                affiliateUrl: affUrl,
+                                priceBreakdown
+                              });
+                            }}
+                            className="w-full bg-forest text-white text-xs font-semibold py-2 px-3 rounded-lg hover:bg-forest-light transition-colors shadow-sm flex items-center justify-center gap-1"
+                          >
+                            <span>View Deal</span>
+                            <span>→</span>
+                          </button>
+                        </td>
+                      );
+                    })}
                   </tr>
                 </tbody>
               </table>

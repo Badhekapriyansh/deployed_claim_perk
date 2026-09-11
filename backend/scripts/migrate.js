@@ -1,8 +1,8 @@
-require("dotenv").config({ path: "../.env" });
+const path = require("path");
+require("dotenv").config({ path: path.join(__dirname, "..", ".env") });
 
 const mongoose = require("mongoose");
 const fs = require("fs");
-const path = require("path");
 
 const User = require("../models/user");
 const Product = require("../models/product");
@@ -52,18 +52,37 @@ async function migrate() {
     // OFFERS
     await Offer.deleteMany({});
 
-    const offerDocuments = Object.entries(offers).map(
-      ([productId, offerData]) => ({
+    const offerDocuments = [];
+    for (const [productId, offerData] of Object.entries(offers)) {
+      // 1. Discount perks document
+      offerDocuments.push({
         productId,
-        ...offerData
-      })
-    );
+        coupons: offerData.coupons || [],
+        cashback: offerData.cashback || [],
+        bankOffers: offerData.bankOffers || [],
+        upiOffers: offerData.upiOffers || []
+      });
+
+      // 2. Multi-platform vendor store offers
+      if (Array.isArray(offerData.platformOffers)) {
+        for (const po of offerData.platformOffers) {
+          offerDocuments.push({
+            productId,
+            vendor: po.vendor,
+            price: po.price,
+            url: po.url,
+            affiliateUrl: po.affiliateUrl,
+            product_name: po.product_name
+          });
+        }
+      }
+    }
 
     if (offerDocuments.length > 0) {
       await Offer.insertMany(offerDocuments);
     }
 
-    console.log("Offers migrated successfully");
+    console.log(`Offers migrated successfully (${offerDocuments.length} offer records)`);
 
     await mongoose.disconnect();
 

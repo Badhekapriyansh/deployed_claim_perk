@@ -118,20 +118,22 @@ export default function Dashboard({ onSelectProduct }) {
                     <p className="font-mono text-base font-bold text-ink">₹{red.finalPrice.toLocaleString("en-IN")}</p>
                   </div>
 
-                  {red.affiliateUrl && red.affiliateUrl.toLowerCase() !== "null" && red.affiliateUrl.toLowerCase() !== "undefined" ? (
-                    <a
-                      href={red.affiliateUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="bg-forest text-white text-xs font-semibold px-3 py-2 rounded-lg hover:bg-forest-light transition-colors whitespace-nowrap"
-                    >
-                      Open Store ↗
-                    </a>
-                  ) : (
-                    <span className="bg-gray-200 text-gray-600 text-xs font-semibold px-3 py-2 rounded-lg whitespace-nowrap">
-                      Direct Link Unavailable
-                    </span>
-                  )}
+                  {(() => {
+                    const cleanUrl = (red.affiliateUrl && red.affiliateUrl.toLowerCase() !== "null" && red.affiliateUrl.toLowerCase() !== "undefined")
+                      ? red.affiliateUrl
+                      : `https://www.google.com/search?q=${encodeURIComponent(red.productName || "")}+${encodeURIComponent(red.platform || "")}`;
+
+                    return (
+                      <a
+                        href={cleanUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-forest text-white text-xs font-semibold px-3 py-2 rounded-lg hover:bg-forest-light transition-colors whitespace-nowrap"
+                      >
+                        Open Store ↗
+                      </a>
+                    );
+                  })()}
 
                   <button
                     onClick={(e) => handleDeleteRedirectItem(e, red.id)}

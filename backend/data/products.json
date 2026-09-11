@@ -5,7 +5,9 @@
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
     "platform": "Flipkart",
-    "basePrice": 70184
+    "basePrice": 69999,
+    "url": "https://www.flipkart.com/search?q=Apple%20iPhone%2015",
+    "affiliateUrl": "https://www.flipkart.com/search?q=Apple%20iPhone%2015&affid=claimperks"
   },
   {
     "id": "p2",
@@ -13,7 +15,9 @@
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
     "platform": "Flipkart",
-    "basePrice": 76983
+    "basePrice": 129990,
+    "url": "https://www.flipkart.com/search?q=Apple%20iPhone%2015%20Pro",
+    "affiliateUrl": "https://www.flipkart.com/search?q=Apple%20iPhone%2015%20Pro&affid=claimperks"
   },
   {
     "id": "p3",
@@ -21,7 +25,9 @@
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
     "platform": "Flipkart",
-    "basePrice": 62847
+    "basePrice": 57999,
+    "url": "https://www.flipkart.com/search?q=Samsung%20Galaxy%20S24",
+    "affiliateUrl": "https://www.flipkart.com/search?q=Samsung%20Galaxy%20S24&affid=claimperks"
   },
   {
     "id": "p4",
@@ -29,7 +35,9 @@
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
     "platform": "Flipkart",
-    "basePrice": 37740
+    "basePrice": 36999,
+    "url": "https://www.flipkart.com/search?q=Samsung%20Galaxy%20A55",
+    "affiliateUrl": "https://www.flipkart.com/search?q=Samsung%20Galaxy%20A55&affid=claimperks"
   },
   {
     "id": "p5",
@@ -37,7 +45,9 @@
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 20304
+    "basePrice": 64999,
+    "url": "https://www.amazon.in/s?k=OnePlus%2012",
+    "affiliateUrl": "https://www.amazon.in/s?k=OnePlus%2012&affid=claimperks"
   },
   {
     "id": "p6",
@@ -45,7 +55,9 @@
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 61153
+    "basePrice": 17999,
+    "url": "https://www.amazon.in/s?k=Xiaomi%20Redmi%20Note%2013",
+    "affiliateUrl": "https://www.amazon.in/s?k=Xiaomi%20Redmi%20Note%2013&affid=claimperks"
   },
   {
     "id": "p7",
@@ -53,15 +65,19 @@
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
     "platform": "Flipkart",
-    "basePrice": 99521
+    "basePrice": 62999,
+    "url": "https://www.flipkart.com/search?q=Google%20Pixel%208",
+    "affiliateUrl": "https://www.flipkart.com/search?q=Google%20Pixel%208&affid=claimperks"
   },
   {
     "id": "p8",
     "name": "Dell XPS 13 Laptop",
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 67580
+    "platform": "Amazon",
+    "basePrice": 119990,
+    "url": "https://www.amazon.in/s?k=Dell%20XPS%2013%20Laptop",
+    "affiliateUrl": "https://www.amazon.in/s?k=Dell%20XPS%2013%20Laptop&affid=claimperks"
   },
   {
     "id": "p9",
@@ -69,7 +85,9 @@
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 117139
+    "basePrice": 59990,
+    "url": "https://www.amazon.in/s?k=HP%20Pavilion%2015%20Laptop",
+    "affiliateUrl": "https://www.amazon.in/s?k=HP%20Pavilion%2015%20Laptop&affid=claimperks"
   },
   {
     "id": "p10",
@@ -77,7 +95,9 @@
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop&q=80",
     "platform": "Flipkart",
-    "basePrice": 82020
+    "basePrice": 54990,
+    "url": "https://www.flipkart.com/search?q=Lenovo%20IdeaPad%20Slim%205",
+    "affiliateUrl": "https://www.flipkart.com/search?q=Lenovo%20IdeaPad%20Slim%205&affid=claimperks"
   },
   {
     "id": "p11",
@@ -85,15 +105,19 @@
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop&q=80",
     "platform": "Flipkart",
-    "basePrice": 7591
+    "basePrice": 94990,
+    "url": "https://www.flipkart.com/search?q=Apple%20MacBook%20Air%20M2",
+    "affiliateUrl": "https://www.flipkart.com/search?q=Apple%20MacBook%20Air%20M2&affid=claimperks"
   },
   {
     "id": "p12",
     "name": "Sony WH-1000XM5 Headphones",
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 41251
+    "platform": "Amazon",
+    "basePrice": 26990,
+    "url": "https://www.amazon.in/s?k=Sony%20WH-1000XM5%20Headphones",
+    "affiliateUrl": "https://www.amazon.in/s?k=Sony%20WH-1000XM5%20Headphones&affid=claimperks"
   },
   {
     "id": "p13",
@@ -101,7 +125,9 @@
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80",
     "platform": "Flipkart",
-    "basePrice": 31684
+    "basePrice": 1299,
+    "url": "https://www.flipkart.com/search?q=boAt%20Airdopes%20141",
+    "affiliateUrl": "https://www.flipkart.com/search?q=boAt%20Airdopes%20141&affid=claimperks"
   },
   {
     "id": "p14",
@@ -109,15 +135,19 @@
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 50941
+    "basePrice": 4999,
+    "url": "https://www.amazon.in/s?k=JBL%20Tune%20720BT",
+    "affiliateUrl": "https://www.amazon.in/s?k=JBL%20Tune%20720BT&affid=claimperks"
   },
   {
     "id": "p15",
     "name": "Apple AirPods Pro",
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80",
-    "platform": "Amazon",
-    "basePrice": 7695
+    "platform": "Flipkart",
+    "basePrice": 21990,
+    "url": "https://www.flipkart.com/search?q=Apple%20AirPods%20Pro",
+    "affiliateUrl": "https://www.flipkart.com/search?q=Apple%20AirPods%20Pro&affid=claimperks"
   },
   {
     "id": "p16",
@@ -125,23 +155,29 @@
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80",
     "platform": "Flipkart",
-    "basePrice": 110710
+    "basePrice": 24900,
+    "url": "https://www.flipkart.com/search?q=Apple%20Watch%20SE",
+    "affiliateUrl": "https://www.flipkart.com/search?q=Apple%20Watch%20SE&affid=claimperks"
   },
   {
     "id": "p17",
     "name": "Samsung Galaxy Watch 6",
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 25848
+    "platform": "Amazon",
+    "basePrice": 21999,
+    "url": "https://www.amazon.in/s?k=Samsung%20Galaxy%20Watch%206",
+    "affiliateUrl": "https://www.amazon.in/s?k=Samsung%20Galaxy%20Watch%206&affid=claimperks"
   },
   {
     "id": "p18",
     "name": "Noise ColorFit Pro 4",
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80",
-    "platform": "Amazon",
-    "basePrice": 39480
+    "platform": "Flipkart",
+    "basePrice": 2499,
+    "url": "https://www.flipkart.com/search?q=Noise%20ColorFit%20Pro%204",
+    "affiliateUrl": "https://www.flipkart.com/search?q=Noise%20ColorFit%20Pro%204&affid=claimperks"
   },
   {
     "id": "p19",
@@ -149,7 +185,9 @@
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 97545
+    "basePrice": 39990,
+    "url": "https://www.amazon.in/s?k=Canon%20EOS%201500D%20Camera",
+    "affiliateUrl": "https://www.amazon.in/s?k=Canon%20EOS%201500D%20Camera&affid=claimperks"
   },
   {
     "id": "p20",
@@ -157,23 +195,29 @@
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 38671
+    "basePrice": 6499,
+    "url": "https://www.amazon.in/s?k=Fujifilm%20Instax%20Mini%2012",
+    "affiliateUrl": "https://www.amazon.in/s?k=Fujifilm%20Instax%20Mini%2012&affid=claimperks"
   },
   {
     "id": "p21",
     "name": "Sony Alpha a6400",
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 51848
+    "platform": "Amazon",
+    "basePrice": 74990,
+    "url": "https://www.amazon.in/s?k=Sony%20Alpha%20a6400",
+    "affiliateUrl": "https://www.amazon.in/s?k=Sony%20Alpha%20a6400&affid=claimperks"
   },
   {
     "id": "p22",
     "name": "Sony PlayStation 5",
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=600&auto=format&fit=crop&q=80",
-    "platform": "Amazon",
-    "basePrice": 22539
+    "platform": "Flipkart",
+    "basePrice": 49990,
+    "url": "https://www.flipkart.com/search?q=Sony%20PlayStation%205",
+    "affiliateUrl": "https://www.flipkart.com/search?q=Sony%20PlayStation%205&affid=claimperks"
   },
   {
     "id": "p23",
@@ -181,71 +225,89 @@
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 87203
+    "basePrice": 31990,
+    "url": "https://www.amazon.in/s?k=Xbox%20Series%20S",
+    "affiliateUrl": "https://www.amazon.in/s?k=Xbox%20Series%20S&affid=claimperks"
   },
   {
     "id": "p24",
     "name": "Logitech G Pro Gaming Mouse",
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 30943
+    "platform": "Amazon",
+    "basePrice": 8995,
+    "url": "https://www.amazon.in/s?k=Logitech%20G%20Pro%20Gaming%20Mouse",
+    "affiliateUrl": "https://www.amazon.in/s?k=Logitech%20G%20Pro%20Gaming%20Mouse&affid=claimperks"
   },
   {
     "id": "p25",
     "name": "Razer BlackWidow Keyboard",
     "category": "Electronics",
     "image": "https://images.unsplash.com/photo-1606813907291-d86efa9b94db?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 29067
+    "platform": "Amazon",
+    "basePrice": 11999,
+    "url": "https://www.amazon.in/s?k=Razer%20BlackWidow%20Keyboard",
+    "affiliateUrl": "https://www.amazon.in/s?k=Razer%20BlackWidow%20Keyboard&affid=claimperks"
   },
   {
     "id": "p26",
     "name": "Nike Air Zoom Pegasus",
     "category": "Fashion",
     "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 9505
+    "platform": "Myntra",
+    "basePrice": 9495,
+    "url": "https://www.myntra.com/nike%20air%20zoom%20pegasus",
+    "affiliateUrl": "https://www.myntra.com/nike%20air%20zoom%20pegasus&affid=claimperks"
   },
   {
     "id": "p27",
     "name": "Adidas Ultraboost 22",
     "category": "Fashion",
     "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=80",
-    "platform": "Ajio",
-    "basePrice": 2074
+    "platform": "Myntra",
+    "basePrice": 14999,
+    "url": "https://www.myntra.com/adidas%20ultraboost%2022",
+    "affiliateUrl": "https://www.myntra.com/adidas%20ultraboost%2022&affid=claimperks"
   },
   {
     "id": "p28",
     "name": "Puma RS-X Sneakers",
     "category": "Fashion",
     "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 4026
+    "platform": "Myntra",
+    "basePrice": 6499,
+    "url": "https://www.myntra.com/puma%20rs-x%20sneakers",
+    "affiliateUrl": "https://www.myntra.com/puma%20rs-x%20sneakers&affid=claimperks"
   },
   {
     "id": "p29",
     "name": "Bata Comfort Loafers",
     "category": "Fashion",
     "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=80",
-    "platform": "Ajio",
-    "basePrice": 8442
+    "platform": "Amazon",
+    "basePrice": 1499,
+    "url": "https://www.amazon.in/s?k=Bata%20Comfort%20Loafers",
+    "affiliateUrl": "https://www.amazon.in/s?k=Bata%20Comfort%20Loafers&affid=claimperks"
   },
   {
     "id": "p30",
     "name": "Woodland Casual Boots",
     "category": "Fashion",
     "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=80",
-    "platform": "Myntra",
-    "basePrice": 4563
+    "platform": "Flipkart",
+    "basePrice": 3995,
+    "url": "https://www.flipkart.com/search?q=Woodland%20Casual%20Boots",
+    "affiliateUrl": "https://www.flipkart.com/search?q=Woodland%20Casual%20Boots&affid=claimperks"
   },
   {
     "id": "p31",
     "name": "Zara Floral Summer Dress",
     "category": "Fashion",
     "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80",
-    "platform": "Ajio",
-    "basePrice": 9758
+    "platform": "Myntra",
+    "basePrice": 2990,
+    "url": "https://www.myntra.com/zara%20floral%20summer%20dress",
+    "affiliateUrl": "https://www.myntra.com/zara%20floral%20summer%20dress&affid=claimperks"
   },
   {
     "id": "p32",
@@ -253,23 +315,29 @@
     "category": "Fashion",
     "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80",
     "platform": "Myntra",
-    "basePrice": 4175
+    "basePrice": 2299,
+    "url": "https://www.myntra.com/h%26m%20cotton%20kurta%20set",
+    "affiliateUrl": "https://www.myntra.com/h%26m%20cotton%20kurta%20set&affid=claimperks"
   },
   {
     "id": "p33",
     "name": "Levi's 511 Slim Jeans",
     "category": "Fashion",
     "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80",
-    "platform": "Ajio",
-    "basePrice": 1604
+    "platform": "Myntra",
+    "basePrice": 2499,
+    "url": "https://www.myntra.com/levi's%20511%20slim%20jeans",
+    "affiliateUrl": "https://www.myntra.com/levi's%20511%20slim%20jeans&affid=claimperks"
   },
   {
     "id": "p34",
     "name": "Van Heusen Formal Shirt",
     "category": "Fashion",
     "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 2815
+    "platform": "Amazon",
+    "basePrice": 1699,
+    "url": "https://www.amazon.in/s?k=Van%20Heusen%20Formal%20Shirt",
+    "affiliateUrl": "https://www.amazon.in/s?k=Van%20Heusen%20Formal%20Shirt&affid=claimperks"
   },
   {
     "id": "p35",
@@ -277,7 +345,9 @@
     "category": "Fashion",
     "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80",
     "platform": "Myntra",
-    "basePrice": 10363
+    "basePrice": 1899,
+    "url": "https://www.myntra.com/allen%20solly%20chinos",
+    "affiliateUrl": "https://www.myntra.com/allen%20solly%20chinos&affid=claimperks"
   },
   {
     "id": "p36",
@@ -285,7 +355,9 @@
     "category": "Fashion",
     "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80",
     "platform": "Myntra",
-    "basePrice": 6929
+    "basePrice": 1590,
+    "url": "https://www.myntra.com/fabindia%20cotton%20kurti",
+    "affiliateUrl": "https://www.myntra.com/fabindia%20cotton%20kurti&affid=claimperks"
   },
   {
     "id": "p37",
@@ -293,7 +365,9 @@
     "category": "Fashion",
     "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80",
     "platform": "Myntra",
-    "basePrice": 3107
+    "basePrice": 2999,
+    "url": "https://www.myntra.com/biba%20printed%20anarkali",
+    "affiliateUrl": "https://www.myntra.com/biba%20printed%20anarkali&affid=claimperks"
   },
   {
     "id": "p38",
@@ -301,15 +375,19 @@
     "category": "Fashion",
     "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80",
     "platform": "Myntra",
-    "basePrice": 476
+    "basePrice": 2499,
+    "url": "https://www.myntra.com/w%20for%20woman%20ethnic%20set",
+    "affiliateUrl": "https://www.myntra.com/w%20for%20woman%20ethnic%20set&affid=claimperks"
   },
   {
     "id": "p39",
     "name": "US Polo Assn Polo T-Shirt",
     "category": "Fashion",
     "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 6731
+    "platform": "Myntra",
+    "basePrice": 1199,
+    "url": "https://www.myntra.com/us%20polo%20assn%20polo%20t-shirt",
+    "affiliateUrl": "https://www.myntra.com/us%20polo%20assn%20polo%20t-shirt&affid=claimperks"
   },
   {
     "id": "p40",
@@ -317,7 +395,9 @@
     "category": "Fashion",
     "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80",
     "platform": "Myntra",
-    "basePrice": 8768
+    "basePrice": 1499,
+    "url": "https://www.myntra.com/roadster%20denim%20jacket",
+    "affiliateUrl": "https://www.myntra.com/roadster%20denim%20jacket&affid=claimperks"
   },
   {
     "id": "p41",
@@ -325,55 +405,69 @@
     "category": "Fashion",
     "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&auto=format&fit=crop&q=80",
     "platform": "Myntra",
-    "basePrice": 10275
+    "basePrice": 2299,
+    "url": "https://www.myntra.com/caprese%20structured%20handbag",
+    "affiliateUrl": "https://www.myntra.com/caprese%20structured%20handbag&affid=claimperks"
   },
   {
     "id": "p42",
     "name": "Baggit Sling Bag",
     "category": "Fashion",
     "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 3254
+    "platform": "Amazon",
+    "basePrice": 1199,
+    "url": "https://www.amazon.in/s?k=Baggit%20Sling%20Bag",
+    "affiliateUrl": "https://www.amazon.in/s?k=Baggit%20Sling%20Bag&affid=claimperks"
   },
   {
     "id": "p43",
     "name": "Wildcraft Travel Backpack",
     "category": "Fashion",
     "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 7622
+    "platform": "Amazon",
+    "basePrice": 1899,
+    "url": "https://www.amazon.in/s?k=Wildcraft%20Travel%20Backpack",
+    "affiliateUrl": "https://www.amazon.in/s?k=Wildcraft%20Travel%20Backpack&affid=claimperks"
   },
   {
     "id": "p44",
     "name": "American Tourister Duffel",
     "category": "Fashion",
     "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=600&auto=format&fit=crop&q=80",
-    "platform": "Ajio",
-    "basePrice": 3311
+    "platform": "Amazon",
+    "basePrice": 2199,
+    "url": "https://www.amazon.in/s?k=American%20Tourister%20Duffel",
+    "affiliateUrl": "https://www.amazon.in/s?k=American%20Tourister%20Duffel&affid=claimperks"
   },
   {
     "id": "p45",
     "name": "Fossil Analog Watch",
     "category": "Fashion",
     "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80",
-    "platform": "Myntra",
-    "basePrice": 2229
+    "platform": "Amazon",
+    "basePrice": 8995,
+    "url": "https://www.amazon.in/s?k=Fossil%20Analog%20Watch",
+    "affiliateUrl": "https://www.amazon.in/s?k=Fossil%20Analog%20Watch&affid=claimperks"
   },
   {
     "id": "p46",
     "name": "Titan Raga Watch",
     "category": "Fashion",
     "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 7201
+    "platform": "Amazon",
+    "basePrice": 4995,
+    "url": "https://www.amazon.in/s?k=Titan%20Raga%20Watch",
+    "affiliateUrl": "https://www.amazon.in/s?k=Titan%20Raga%20Watch&affid=claimperks"
   },
   {
     "id": "p47",
     "name": "Fastrack Chronograph Watch",
     "category": "Fashion",
     "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80",
-    "platform": "Myntra",
-    "basePrice": 8840
+    "platform": "Amazon",
+    "basePrice": 2495,
+    "url": "https://www.amazon.in/s?k=Fastrack%20Chronograph%20Watch",
+    "affiliateUrl": "https://www.amazon.in/s?k=Fastrack%20Chronograph%20Watch&affid=claimperks"
   },
   {
     "id": "p48",
@@ -381,7 +475,9 @@
     "category": "Home & Kitchen",
     "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 12419
+    "basePrice": 8999,
+    "url": "https://www.amazon.in/s?k=Instant%20Pot%20Duo%206L",
+    "affiliateUrl": "https://www.amazon.in/s?k=Instant%20Pot%20Duo%206L&affid=claimperks"
   },
   {
     "id": "p49",
@@ -389,15 +485,19 @@
     "category": "Home & Kitchen",
     "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 13004
+    "basePrice": 2699,
+    "url": "https://www.amazon.in/s?k=Prestige%20Induction%20Cooktop",
+    "affiliateUrl": "https://www.amazon.in/s?k=Prestige%20Induction%20Cooktop&affid=claimperks"
   },
   {
     "id": "p50",
     "name": "Philips Air Fryer HD9200",
     "category": "Home & Kitchen",
     "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 2890
+    "platform": "Amazon",
+    "basePrice": 6999,
+    "url": "https://www.amazon.in/s?k=Philips%20Air%20Fryer%20HD9200",
+    "affiliateUrl": "https://www.amazon.in/s?k=Philips%20Air%20Fryer%20HD9200&affid=claimperks"
   },
   {
     "id": "p51",
@@ -405,23 +505,29 @@
     "category": "Home & Kitchen",
     "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 6654
+    "basePrice": 2499,
+    "url": "https://www.amazon.in/s?k=Bajaj%20Mixer%20Grinder",
+    "affiliateUrl": "https://www.amazon.in/s?k=Bajaj%20Mixer%20Grinder&affid=claimperks"
   },
   {
     "id": "p52",
     "name": "Wonderchef Nutri-Blend",
     "category": "Home & Kitchen",
     "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 9777
+    "platform": "Amazon",
+    "basePrice": 2799,
+    "url": "https://www.amazon.in/s?k=Wonderchef%20Nutri-Blend",
+    "affiliateUrl": "https://www.amazon.in/s?k=Wonderchef%20Nutri-Blend&affid=claimperks"
   },
   {
     "id": "p53",
     "name": "Milton Thermosteel Flask",
     "category": "Home & Kitchen",
     "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 23891
+    "platform": "Amazon",
+    "basePrice": 899,
+    "url": "https://www.amazon.in/s?k=Milton%20Thermosteel%20Flask",
+    "affiliateUrl": "https://www.amazon.in/s?k=Milton%20Thermosteel%20Flask&affid=claimperks"
   },
   {
     "id": "p54",
@@ -429,7 +535,9 @@
     "category": "Home & Kitchen",
     "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 20899
+    "basePrice": 3490,
+    "url": "https://www.amazon.in/s?k=IKEA%20Storage%20Ottoman",
+    "affiliateUrl": "https://www.amazon.in/s?k=IKEA%20Storage%20Ottoman&affid=claimperks"
   },
   {
     "id": "p55",
@@ -437,15 +545,19 @@
     "category": "Home & Kitchen",
     "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 19295
+    "basePrice": 5999,
+    "url": "https://www.amazon.in/s?k=Urban%20Ladder%20Bookshelf",
+    "affiliateUrl": "https://www.amazon.in/s?k=Urban%20Ladder%20Bookshelf&affid=claimperks"
   },
   {
     "id": "p56",
     "name": "Nilkamal Plastic Chair",
     "category": "Home & Kitchen",
     "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 5576
+    "platform": "Amazon",
+    "basePrice": 899,
+    "url": "https://www.amazon.in/s?k=Nilkamal%20Plastic%20Chair",
+    "affiliateUrl": "https://www.amazon.in/s?k=Nilkamal%20Plastic%20Chair&affid=claimperks"
   },
   {
     "id": "p57",
@@ -453,7 +565,9 @@
     "category": "Home & Kitchen",
     "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 20139
+    "basePrice": 14990,
+    "url": "https://www.amazon.in/s?k=Godrej%20Interio%20Wardrobe",
+    "affiliateUrl": "https://www.amazon.in/s?k=Godrej%20Interio%20Wardrobe&affid=claimperks"
   },
   {
     "id": "p58",
@@ -461,23 +575,29 @@
     "category": "Home & Kitchen",
     "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 13660
+    "basePrice": 399,
+    "url": "https://www.amazon.in/s?k=Philips%20LED%20Bulb%20Pack",
+    "affiliateUrl": "https://www.amazon.in/s?k=Philips%20LED%20Bulb%20Pack&affid=claimperks"
   },
   {
     "id": "p59",
     "name": "Havells Ceiling Fan",
     "category": "Home & Kitchen",
     "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 10564
+    "platform": "Amazon",
+    "basePrice": 2299,
+    "url": "https://www.amazon.in/s?k=Havells%20Ceiling%20Fan",
+    "affiliateUrl": "https://www.amazon.in/s?k=Havells%20Ceiling%20Fan&affid=claimperks"
   },
   {
     "id": "p60",
     "name": "Hindware Water Purifier",
     "category": "Home & Kitchen",
     "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 15691
+    "platform": "Amazon",
+    "basePrice": 8499,
+    "url": "https://www.amazon.in/s?k=Hindware%20Water%20Purifier",
+    "affiliateUrl": "https://www.amazon.in/s?k=Hindware%20Water%20Purifier&affid=claimperks"
   },
   {
     "id": "p61",
@@ -485,7 +605,9 @@
     "category": "Home & Kitchen",
     "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 8711
+    "basePrice": 1499,
+    "url": "https://www.amazon.in/s?k=Butterfly%20Pressure%20Cooker",
+    "affiliateUrl": "https://www.amazon.in/s?k=Butterfly%20Pressure%20Cooker&affid=claimperks"
   },
   {
     "id": "p62",
@@ -493,23 +615,29 @@
     "category": "Home & Kitchen",
     "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 9110
+    "basePrice": 1699,
+    "url": "https://www.amazon.in/s?k=Cello%20Dinner%20Set",
+    "affiliateUrl": "https://www.amazon.in/s?k=Cello%20Dinner%20Set&affid=claimperks"
   },
   {
     "id": "p63",
     "name": "Bombay Dyeing Bedsheet Set",
     "category": "Home & Kitchen",
     "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 10255
+    "platform": "Amazon",
+    "basePrice": 1199,
+    "url": "https://www.amazon.in/s?k=Bombay%20Dyeing%20Bedsheet%20Set",
+    "affiliateUrl": "https://www.amazon.in/s?k=Bombay%20Dyeing%20Bedsheet%20Set&affid=claimperks"
   },
   {
     "id": "p64",
     "name": "Spaces Cotton Towel Set",
     "category": "Home & Kitchen",
     "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 10324
+    "platform": "Amazon",
+    "basePrice": 999,
+    "url": "https://www.amazon.in/s?k=Spaces%20Cotton%20Towel%20Set",
+    "affiliateUrl": "https://www.amazon.in/s?k=Spaces%20Cotton%20Towel%20Set&affid=claimperks"
   },
   {
     "id": "p65",
@@ -517,15 +645,19 @@
     "category": "Home & Kitchen",
     "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 13653
+    "basePrice": 499,
+    "url": "https://www.amazon.in/s?k=Ajanta%20Wall%20Clock",
+    "affiliateUrl": "https://www.amazon.in/s?k=Ajanta%20Wall%20Clock&affid=claimperks"
   },
   {
     "id": "p66",
     "name": "Solimo Storage Boxes",
     "category": "Home & Kitchen",
     "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 5375
+    "platform": "Amazon",
+    "basePrice": 699,
+    "url": "https://www.amazon.in/s?k=Solimo%20Storage%20Boxes",
+    "affiliateUrl": "https://www.amazon.in/s?k=Solimo%20Storage%20Boxes&affid=claimperks"
   },
   {
     "id": "p67",
@@ -533,7 +665,9 @@
     "category": "Home & Kitchen",
     "image": "https://images.unsplash.com/photo-1588854337221-4cf9fa96059c?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 3192
+    "basePrice": 899,
+    "url": "https://www.amazon.in/s?k=Amazon%20Basics%20Curtain%20Set",
+    "affiliateUrl": "https://www.amazon.in/s?k=Amazon%20Basics%20Curtain%20Set&affid=claimperks"
   },
   {
     "id": "p68",
@@ -541,7 +675,9 @@
     "category": "Beauty",
     "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
     "platform": "Nykaa",
-    "basePrice": 2365
+    "basePrice": 750,
+    "url": "https://www.nykaa.com/search/result/?q=Lakme%20Absolute%20Foundation",
+    "affiliateUrl": "https://www.nykaa.com/search/result/?q=Lakme%20Absolute%20Foundation&affid=claimperks"
   },
   {
     "id": "p69",
@@ -549,31 +685,39 @@
     "category": "Beauty",
     "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
     "platform": "Nykaa",
-    "basePrice": 3105
+    "basePrice": 425,
+    "url": "https://www.nykaa.com/search/result/?q=Maybelline%20Fit%20Me%20Concealer",
+    "affiliateUrl": "https://www.nykaa.com/search/result/?q=Maybelline%20Fit%20Me%20Concealer&affid=claimperks"
   },
   {
     "id": "p70",
     "name": "Nykaa Matte Lipstick",
     "category": "Beauty",
     "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
-    "platform": "Myntra",
-    "basePrice": 2976
+    "platform": "Nykaa",
+    "basePrice": 399,
+    "url": "https://www.nykaa.com/search/result/?q=Nykaa%20Matte%20Lipstick",
+    "affiliateUrl": "https://www.nykaa.com/search/result/?q=Nykaa%20Matte%20Lipstick&affid=claimperks"
   },
   {
     "id": "p71",
     "name": "MAC Ruby Woo Lipstick",
     "category": "Beauty",
     "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
-    "platform": "Amazon",
-    "basePrice": 481
+    "platform": "Nykaa",
+    "basePrice": 1950,
+    "url": "https://www.nykaa.com/search/result/?q=MAC%20Ruby%20Woo%20Lipstick",
+    "affiliateUrl": "https://www.nykaa.com/search/result/?q=MAC%20Ruby%20Woo%20Lipstick&affid=claimperks"
   },
   {
     "id": "p72",
     "name": "The Ordinary Niacinamide Serum",
     "category": "Beauty",
     "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
-    "platform": "Myntra",
-    "basePrice": 1723
+    "platform": "Nykaa",
+    "basePrice": 600,
+    "url": "https://www.nykaa.com/search/result/?q=The%20Ordinary%20Niacinamide%20Serum",
+    "affiliateUrl": "https://www.nykaa.com/search/result/?q=The%20Ordinary%20Niacinamide%20Serum&affid=claimperks"
   },
   {
     "id": "p73",
@@ -581,7 +725,9 @@
     "category": "Beauty",
     "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
     "platform": "Nykaa",
-    "basePrice": 1692
+    "basePrice": 699,
+    "url": "https://www.nykaa.com/search/result/?q=Minimalist%20Vitamin%20C%20Serum",
+    "affiliateUrl": "https://www.nykaa.com/search/result/?q=Minimalist%20Vitamin%20C%20Serum&affid=claimperks"
   },
   {
     "id": "p74",
@@ -589,7 +735,9 @@
     "category": "Beauty",
     "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
     "platform": "Nykaa",
-    "basePrice": 3247
+    "basePrice": 399,
+    "url": "https://www.nykaa.com/search/result/?q=Mamaearth%20Onion%20Hair%20Oil",
+    "affiliateUrl": "https://www.nykaa.com/search/result/?q=Mamaearth%20Onion%20Hair%20Oil&affid=claimperks"
   },
   {
     "id": "p75",
@@ -597,87 +745,109 @@
     "category": "Beauty",
     "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 4459
+    "basePrice": 349,
+    "url": "https://www.amazon.in/s?k=WOW%20Skin%20Science%20Shampoo",
+    "affiliateUrl": "https://www.amazon.in/s?k=WOW%20Skin%20Science%20Shampoo&affid=claimperks"
   },
   {
     "id": "p76",
     "name": "L'Oreal Paris Hair Serum",
     "category": "Beauty",
     "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
-    "platform": "Nykaa",
-    "basePrice": 3177
+    "platform": "Amazon",
+    "basePrice": 499,
+    "url": "https://www.amazon.in/s?k=L'Oreal%20Paris%20Hair%20Serum",
+    "affiliateUrl": "https://www.amazon.in/s?k=L'Oreal%20Paris%20Hair%20Serum&affid=claimperks"
   },
   {
     "id": "p77",
     "name": "Dove Body Wash",
     "category": "Beauty",
     "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
-    "platform": "Nykaa",
-    "basePrice": 3885
+    "platform": "Amazon",
+    "basePrice": 325,
+    "url": "https://www.amazon.in/s?k=Dove%20Body%20Wash",
+    "affiliateUrl": "https://www.amazon.in/s?k=Dove%20Body%20Wash&affid=claimperks"
   },
   {
     "id": "p78",
     "name": "Neutrogena Sunscreen SPF 50",
     "category": "Beauty",
     "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
-    "platform": "Myntra",
-    "basePrice": 3599
+    "platform": "Amazon",
+    "basePrice": 599,
+    "url": "https://www.amazon.in/s?k=Neutrogena%20Sunscreen%20SPF%2050",
+    "affiliateUrl": "https://www.amazon.in/s?k=Neutrogena%20Sunscreen%20SPF%2050&affid=claimperks"
   },
   {
     "id": "p79",
     "name": "Cetaphil Gentle Cleanser",
     "category": "Beauty",
     "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
-    "platform": "Amazon",
-    "basePrice": 515
+    "platform": "Nykaa",
+    "basePrice": 535,
+    "url": "https://www.nykaa.com/search/result/?q=Cetaphil%20Gentle%20Cleanser",
+    "affiliateUrl": "https://www.nykaa.com/search/result/?q=Cetaphil%20Gentle%20Cleanser&affid=claimperks"
   },
   {
     "id": "p80",
     "name": "Plum Green Tea Face Wash",
     "category": "Beauty",
     "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
-    "platform": "Myntra",
-    "basePrice": 1458
+    "platform": "Nykaa",
+    "basePrice": 299,
+    "url": "https://www.nykaa.com/search/result/?q=Plum%20Green%20Tea%20Face%20Wash",
+    "affiliateUrl": "https://www.nykaa.com/search/result/?q=Plum%20Green%20Tea%20Face%20Wash&affid=claimperks"
   },
   {
     "id": "p81",
     "name": "Biotique Bio Almond Moisturizer",
     "category": "Beauty",
     "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
-    "platform": "Myntra",
-    "basePrice": 3789
+    "platform": "Amazon",
+    "basePrice": 210,
+    "url": "https://www.amazon.in/s?k=Biotique%20Bio%20Almond%20Moisturizer",
+    "affiliateUrl": "https://www.amazon.in/s?k=Biotique%20Bio%20Almond%20Moisturizer&affid=claimperks"
   },
   {
     "id": "p82",
     "name": "Sugar Cosmetics Eyeliner",
     "category": "Beauty",
     "image": "https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&auto=format&fit=crop&q=80",
-    "platform": "Amazon",
-    "basePrice": 1518
+    "platform": "Nykaa",
+    "basePrice": 299,
+    "url": "https://www.nykaa.com/search/result/?q=Sugar%20Cosmetics%20Eyeliner",
+    "affiliateUrl": "https://www.nykaa.com/search/result/?q=Sugar%20Cosmetics%20Eyeliner&affid=claimperks"
   },
   {
     "id": "p83",
     "name": "Tata Sampann Toor Dal 1kg",
     "category": "Grocery",
     "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
-    "platform": "BigBasket",
-    "basePrice": 1147
+    "platform": "Amazon",
+    "basePrice": 175,
+    "url": "https://www.amazon.in/s?k=Tata%20Sampann%20Toor%20Dal%201kg",
+    "affiliateUrl": "https://www.amazon.in/s?k=Tata%20Sampann%20Toor%20Dal%201kg&affid=claimperks"
   },
   {
     "id": "p84",
     "name": "Fortune Sunflower Oil 1L",
     "category": "Grocery",
     "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80",
-    "platform": "BigBasket",
-    "basePrice": 178
+    "platform": "Amazon",
+    "basePrice": 140,
+    "url": "https://www.amazon.in/s?k=Fortune%20Sunflower%20Oil%201L",
+    "affiliateUrl": "https://www.amazon.in/s?k=Fortune%20Sunflower%20Oil%201L&affid=claimperks"
   },
   {
     "id": "p85",
     "name": "India Gate Basmati Rice 5kg",
     "category": "Grocery",
     "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
-    "platform": "BigBasket",
-    "basePrice": 262
+    "platform": "Amazon",
+    "basePrice": 499,
+    "url": "https://www.amazon.in/s?k=India%20Gate%20Basmati%20Rice%205kg",
+    "affiliateUrl": "https://www.amazon.in/s?k=India%20Gate%20Basmati%20Rice%205kg&affid=claimperks"
   },
   {
     "id": "p86",
@@ -685,7 +855,9 @@
     "category": "Grocery",
     "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 565
+    "basePrice": 545,
+    "url": "https://www.amazon.in/s?k=Nescafe%20Classic%20Coffee%20200g",
+    "affiliateUrl": "https://www.amazon.in/s?k=Nescafe%20Classic%20Coffee%20200g&affid=claimperks"
   },
   {
     "id": "p87",
@@ -693,7 +865,9 @@
     "category": "Grocery",
     "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 1228
+    "basePrice": 195,
+    "url": "https://www.amazon.in/s?k=Bru%20Instant%20Coffee%20100g",
+    "affiliateUrl": "https://www.amazon.in/s?k=Bru%20Instant%20Coffee%20100g&affid=claimperks"
   },
   {
     "id": "p88",
@@ -701,15 +875,19 @@
     "category": "Grocery",
     "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 965
+    "basePrice": 275,
+    "url": "https://www.amazon.in/s?k=Amul%20Butter%20500g",
+    "affiliateUrl": "https://www.amazon.in/s?k=Amul%20Butter%20500g&affid=claimperks"
   },
   {
     "id": "p89",
     "name": "Britannia Marie Gold Biscuits",
     "category": "Grocery",
     "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
-    "platform": "BigBasket",
-    "basePrice": 1263
+    "platform": "Amazon",
+    "basePrice": 45,
+    "url": "https://www.amazon.in/s?k=Britannia%20Marie%20Gold%20Biscuits",
+    "affiliateUrl": "https://www.amazon.in/s?k=Britannia%20Marie%20Gold%20Biscuits&affid=claimperks"
   },
   {
     "id": "p90",
@@ -717,7 +895,9 @@
     "category": "Grocery",
     "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 994
+    "basePrice": 120,
+    "url": "https://www.amazon.in/s?k=Haldiram's%20Namkeen%20Mix",
+    "affiliateUrl": "https://www.amazon.in/s?k=Haldiram's%20Namkeen%20Mix&affid=claimperks"
   },
   {
     "id": "p91",
@@ -725,7 +905,9 @@
     "category": "Grocery",
     "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 269
+    "basePrice": 150,
+    "url": "https://www.amazon.in/s?k=Cadbury%20Dairy%20Milk%20Pack",
+    "affiliateUrl": "https://www.amazon.in/s?k=Cadbury%20Dairy%20Milk%20Pack&affid=claimperks"
   },
   {
     "id": "p92",
@@ -733,23 +915,29 @@
     "category": "Grocery",
     "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 500
+    "basePrice": 199,
+    "url": "https://www.amazon.in/s?k=Nestle%20Munch%20Chocolate%20Box",
+    "affiliateUrl": "https://www.amazon.in/s?k=Nestle%20Munch%20Chocolate%20Box&affid=claimperks"
   },
   {
     "id": "p93",
     "name": "Kellogg's Corn Flakes 500g",
     "category": "Grocery",
     "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
-    "platform": "BigBasket",
-    "basePrice": 1095
+    "platform": "Amazon",
+    "basePrice": 190,
+    "url": "https://www.amazon.in/s?k=Kellogg's%20Corn%20Flakes%20500g",
+    "affiliateUrl": "https://www.amazon.in/s?k=Kellogg's%20Corn%20Flakes%20500g&affid=claimperks"
   },
   {
     "id": "p94",
     "name": "Saffola Gold Oil 1L",
     "category": "Grocery",
     "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
-    "platform": "BigBasket",
-    "basePrice": 1168
+    "platform": "Amazon",
+    "basePrice": 165,
+    "url": "https://www.amazon.in/s?k=Saffola%20Gold%20Oil%201L",
+    "affiliateUrl": "https://www.amazon.in/s?k=Saffola%20Gold%20Oil%201L&affid=claimperks"
   },
   {
     "id": "p95",
@@ -757,15 +945,19 @@
     "category": "Grocery",
     "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 448
+    "basePrice": 115,
+    "url": "https://www.amazon.in/s?k=Real%20Fruit%20Juice%20Mixed%20Fruit",
+    "affiliateUrl": "https://www.amazon.in/s?k=Real%20Fruit%20Juice%20Mixed%20Fruit&affid=claimperks"
   },
   {
     "id": "p96",
     "name": "Bournvita Health Drink 500g",
     "category": "Grocery",
     "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
-    "platform": "BigBasket",
-    "basePrice": 627
+    "platform": "Amazon",
+    "basePrice": 245,
+    "url": "https://www.amazon.in/s?k=Bournvita%20Health%20Drink%20500g",
+    "affiliateUrl": "https://www.amazon.in/s?k=Bournvita%20Health%20Drink%20500g&affid=claimperks"
   },
   {
     "id": "p97",
@@ -773,63 +965,79 @@
     "category": "Grocery",
     "image": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 973
+    "basePrice": 110,
+    "url": "https://www.amazon.in/s?k=MTR%20Ready%20to%20Eat%20Meal%20Pack",
+    "affiliateUrl": "https://www.amazon.in/s?k=MTR%20Ready%20to%20Eat%20Meal%20Pack&affid=claimperks"
   },
   {
     "id": "p98",
     "name": "Decathlon Yoga Mat",
     "category": "Sports & Fitness",
     "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
-    "platform": "Amazon",
-    "basePrice": 10103
+    "platform": "Decathlon",
+    "basePrice": 699,
+    "url": "https://www.decathlon.in/search?query=Decathlon%20Yoga%20Mat",
+    "affiliateUrl": "https://www.decathlon.in/search?query=Decathlon%20Yoga%20Mat&affid=claimperks"
   },
   {
     "id": "p99",
     "name": "Kore Adjustable Dumbbells Set",
     "category": "Sports & Fitness",
     "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 2432
+    "platform": "Amazon",
+    "basePrice": 1499,
+    "url": "https://www.amazon.in/s?k=Kore%20Adjustable%20Dumbbells%20Set",
+    "affiliateUrl": "https://www.amazon.in/s?k=Kore%20Adjustable%20Dumbbells%20Set&affid=claimperks"
   },
   {
     "id": "p100",
     "name": "Cosco Resistance Bands Set",
     "category": "Sports & Fitness",
     "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
-    "platform": "Decathlon",
-    "basePrice": 24114
+    "platform": "Amazon",
+    "basePrice": 599,
+    "url": "https://www.amazon.in/s?k=Cosco%20Resistance%20Bands%20Set",
+    "affiliateUrl": "https://www.amazon.in/s?k=Cosco%20Resistance%20Bands%20Set&affid=claimperks"
   },
   {
     "id": "p101",
     "name": "boldfit Gym Gloves",
     "category": "Sports & Fitness",
     "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
-    "platform": "Decathlon",
-    "basePrice": 10006
+    "platform": "Amazon",
+    "basePrice": 399,
+    "url": "https://www.amazon.in/s?k=boldfit%20Gym%20Gloves",
+    "affiliateUrl": "https://www.amazon.in/s?k=boldfit%20Gym%20Gloves&affid=claimperks"
   },
   {
     "id": "p102",
     "name": "Nivia Football",
     "category": "Sports & Fitness",
     "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 17270
+    "platform": "Amazon",
+    "basePrice": 649,
+    "url": "https://www.amazon.in/s?k=Nivia%20Football",
+    "affiliateUrl": "https://www.amazon.in/s?k=Nivia%20Football&affid=claimperks"
   },
   {
     "id": "p103",
     "name": "Yonex Badminton Racket",
     "category": "Sports & Fitness",
     "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 26692
+    "platform": "Amazon",
+    "basePrice": 1299,
+    "url": "https://www.amazon.in/s?k=Yonex%20Badminton%20Racket",
+    "affiliateUrl": "https://www.amazon.in/s?k=Yonex%20Badminton%20Racket&affid=claimperks"
   },
   {
     "id": "p104",
     "name": "Cosco Table Tennis Kit",
     "category": "Sports & Fitness",
     "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
-    "platform": "Decathlon",
-    "basePrice": 3359
+    "platform": "Amazon",
+    "basePrice": 899,
+    "url": "https://www.amazon.in/s?k=Cosco%20Table%20Tennis%20Kit",
+    "affiliateUrl": "https://www.amazon.in/s?k=Cosco%20Table%20Tennis%20Kit&affid=claimperks"
   },
   {
     "id": "p105",
@@ -837,7 +1045,9 @@
     "category": "Sports & Fitness",
     "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 32590
+    "basePrice": 1899,
+    "url": "https://www.amazon.in/s?k=Firefox%20Cricket%20Bat",
+    "affiliateUrl": "https://www.amazon.in/s?k=Firefox%20Cricket%20Bat&affid=claimperks"
   },
   {
     "id": "p106",
@@ -845,47 +1055,59 @@
     "category": "Sports & Fitness",
     "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
     "platform": "Flipkart",
-    "basePrice": 8403
+    "basePrice": 7999,
+    "url": "https://www.flipkart.com/search?q=Hero%20Sprint%20Mountain%20Bike",
+    "affiliateUrl": "https://www.flipkart.com/search?q=Hero%20Sprint%20Mountain%20Bike&affid=claimperks"
   },
   {
     "id": "p107",
     "name": "Btwin Cycling Helmet",
     "category": "Sports & Fitness",
     "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 27668
+    "platform": "Decathlon",
+    "basePrice": 1199,
+    "url": "https://www.decathlon.in/search?query=Btwin%20Cycling%20Helmet",
+    "affiliateUrl": "https://www.decathlon.in/search?query=Btwin%20Cycling%20Helmet&affid=claimperks"
   },
   {
     "id": "p108",
     "name": "Puma Running Shoes",
     "category": "Sports & Fitness",
     "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 13763
+    "platform": "Myntra",
+    "basePrice": 2499,
+    "url": "https://www.myntra.com/puma%20running%20shoes",
+    "affiliateUrl": "https://www.myntra.com/puma%20running%20shoes&affid=claimperks"
   },
   {
     "id": "p109",
     "name": "Nike Dri-FIT Training Shirt",
     "category": "Sports & Fitness",
     "image": "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&auto=format&fit=crop&q=80",
-    "platform": "Amazon",
-    "basePrice": 26969
+    "platform": "Myntra",
+    "basePrice": 1495,
+    "url": "https://www.myntra.com/nike%20dri-fit%20training%20shirt",
+    "affiliateUrl": "https://www.myntra.com/nike%20dri-fit%20training%20shirt&affid=claimperks"
   },
   {
     "id": "p110",
     "name": "Domyos Skipping Rope",
     "category": "Sports & Fitness",
     "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 18524
+    "platform": "Decathlon",
+    "basePrice": 249,
+    "url": "https://www.decathlon.in/search?query=Domyos%20Skipping%20Rope",
+    "affiliateUrl": "https://www.decathlon.in/search?query=Domyos%20Skipping%20Rope&affid=claimperks"
   },
   {
     "id": "p111",
     "name": "Kobo Speed Rope Pro",
     "category": "Sports & Fitness",
     "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 8647
+    "platform": "Amazon",
+    "basePrice": 349,
+    "url": "https://www.amazon.in/s?k=Kobo%20Speed%20Rope%20Pro",
+    "affiliateUrl": "https://www.amazon.in/s?k=Kobo%20Speed%20Rope%20Pro&affid=claimperks"
   },
   {
     "id": "p112",
@@ -893,7 +1115,9 @@
     "category": "Sports & Fitness",
     "image": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 4998
+    "basePrice": 449,
+    "url": "https://www.amazon.in/s?k=Strauss%20Yoga%20Block%20Set",
+    "affiliateUrl": "https://www.amazon.in/s?k=Strauss%20Yoga%20Block%20Set&affid=claimperks"
   },
   {
     "id": "p113",
@@ -901,7 +1125,9 @@
     "category": "Books & Stationery",
     "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 523
+    "basePrice": 499,
+    "url": "https://www.amazon.in/s?k=Atomic%20Habits%20by%20James%20Clear",
+    "affiliateUrl": "https://www.amazon.in/s?k=Atomic%20Habits%20by%20James%20Clear&affid=claimperks"
   },
   {
     "id": "p114",
@@ -909,31 +1135,39 @@
     "category": "Books & Stationery",
     "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 510
+    "basePrice": 250,
+    "url": "https://www.amazon.in/s?k=The%20Alchemist%20by%20Paulo%20Coelho",
+    "affiliateUrl": "https://www.amazon.in/s?k=The%20Alchemist%20by%20Paulo%20Coelho&affid=claimperks"
   },
   {
     "id": "p115",
     "name": "Ikigai by Hector Garcia",
     "category": "Books & Stationery",
     "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 333
+    "platform": "Amazon",
+    "basePrice": 350,
+    "url": "https://www.amazon.in/s?k=Ikigai%20by%20Hector%20Garcia",
+    "affiliateUrl": "https://www.amazon.in/s?k=Ikigai%20by%20Hector%20Garcia&affid=claimperks"
   },
   {
     "id": "p116",
     "name": "Rich Dad Poor Dad",
     "category": "Books & Stationery",
     "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 314
+    "platform": "Amazon",
+    "basePrice": 320,
+    "url": "https://www.amazon.in/s?k=Rich%20Dad%20Poor%20Dad",
+    "affiliateUrl": "https://www.amazon.in/s?k=Rich%20Dad%20Poor%20Dad&affid=claimperks"
   },
   {
     "id": "p117",
     "name": "NCERT Physics Class 12 Set",
     "category": "Books & Stationery",
     "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 301
+    "platform": "Amazon",
+    "basePrice": 450,
+    "url": "https://www.amazon.in/s?k=NCERT%20Physics%20Class%2012%20Set",
+    "affiliateUrl": "https://www.amazon.in/s?k=NCERT%20Physics%20Class%2012%20Set&affid=claimperks"
   },
   {
     "id": "p118",
@@ -941,15 +1175,19 @@
     "category": "Books & Stationery",
     "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 534
+    "basePrice": 280,
+    "url": "https://www.amazon.in/s?k=Classmate%20Notebook%20Pack",
+    "affiliateUrl": "https://www.amazon.in/s?k=Classmate%20Notebook%20Pack&affid=claimperks"
   },
   {
     "id": "p119",
     "name": "Parker Jotter Ballpoint Pen",
     "category": "Books & Stationery",
     "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 537
+    "platform": "Amazon",
+    "basePrice": 299,
+    "url": "https://www.amazon.in/s?k=Parker%20Jotter%20Ballpoint%20Pen",
+    "affiliateUrl": "https://www.amazon.in/s?k=Parker%20Jotter%20Ballpoint%20Pen&affid=claimperks"
   },
   {
     "id": "p120",
@@ -957,7 +1195,9 @@
     "category": "Books & Stationery",
     "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 947
+    "basePrice": 180,
+    "url": "https://www.amazon.in/s?k=Faber-Castell%20Colour%20Pencils",
+    "affiliateUrl": "https://www.amazon.in/s?k=Faber-Castell%20Colour%20Pencils&affid=claimperks"
   },
   {
     "id": "p121",
@@ -965,15 +1205,19 @@
     "category": "Books & Stationery",
     "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 466
+    "basePrice": 160,
+    "url": "https://www.amazon.in/s?k=Camlin%20Geometry%20Box",
+    "affiliateUrl": "https://www.amazon.in/s?k=Camlin%20Geometry%20Box&affid=claimperks"
   },
   {
     "id": "p122",
     "name": "Apsara Pencil Pack of 20",
     "category": "Books & Stationery",
     "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 1164
+    "platform": "Amazon",
+    "basePrice": 110,
+    "url": "https://www.amazon.in/s?k=Apsara%20Pencil%20Pack%20of%2020",
+    "affiliateUrl": "https://www.amazon.in/s?k=Apsara%20Pencil%20Pack%20of%2020&affid=claimperks"
   },
   {
     "id": "p123",
@@ -981,7 +1225,9 @@
     "category": "Toys & Baby",
     "image": "https://images.unsplash.com/photo-1558060370-d644479be6e7?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 1012
+    "basePrice": 1499,
+    "url": "https://www.amazon.in/s?k=LEGO%20Classic%20Bricks%20Set",
+    "affiliateUrl": "https://www.amazon.in/s?k=LEGO%20Classic%20Bricks%20Set&affid=claimperks"
   },
   {
     "id": "p124",
@@ -989,7 +1235,9 @@
     "category": "Toys & Baby",
     "image": "https://images.unsplash.com/photo-1558060370-d644479be6e7?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 3522
+    "basePrice": 749,
+    "url": "https://www.amazon.in/s?k=Hot%20Wheels%205-Car%20Pack",
+    "affiliateUrl": "https://www.amazon.in/s?k=Hot%20Wheels%205-Car%20Pack&affid=claimperks"
   },
   {
     "id": "p125",
@@ -997,31 +1245,39 @@
     "category": "Toys & Baby",
     "image": "https://images.unsplash.com/photo-1558060370-d644479be6e7?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 3019
+    "basePrice": 899,
+    "url": "https://www.amazon.in/s?k=Funskool%20Monopoly%20Board%20Game",
+    "affiliateUrl": "https://www.amazon.in/s?k=Funskool%20Monopoly%20Board%20Game&affid=claimperks"
   },
   {
     "id": "p126",
     "name": "Fisher-Price Rock-a-Stack",
     "category": "Toys & Baby",
     "image": "https://images.unsplash.com/photo-1558060370-d644479be6e7?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 1221
+    "platform": "Amazon",
+    "basePrice": 399,
+    "url": "https://www.amazon.in/s?k=Fisher-Price%20Rock-a-Stack",
+    "affiliateUrl": "https://www.amazon.in/s?k=Fisher-Price%20Rock-a-Stack&affid=claimperks"
   },
   {
     "id": "p127",
     "name": "Barbie Dreamhouse Doll Set",
     "category": "Toys & Baby",
     "image": "https://images.unsplash.com/photo-1558060370-d644479be6e7?w=600&auto=format&fit=crop&q=80",
-    "platform": "FirstCry",
-    "basePrice": 5939
+    "platform": "Amazon",
+    "basePrice": 4999,
+    "url": "https://www.amazon.in/s?k=Barbie%20Dreamhouse%20Doll%20Set",
+    "affiliateUrl": "https://www.amazon.in/s?k=Barbie%20Dreamhouse%20Doll%20Set&affid=claimperks"
   },
   {
     "id": "p128",
     "name": "Nerf Elite Blaster",
     "category": "Toys & Baby",
     "image": "https://images.unsplash.com/photo-1558060370-d644479be6e7?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 3977
+    "platform": "Amazon",
+    "basePrice": 1299,
+    "url": "https://www.amazon.in/s?k=Nerf%20Elite%20Blaster",
+    "affiliateUrl": "https://www.amazon.in/s?k=Nerf%20Elite%20Blaster&affid=claimperks"
   },
   {
     "id": "p129",
@@ -1029,7 +1285,9 @@
     "category": "Toys & Baby",
     "image": "https://images.unsplash.com/photo-1558060370-d644479be6e7?w=600&auto=format&fit=crop&q=80",
     "platform": "Amazon",
-    "basePrice": 2924
+    "basePrice": 899,
+    "url": "https://www.amazon.in/s?k=Pampers%20Baby%20Diapers%20Pack",
+    "affiliateUrl": "https://www.amazon.in/s?k=Pampers%20Baby%20Diapers%20Pack&affid=claimperks"
   },
   {
     "id": "p130",
@@ -1037,7 +1295,9 @@
     "category": "Toys & Baby",
     "image": "https://images.unsplash.com/photo-1558060370-d644479be6e7?w=600&auto=format&fit=crop&q=80",
     "platform": "FirstCry",
-    "basePrice": 5491
+    "basePrice": 749,
+    "url": "https://www.firstcry.com/search?q=Johnson's%20Baby%20Care%20Combo",
+    "affiliateUrl": "https://www.firstcry.com/search?q=Johnson's%20Baby%20Care%20Combo&affid=claimperks"
   },
   {
     "id": "p131",
@@ -1045,14 +1305,18 @@
     "category": "Toys & Baby",
     "image": "https://images.unsplash.com/photo-1558060370-d644479be6e7?w=600&auto=format&fit=crop&q=80",
     "platform": "FirstCry",
-    "basePrice": 4194
+    "basePrice": 425,
+    "url": "https://www.firstcry.com/search?q=Chicco%20Baby%20Feeding%20Bottle",
+    "affiliateUrl": "https://www.firstcry.com/search?q=Chicco%20Baby%20Feeding%20Bottle&affid=claimperks"
   },
   {
     "id": "p132",
     "name": "Mothercare Stroller",
     "category": "Toys & Baby",
     "image": "https://images.unsplash.com/photo-1558060370-d644479be6e7?w=600&auto=format&fit=crop&q=80",
-    "platform": "Flipkart",
-    "basePrice": 2865
+    "platform": "FirstCry",
+    "basePrice": 5999,
+    "url": "https://www.firstcry.com/search?q=Mothercare%20Stroller",
+    "affiliateUrl": "https://www.firstcry.com/search?q=Mothercare%20Stroller&affid=claimperks"
   }
 ]

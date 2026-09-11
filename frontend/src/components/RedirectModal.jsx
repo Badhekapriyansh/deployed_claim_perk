@@ -6,16 +6,27 @@ export default function RedirectModal({ product, deal, onClose, user }) {
   const { platform, logo, basePrice, affiliateUrl, priceBreakdown } = deal;
   const { bestCoupon, bestBankOffer, bestUpiOffer, bestCashback, totalDiscount, finalPrice } = priceBreakdown;
 
-  const isValidUrl = Boolean(
-    affiliateUrl &&
-    typeof affiliateUrl === "string" &&
-    affiliateUrl.trim() !== "" &&
-    affiliateUrl.toLowerCase() !== "null" &&
-    affiliateUrl.toLowerCase() !== "undefined"
-  );
+  const targetUrl = (() => {
+    if (affiliateUrl && typeof affiliateUrl === "string") {
+      const clean = affiliateUrl.trim();
+      if (clean !== "" && clean.toLowerCase() !== "null" && clean.toLowerCase() !== "undefined") {
+        return clean;
+      }
+    }
+    const query = encodeURIComponent(product?.name || "");
+    const p = (platform || "").toLowerCase();
+    if (p.includes("flipkart")) return `https://www.flipkart.com/search?q=${query}&affid=claimperks`;
+    if (p.includes("amazon")) return `https://www.amazon.in/s?k=${query}&affid=claimperks`;
+    if (p.includes("croma")) return `https://www.croma.com/searchB?q=${query}&affid=claimperks`;
+    if (p.includes("reliance")) return `https://www.reliancedigital.in/search?q=${query}&affid=claimperks`;
+    if (p.includes("myntra")) return `https://www.myntra.com/${query}?affid=claimperks`;
+    return `https://www.google.com/search?q=${query}+buy+online`;
+  })();
+
+  const isValidUrl = Boolean(targetUrl);
 
   const handleContinue = async () => {
-    if (!isValidUrl) return;
+    if (!targetUrl) return;
     if (user) {
       logRedirect({
         productId: product.id,
@@ -23,10 +34,10 @@ export default function RedirectModal({ product, deal, onClose, user }) {
         basePrice,
         finalPrice,
         totalDiscount,
-        affiliateUrl
+        affiliateUrl: targetUrl
       }).catch(() => {});
     }
-    window.open(affiliateUrl, "_blank", "noopener,noreferrer");
+    window.open(targetUrl, "_blank", "noopener,noreferrer");
     onClose();
   };
 

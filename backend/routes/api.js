@@ -238,19 +238,31 @@ router.get("/products/:id", async (req, res) => {
 });
 
 // GET /api/offers/:productId
-// Returns stored vendor offers directly from MongoDB Offer documents with actual prices and URLs.
+// Validates all vendor offers, identifies lowest valid price as best deal, and preserves all valid platform offers.
 router.get("/offers/:productId", async (req, res) => {
   try {
-    let product = await Product.findOne({ id: req.params.productId }).lean();
+    const requestedId = req.params.productId;
+    let product = await Product.findOne({ id: requestedId }).lean();
     if (!product) {
-      product = productsJSON.find((p) => p.id === req.params.productId);
+      product = productsJSON.find((p) => p.id === requestedId);
     }
     if (!product) return res.status(404).json({ error: "Product not found" });
 
-    const offers = await getOffersForProduct(req.params.productId);
+    const offers = await getOffersForProduct(requestedId);
 
     // Fetch all real stored Offer documents for this productId from MongoDB
-    const dbOffers = await Offer.find({ productId: req.params.productId }).lean();
+    let rawOffers = await Offer.find({ productId: requestedId }).lean();
+    if ((!rawOffers || rawOffers.filter(o => o.vendor || o.price).length === 0) && offersJSON[requestedId]?.platformOffers) {
+      const fallbackOffers = offersJSON[requestedId].platformOffers.map(po => ({
+        productId: requestedId,
+        vendor: po.vendor,
+        price: po.price,
+        url: po.url,
+        affiliateUrl: po.affiliateUrl,
+        product_name: product.name
+      }));
+      rawOffers = [...(rawOffers || []), ...fallbackOffers];
+    }
 
     const sanitizeUrl = (u) => {
       if (!u || typeof u !== "string") return null;
@@ -259,43 +271,111 @@ router.get("/offers/:productId", async (req, res) => {
       return trimmed;
     };
 
-    const platformDeals = [];
+    // Helper to verify product identity matches
+    const isProductMatching = (offerDoc, targetProduct) => {
+      if (!offerDoc) return false;
+      if (offerDoc.productId && offerDoc.productId !== targetProduct.id) return false;
+      const offerName = (offerDoc.product_name || offerDoc.name || "").trim().toLowerCase();
+      if (offerName) {
+        const targetName = (targetProduct.name || "").trim().toLowerCase();
+        // If names are present, ensure they don't blatantly conflict
+        const targetBrand = getBrandName(targetProduct.name).toLowerCase();
+        if (targetBrand && targetBrand !== "other" && offerName.length > 3) {
+          if (!offerName.includes(targetBrand) && !targetName.includes(offerName)) {
+            return false;
+          }
+        }
+      }
+      return true;
+    };
 
-    if (dbOffers && dbOffers.length > 0) {
-      for (const o of dbOffers) {
-        const vendor = o.vendor || o.platform || product.platform || "Unknown Vendor";
-        const offerPrice = o.price !== undefined && o.price !== null && !isNaN(Number(o.price)) && Number(o.price) > 0
-          ? Number(o.price)
-          : Number(product.basePrice || 0);
+    const vendorDealsMap = new Map();
+
+    if (rawOffers && rawOffers.length > 0) {
+      for (const o of rawOffers) {
+        // Validate product identity
+        if (!isProductMatching(o, product)) {
+          continue; // Reject mismatched product offers
+        }
+
+        const vendor = (o.vendor || o.platform || "").trim();
+        const hasValidVendor = vendor && vendor.toLowerCase() !== "null" && vendor.toLowerCase() !== "undefined";
+
+        // Discount documents or records without a vendor are not store deals
+        if (!hasValidVendor) {
+          continue;
+        }
+
+        const vendorKey = vendor.toLowerCase();
+
+        // Validate price: must be positive number
+        const rawPrice = o.price;
+        const hasExplicitPrice = rawPrice !== undefined && rawPrice !== null && rawPrice !== "";
+        const numPrice = hasExplicitPrice ? Number(rawPrice) : NaN;
+        const isPriceValid = !isNaN(numPrice) && numPrice > 0;
 
         const targetUrl = sanitizeUrl(o.affiliateUrl) || sanitizeUrl(o.url) || sanitizeUrl(o.productUrl) || sanitizeUrl(o.link) || null;
 
-        const breakdown = calculateBestPrice(offerPrice, offers);
-        const savingsPercent = offerPrice > 0 ? Math.round((breakdown.totalDiscount / offerPrice) * 100) : 0;
+        if (isPriceValid) {
+          const breakdown = calculateBestPrice(numPrice, offers);
+          const savingsPercent = Math.round((breakdown.totalDiscount / numPrice) * 100);
 
-        platformDeals.push({
-          platform: vendor,
-          logo: getVendorLogo(vendor),
-          basePrice: offerPrice,
-          affiliateUrl: targetUrl,
-          offers,
-          priceBreakdown: {
-            ...breakdown,
-            savingsPercent
+          const dealObj = {
+            platform: vendor,
+            logo: getVendorLogo(vendor),
+            basePrice: numPrice,
+            isAvailable: true,
+            affiliateUrl: targetUrl,
+            offers,
+            priceBreakdown: {
+              ...breakdown,
+              savingsPercent
+            }
+          };
+
+          if (!vendorDealsMap.has(vendorKey)) {
+            vendorDealsMap.set(vendorKey, dealObj);
+          } else {
+            const existing = vendorDealsMap.get(vendorKey);
+            // Preserve valid URL if existing or new has one
+            const bestUrl = targetUrl || existing.affiliateUrl;
+            if (numPrice < existing.basePrice) {
+              dealObj.affiliateUrl = bestUrl;
+              vendorDealsMap.set(vendorKey, dealObj);
+            } else if (!existing.affiliateUrl && targetUrl) {
+              existing.affiliateUrl = targetUrl;
+            }
           }
-        });
+        } else if (hasValidVendor && rawPrice === null) {
+          // Explicitly recorded store with price unavailable (not a fake price)
+          if (!vendorDealsMap.has(vendorKey)) {
+            vendorDealsMap.set(vendorKey, {
+              platform: vendor,
+              logo: getVendorLogo(vendor),
+              basePrice: null,
+              isAvailable: false,
+              affiliateUrl: targetUrl,
+              offers,
+              priceBreakdown: null
+            });
+          }
+        }
       }
-    } else {
-      // Single default deal using actual stored product basePrice and product URL (no multipliers!)
-      const offerPrice = Number(product.basePrice || 0);
-      const targetUrl = sanitizeUrl(product.url) || sanitizeUrl(product.affiliateUrl) || null;
-      const breakdown = calculateBestPrice(offerPrice, offers);
-      const savingsPercent = offerPrice > 0 ? Math.round((breakdown.totalDiscount / offerPrice) * 100) : 0;
+    }
 
-      platformDeals.push({
-        platform: product.platform || "Official Store",
-        logo: getVendorLogo(product.platform),
-        basePrice: offerPrice,
+    // Only if no valid vendor deals were found in offer records, fallback to product's single platform
+    const prodBasePrice = Number(product.basePrice);
+    if (vendorDealsMap.size === 0 && !isNaN(prodBasePrice) && prodBasePrice > 0) {
+      const prodPlatform = (product.platform || "Official Store").trim();
+      const targetUrl = sanitizeUrl(product.url) || sanitizeUrl(product.affiliateUrl) || null;
+      const breakdown = calculateBestPrice(prodBasePrice, offers);
+      const savingsPercent = Math.round((breakdown.totalDiscount / prodBasePrice) * 100);
+
+      vendorDealsMap.set(prodPlatform.toLowerCase(), {
+        platform: prodPlatform,
+        logo: getVendorLogo(prodPlatform),
+        basePrice: prodBasePrice,
+        isAvailable: true,
         affiliateUrl: targetUrl,
         offers,
         priceBreakdown: {
@@ -305,28 +385,66 @@ router.get("/offers/:productId", async (req, res) => {
       });
     }
 
-    // Sort platform deals by lowest final payable price
-    platformDeals.sort((a, b) => a.priceBreakdown.finalPrice - b.priceBreakdown.finalPrice);
+    const allDeals = Array.from(vendorDealsMap.values());
 
-    const bp = Number(platformDeals[0]?.basePrice || product.basePrice || 0);
-    const mainBreakdown = calculateBestPrice(bp, offers);
+    // Only include verified valid deals with non-null direct affiliate links
+    const validDeals = allDeals.filter(
+      (d) =>
+        d.isAvailable &&
+        d.basePrice !== null &&
+        d.basePrice > 0 &&
+        d.priceBreakdown &&
+        d.affiliateUrl &&
+        typeof d.affiliateUrl === "string" &&
+        d.affiliateUrl.trim() !== "" &&
+        d.affiliateUrl.toLowerCase() !== "null" &&
+        d.affiliateUrl.toLowerCase() !== "undefined"
+    );
 
-    // 90-day price history trend
-    const priceHistory = [
+    // Sort valid deals by lowest final payable price (and lowest base price as tiebreaker)
+    validDeals.sort((a, b) => {
+      const diffFinal = (a.priceBreakdown?.finalPrice || 0) - (b.priceBreakdown?.finalPrice || 0);
+      if (diffFinal !== 0) return diffFinal;
+      return (a.basePrice || 0) - (b.basePrice || 0);
+    });
+
+    // Only return verified platform deals with direct links
+    const platformDeals = validDeals;
+
+    // Identify winning lowest price deal
+    const bestDeal = validDeals.length > 0 ? validDeals[0] : null;
+
+    if (!bestDeal && platformDeals.length === 0) {
+      return res.json({
+        product,
+        offers,
+        priceBreakdown: null,
+        platformDeals: [],
+        bestDeal: null,
+        priceHistory: [],
+        message: "No valid offers available"
+      });
+    }
+
+    const bp = Number(bestDeal?.basePrice || product.basePrice || 0);
+    const mainBreakdown = bestDeal?.priceBreakdown || (bp > 0 ? calculateBestPrice(bp, offers) : null);
+
+    // 90-day price history trend based on validated price
+    const priceHistory = bp > 0 ? [
       { label: "90d ago", price: Math.round(bp * 1.14) },
       { label: "60d ago", price: Math.round(bp * 1.08) },
       { label: "45d ago", price: Math.round(bp * 1.18) },
       { label: "30d ago", price: Math.round(bp * 1.05) },
       { label: "15d ago", price: Math.round(bp * 1.02) },
       { label: "Today", price: Math.round(bp) }
-    ];
+    ] : [];
 
     res.json({
       product,
       offers,
       priceBreakdown: mainBreakdown,
       platformDeals,
-      bestDeal: platformDeals[0],
+      bestDeal,
       priceHistory
     });
   } catch (err) {
