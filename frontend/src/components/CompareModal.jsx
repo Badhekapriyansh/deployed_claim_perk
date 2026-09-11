@@ -7,6 +7,14 @@ export default function CompareModal({ productIds, onClose, onSelectForCheckout 
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, []);
+
+  useEffect(() => {
     if (!productIds || productIds.length === 0) return;
     setLoading(true);
     setError(null);
@@ -19,9 +27,9 @@ export default function CompareModal({ productIds, onClose, onSelectForCheckout 
   if (!productIds || productIds.length === 0) return null;
 
   return (
-    <div className="fixed inset-0 bg-ink/50 backdrop-blur-sm flex items-center justify-center p-4 z-50" onClick={onClose}>
+    <div className="fixed inset-0 bg-ink/50 backdrop-blur-sm flex items-center justify-center p-4 z-50 overscroll-contain" onClick={onClose}>
       <div
-        className="bg-white rounded-2xl max-w-4xl w-full shadow-2xl overflow-hidden flex flex-col max-h-[90vh]"
+        className="bg-white rounded-2xl max-w-4xl w-full shadow-2xl overflow-hidden flex flex-col max-h-[90vh] overscroll-contain"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="p-6 border-b border-line flex items-center justify-between bg-paper/50">
@@ -34,7 +42,7 @@ export default function CompareModal({ productIds, onClose, onSelectForCheckout 
           </button>
         </div>
 
-        <div className="p-6 overflow-y-auto flex-1">
+        <div className="p-6 overflow-y-auto flex-1 overscroll-contain">
           {loading ? (
             <p className="text-center py-12 text-muted text-sm">Calculating deal comparisons…</p>
           ) : error ? (

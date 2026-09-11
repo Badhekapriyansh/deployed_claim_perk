@@ -50,8 +50,55 @@
     "email": "badheka.priyansh2409@gmail.com",
     "passwordHash": "$2a$10$F6ZGSMljboXTNHk21rgkbOloq1FngdOQoJhOKroquBwTZMZJUW1kK",
     "role": "user",
-    "favorites": [],
-    "history": [],
+    "favorites": [
+      "p14"
+    ],
+    "history": [
+      {
+        "productId": "p1",
+        "viewedAt": "2026-09-11T16:03:01.960Z"
+      },
+      {
+        "productId": "p98",
+        "viewedAt": "2026-09-11T16:03:52.126Z"
+      },
+      {
+        "productId": "p107",
+        "viewedAt": "2026-09-11T16:04:34.089Z"
+      },
+      {
+        "productId": "p2",
+        "viewedAt": "2026-09-11T16:05:51.289Z"
+      },
+      {
+        "productId": "p10",
+        "viewedAt": "2026-09-11T16:05:57.413Z"
+      },
+      {
+        "productId": "p3",
+        "viewedAt": "2026-09-11T16:07:51.594Z"
+      },
+      {
+        "productId": "p11",
+        "viewedAt": "2026-09-11T16:08:18.610Z"
+      },
+      {
+        "productId": "p9",
+        "viewedAt": "2026-09-11T16:08:52.625Z"
+      },
+      {
+        "productId": "p14",
+        "viewedAt": "2026-09-11T16:09:21.019Z"
+      },
+      {
+        "productId": "p12",
+        "viewedAt": "2026-09-11T16:09:39.542Z"
+      },
+      {
+        "productId": "p18",
+        "viewedAt": "2026-09-11T16:10:29.993Z"
+      }
+    ],
     "createdAt": "2026-07-31T10:52:36.547Z",
     "orders": [
       {
@@ -70,10 +117,258 @@
         "createdAt": "2026-07-31T10:57:23.269Z"
       }
     ],
-    "redirects": [],
+    "redirects": [
+      {
+        "id": "RED-1789143034482",
+        "productId": "p18",
+        "productName": "Noise ColorFit Pro 4",
+        "productImage": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600&auto=format&fit=crop&q=80",
+        "platform": "Flipkart",
+        "basePrice": 2499,
+        "finalPrice": 1924,
+        "totalDiscount": 575,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Noise%20ColorFit%20Pro%204&affid=claimperks",
+        "timestamp": "2026-09-11T16:10:34.482Z"
+      },
+      {
+        "id": "RED-1789142983840",
+        "productId": "p12",
+        "productName": "Sony WH-1000XM5 Headphones",
+        "productImage": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
+        "platform": "Amazon",
+        "basePrice": 26990,
+        "finalPrice": 21392,
+        "totalDiscount": 5598,
+        "affiliateUrl": "https://www.amazon.in/s?k=Sony%20WH-1000XM5%20Headphones&affid=claimperks",
+        "timestamp": "2026-09-11T16:09:43.840Z"
+      },
+      {
+        "id": "RED-1789142965221",
+        "productId": "p14",
+        "productName": "JBL Tune 720BT",
+        "productImage": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600&auto=format&fit=crop&q=80",
+        "platform": "Amazon",
+        "basePrice": 4999,
+        "finalPrice": 3849,
+        "totalDiscount": 1150,
+        "affiliateUrl": "https://www.amazon.in/s?k=JBL%20Tune%20720BT&affid=claimperks",
+        "timestamp": "2026-09-11T16:09:25.221Z"
+      },
+      {
+        "id": "RED-1789142936497",
+        "productId": "p9",
+        "productName": "HP Pavilion 15 Laptop",
+        "productImage": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop&q=80",
+        "platform": "Amazon",
+        "basePrice": 59990,
+        "finalPrice": 53290,
+        "totalDiscount": 6700,
+        "affiliateUrl": "https://www.amazon.in/s?k=HP%20Pavilion%2015%20Laptop&affid=claimperks",
+        "timestamp": "2026-09-11T16:08:56.497Z"
+      },
+      {
+        "id": "RED-1789142902417",
+        "productId": "p11",
+        "productName": "Apple MacBook Air M2",
+        "productImage": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop&q=80",
+        "platform": "Flipkart",
+        "basePrice": 94990,
+        "finalPrice": 88290,
+        "totalDiscount": 6700,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Apple%20MacBook%20Air%20M2&affid=claimperks",
+        "timestamp": "2026-09-11T16:08:22.417Z"
+      },
+      {
+        "id": "RED-1789142882876",
+        "productId": "p3",
+        "productName": "Samsung Galaxy S24",
+        "productImage": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=600&auto=format&fit=crop&q=80",
+        "platform": "Flipkart",
+        "basePrice": 57999,
+        "finalPrice": 51299,
+        "totalDiscount": 6700,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Samsung%20Galaxy%20S24&affid=claimperks",
+        "timestamp": "2026-09-11T16:08:02.876Z"
+      },
+      {
+        "id": "RED-1789142776508",
+        "productId": "p10",
+        "productName": "Lenovo IdeaPad Slim 5",
+        "productImage": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop&q=80",
+        "platform": "Amazon",
+        "basePrice": 57465,
+        "finalPrice": 50765,
+        "totalDiscount": 6700,
+        "affiliateUrl": "https://www.amazon.in/s?k=Lenovo%20IdeaPad%20Slim%205&affid=claimperks",
+        "timestamp": "2026-09-11T16:06:16.508Z"
+      },
+      {
+        "id": "RED-1789142762887",
+        "productId": "p10",
+        "productName": "Lenovo IdeaPad Slim 5",
+        "productImage": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop&q=80",
+        "platform": "Flipkart",
+        "basePrice": 54990,
+        "finalPrice": 48290,
+        "totalDiscount": 6700,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Lenovo%20IdeaPad%20Slim%205&affid=claimperks",
+        "timestamp": "2026-09-11T16:06:02.887Z"
+      },
+      {
+        "id": "RED-1789142700928",
+        "productId": "p10",
+        "productName": "Lenovo IdeaPad Slim 5",
+        "productImage": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?w=600&auto=format&fit=crop&q=80",
+        "platform": "Flipkart",
+        "basePrice": 54990,
+        "finalPrice": 48290,
+        "totalDiscount": 6700,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Lenovo%20IdeaPad%20Slim%205&affid=claimperks",
+        "timestamp": "2026-09-11T16:05:00.928Z"
+      },
+      {
+        "id": "RED-1789142678546",
+        "productId": "p107",
+        "productName": "Btwin Cycling Helmet",
+        "productImage": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
+        "platform": "Flipkart",
+        "basePrice": 1277,
+        "finalPrice": 953,
+        "totalDiscount": 324,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Btwin%20Cycling%20Helmet&affid=claimperks",
+        "timestamp": "2026-09-11T16:04:38.546Z"
+      },
+      {
+        "id": "RED-1789142659864",
+        "productId": "p98",
+        "productName": "Decathlon Yoga Mat",
+        "productImage": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
+        "platform": "Flipkart",
+        "basePrice": 744,
+        "finalPrice": 538,
+        "totalDiscount": 206,
+        "affiliateUrl": "https://www.flipkart.com/search?q=Decathlon%20Yoga%20Mat&affid=claimperks",
+        "timestamp": "2026-09-11T16:04:19.864Z"
+      },
+      {
+        "id": "RED-1789142646524",
+        "productId": "p98",
+        "productName": "Decathlon Yoga Mat",
+        "productImage": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
+        "platform": "Amazon",
+        "basePrice": 730,
+        "finalPrice": 526,
+        "totalDiscount": 204,
+        "affiliateUrl": "https://www.amazon.in/s?k=Decathlon%20Yoga%20Mat&affid=claimperks",
+        "timestamp": "2026-09-11T16:04:06.524Z"
+      },
+      {
+        "id": "RED-1789142636095",
+        "productId": "p98",
+        "productName": "Decathlon Yoga Mat",
+        "productImage": "https://images.unsplash.com/photo-1584735935682-2f2b69dff9d2?w=600&auto=format&fit=crop&q=80",
+        "platform": "Decathlon",
+        "basePrice": 699,
+        "finalPrice": 503,
+        "totalDiscount": 196,
+        "affiliateUrl": "https://www.decathlon.in/search?query=Decathlon%20Yoga%20Mat&affid=claimperks",
+        "timestamp": "2026-09-11T16:03:56.095Z"
+      }
+    ],
     "wallet": {
-      "balance": 350,
+      "balance": 1000,
       "transactions": [
+        {
+          "id": "TXN-1789143034482",
+          "type": "credit",
+          "title": "Perks Bonus: Jumped to Flipkart",
+          "amount": 50,
+          "date": "2026-09-11T16:10:34.482Z"
+        },
+        {
+          "id": "TXN-1789142983841",
+          "type": "credit",
+          "title": "Perks Bonus: Jumped to Amazon",
+          "amount": 50,
+          "date": "2026-09-11T16:09:43.841Z"
+        },
+        {
+          "id": "TXN-1789142965221",
+          "type": "credit",
+          "title": "Perks Bonus: Jumped to Amazon",
+          "amount": 50,
+          "date": "2026-09-11T16:09:25.221Z"
+        },
+        {
+          "id": "TXN-1789142936498",
+          "type": "credit",
+          "title": "Perks Bonus: Jumped to Amazon",
+          "amount": 50,
+          "date": "2026-09-11T16:08:56.498Z"
+        },
+        {
+          "id": "TXN-1789142902417",
+          "type": "credit",
+          "title": "Perks Bonus: Jumped to Flipkart",
+          "amount": 50,
+          "date": "2026-09-11T16:08:22.417Z"
+        },
+        {
+          "id": "TXN-1789142882876",
+          "type": "credit",
+          "title": "Perks Bonus: Jumped to Flipkart",
+          "amount": 50,
+          "date": "2026-09-11T16:08:02.876Z"
+        },
+        {
+          "id": "TXN-1789142776508",
+          "type": "credit",
+          "title": "Perks Bonus: Jumped to Amazon",
+          "amount": 50,
+          "date": "2026-09-11T16:06:16.508Z"
+        },
+        {
+          "id": "TXN-1789142762887",
+          "type": "credit",
+          "title": "Perks Bonus: Jumped to Flipkart",
+          "amount": 50,
+          "date": "2026-09-11T16:06:02.887Z"
+        },
+        {
+          "id": "TXN-1789142700929",
+          "type": "credit",
+          "title": "Perks Bonus: Jumped to Flipkart",
+          "amount": 50,
+          "date": "2026-09-11T16:05:00.929Z"
+        },
+        {
+          "id": "TXN-1789142678546",
+          "type": "credit",
+          "title": "Perks Bonus: Jumped to Flipkart",
+          "amount": 50,
+          "date": "2026-09-11T16:04:38.546Z"
+        },
+        {
+          "id": "TXN-1789142659864",
+          "type": "credit",
+          "title": "Perks Bonus: Jumped to Flipkart",
+          "amount": 50,
+          "date": "2026-09-11T16:04:19.864Z"
+        },
+        {
+          "id": "TXN-1789142646524",
+          "type": "credit",
+          "title": "Perks Bonus: Jumped to Amazon",
+          "amount": 50,
+          "date": "2026-09-11T16:04:06.524Z"
+        },
+        {
+          "id": "TXN-1789142636095",
+          "type": "credit",
+          "title": "Perks Bonus: Jumped to Decathlon",
+          "amount": 50,
+          "date": "2026-09-11T16:03:56.095Z"
+        },
         {
           "id": "TXN-1785497680683",
           "type": "credit",

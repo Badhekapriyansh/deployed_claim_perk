@@ -1,7 +1,16 @@
+import { useEffect } from "react";
 import { logRedirect } from "../api/client.js";
 
 export default function RedirectModal({ product, deal, onClose, user }) {
   if (!product || !deal) return null;
+
+  useEffect(() => {
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, []);
 
   const { platform, logo, basePrice, affiliateUrl, priceBreakdown } = deal;
   const { bestCoupon, bestBankOffer, bestUpiOffer, bestCashback, totalDiscount, finalPrice } = priceBreakdown;
@@ -42,9 +51,9 @@ export default function RedirectModal({ product, deal, onClose, user }) {
   };
 
   return (
-    <div className="fixed inset-0 bg-ink/50 backdrop-blur-sm flex items-center justify-center p-4 z-50" onClick={onClose}>
+    <div className="fixed inset-0 bg-ink/50 backdrop-blur-sm flex items-center justify-center p-4 z-50 overscroll-contain" onClick={onClose}>
       <div
-        className="bg-white rounded-2xl max-w-md w-full shadow-2xl overflow-hidden animate-scale-up"
+        className="bg-white rounded-2xl max-w-md w-full shadow-2xl overflow-hidden animate-scale-up overscroll-contain"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}

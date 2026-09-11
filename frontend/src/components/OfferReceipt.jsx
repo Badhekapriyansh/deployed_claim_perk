@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import PriceHistoryChart from "./PriceHistoryChart.jsx";
 
 export default function OfferReceipt({
@@ -18,6 +18,14 @@ export default function OfferReceipt({
   const [copiedCode, setCopiedCode] = useState(false);
   const [alertSet, setAlertSet] = useState(false);
 
+  useEffect(() => {
+    const originalOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = originalOverflow;
+    };
+  }, []);
+
   const mainBestCoupon = priceBreakdown?.bestCoupon;
 
   const handleCopyCode = (code) => {
@@ -33,9 +41,9 @@ export default function OfferReceipt({
   };
 
   return (
-    <div className="fixed inset-0 bg-ink/50 backdrop-blur-sm flex items-center justify-center p-4 z-50" onClick={onClose}>
+    <div className="fixed inset-0 bg-ink/50 backdrop-blur-sm flex items-center justify-center p-4 z-50 overscroll-contain" onClick={onClose}>
       <div
-        className="bg-white rounded-2xl max-w-xl w-full shadow-2xl overflow-hidden max-h-[90vh] flex flex-col"
+        className="bg-white rounded-2xl max-w-xl w-full shadow-2xl overflow-hidden max-h-[90vh] flex flex-col overscroll-contain"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -75,7 +83,7 @@ export default function OfferReceipt({
         </div>
 
         {/* Body */}
-        <div className="p-6 overflow-y-auto flex-1 space-y-5">
+        <div className="p-6 overflow-y-auto flex-1 space-y-5 overscroll-contain">
           {/* Best Overall Deal Banner */}
           {bestDeal && bestDeal.priceBreakdown ? (
             <div className="bg-forest/10 border border-forest/30 rounded-2xl p-4 flex items-center justify-between">
