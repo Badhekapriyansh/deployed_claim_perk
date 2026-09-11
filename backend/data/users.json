@@ -805,5 +805,87 @@
     "favorites": [],
     "history": [],
     "createdAt": "2026-09-11T10:47:38.835Z"
+  },
+  {
+    "id": "27686ccb-cc63-4a96-92aa-903e0da3d90a",
+    "name": "E2E User Updated",
+    "email": "e2e_user_1789130798955@example.com",
+    "passwordHash": "$2a$10$sTuaFpSLpisik/9koP08O.P7xhP32sIVb1fZIaSZXidfFWCoy0Jyy",
+    "role": "user",
+    "favorites": [],
+    "history": [],
+    "createdAt": "2026-09-11T12:46:39.098Z",
+    "address": "456 Park Ave",
+    "redirects": [],
+    "wallet": {
+      "balance": 290,
+      "transactions": [
+        {
+          "id": "WD-1789130799514",
+          "type": "debit",
+          "title": "UPI Transfer to user@upi",
+          "amount": 10,
+          "date": "2026-09-11T12:46:39.514Z"
+        },
+        {
+          "id": "TXN-1789130799498",
+          "type": "credit",
+          "title": "Cashback: Britannia Marie Gold Biscuits",
+          "amount": 0,
+          "date": "2026-09-11T12:46:39.498Z"
+        },
+        {
+          "id": "TXN-1789130799469",
+          "type": "credit",
+          "title": "Perks Bonus: Jumped to Amazon",
+          "amount": 50,
+          "date": "2026-09-11T12:46:39.469Z"
+        }
+      ]
+    },
+    "orders": [
+      {
+        "id": "ORD-1789130799498-745",
+        "invoiceId": "CP-INV-975736",
+        "productId": "p89",
+        "productName": "Britannia Marie Gold Biscuits",
+        "productImage": "https://images.unsplash.com/photo-1542838132-92c53300491e?w=600&auto=format&fit=crop&q=80",
+        "platform": "Amazon",
+        "basePrice": 45,
+        "totalDiscount": 305,
+        "finalPrice": 0,
+        "paymentMethod": "UPI",
+        "shippingAddress": "456 Park Ave",
+        "cardOrUpi": "user@upi",
+        "createdAt": "2026-09-11T12:46:39.498Z"
+      }
+    ],
+    "notifications": [
+      {
+        "id": "NOTIF-1789130799498",
+        "title": "Order Placed & Cashback Earned! 🎉",
+        "message": "You earned ₹0 cashback in your Perks Wallet for ordering Britannia Marie Gold Biscuits!",
+        "date": "2026-09-11T12:46:39.498Z",
+        "read": false
+      }
+    ],
+    "priceAlerts": [
+      {
+        "productId": "p89",
+        "targetPrice": 50000,
+        "createdAt": "2026-09-11T12:46:39.526Z"
+      }
+    ]
+  },
+  {
+    "id": "2e5903ed-37f8-4a25-88ba-383732b9c068",
+    "name": "Business Partner",
+    "email": "e2e_biz_1789130799545@example.com",
+    "passwordHash": "$2a$10$Ah97QCecNzHkXPamLxLVpOO/8PbWdn1SDgnqRPguqMX1RaF2bEBwu",
+    "role": "business",
+    "businessName": "SuperDeals Ltd",
+    "favorites": [],
+    "history": [],
+    "createdAt": "2026-09-11T12:46:39.757Z"
   }
 ]

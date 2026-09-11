@@ -152,13 +152,23 @@ async function runPriceCorrectnessTests() {
   const cashbackDiscount = applyDiscount(sampleBasePrice, sampleOffers.cashback[0]);
   assert(cashbackDiscount === 1500, "Test 20: Cashback offer with cap correctly calculates ₹1,500");
 
-  // Test 21: Effective price remains correct
+  // Test 21: Realistic combinable price calculation (Bank Card applied, UPI excluded as mutually exclusive, Cashback separated)
   const breakdown = calculateBestPrice(sampleBasePrice, sampleOffers);
-  const expectedTotalDiscount = 5000 + 3000 + 200 + 1500; // 9,700
-  const expectedFinalPrice = sampleBasePrice - expectedTotalDiscount; // 50,300
+  const expectedInstantDiscount = 5000 + 3000; // 8,000 (Coupon + Bank Card)
+  const expectedPayablePrice = sampleBasePrice - expectedInstantDiscount; // 52,000
+  const expectedCashback = 1500;
+  const expectedEffectiveCost = expectedPayablePrice - expectedCashback; // 50,500
+  const expectedTotalDiscount = expectedInstantDiscount + expectedCashback; // 9,500
+
   assert(
-    breakdown.totalDiscount === expectedTotalDiscount && breakdown.finalPrice === expectedFinalPrice,
-    `Test 21: Effective price calculation: Base ₹${sampleBasePrice} - ₹${expectedTotalDiscount} = Final ₹${expectedFinalPrice}`
+    breakdown.payablePrice === expectedPayablePrice &&
+    breakdown.finalPrice === expectedPayablePrice &&
+    breakdown.cashbackAmount === expectedCashback &&
+    breakdown.effectiveCost === expectedEffectiveCost &&
+    breakdown.totalDiscount === expectedTotalDiscount &&
+    breakdown.bestBankOffer?.applied === true &&
+    breakdown.bestUpiOffer?.applied === false,
+    `Test 21: Realistic price: Base ₹${sampleBasePrice} -> Payable ₹${expectedPayablePrice}, Cashback ₹${expectedCashback}, Effective ₹${expectedEffectiveCost}`
   );
 
   // --- MULTI-PLATFORM VENDOR OFFER COMPARISON SCENARIOS ---

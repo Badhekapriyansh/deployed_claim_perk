@@ -80,42 +80,52 @@ export default function CompareModal({ productIds, onClose, onSelectForCheckout 
                     ))}
                   </tr>
                   <tr>
-                    <td className="py-3 px-4 font-medium text-ink">Bank Offer</td>
+                    <td className="py-3 px-4 font-medium text-ink">Applied Payment Perk</td>
+                    {data.map(({ product, priceBreakdown }) => {
+                      const bank = priceBreakdown.bestBankOffer;
+                      const upi = priceBreakdown.bestUpiOffer;
+                      if (bank && bank.applied !== false) {
+                        return (
+                          <td key={product.id} className="py-3 px-4 text-center text-xs text-forest font-mono">
+                            -₹{bank.appliedDiscount} ({bank.bank})
+                          </td>
+                        );
+                      }
+                      if (upi && upi.applied !== false) {
+                        return (
+                          <td key={product.id} className="py-3 px-4 text-center text-xs text-forest font-mono">
+                            -₹{upi.appliedDiscount} ({upi.app})
+                          </td>
+                        );
+                      }
+                      return (
+                        <td key={product.id} className="py-3 px-4 text-center text-xs text-muted font-mono">
+                          —
+                        </td>
+                      );
+                    })}
+                  </tr>
+                  <tr className="bg-paper/70 font-semibold">
+                    <td className="py-3 px-4 font-display text-ink">Payable at Checkout</td>
                     {data.map(({ product, priceBreakdown }) => (
-                      <td key={product.id} className="py-3 px-4 text-center text-xs text-forest font-mono">
-                        {priceBreakdown.bestBankOffer ? `-₹${priceBreakdown.bestBankOffer.appliedDiscount} (${priceBreakdown.bestBankOffer.bank})` : "—"}
+                      <td key={product.id} className="py-3 px-4 text-center font-mono text-ink text-base font-bold">
+                        ₹{(priceBreakdown.payablePrice || priceBreakdown.finalPrice).toLocaleString("en-IN")}
                       </td>
                     ))}
                   </tr>
                   <tr>
-                    <td className="py-3 px-4 font-medium text-ink">UPI Offer</td>
+                    <td className="py-3 px-4 font-medium text-ink">Post-Purchase Cashback</td>
                     {data.map(({ product, priceBreakdown }) => (
-                      <td key={product.id} className="py-3 px-4 text-center text-xs text-forest font-mono">
-                        {priceBreakdown.bestUpiOffer ? `-₹${priceBreakdown.bestUpiOffer.appliedDiscount} (${priceBreakdown.bestUpiOffer.app})` : "—"}
+                      <td key={product.id} className="py-3 px-4 text-center text-xs text-coral font-mono">
+                        {priceBreakdown.bestCashback ? `₹${priceBreakdown.bestCashback.appliedDiscount} (${priceBreakdown.bestCashback.provider})` : "—"}
                       </td>
                     ))}
                   </tr>
-                  <tr>
-                    <td className="py-3 px-4 font-medium text-ink">Cashback</td>
-                    {data.map(({ product, priceBreakdown }) => (
-                      <td key={product.id} className="py-3 px-4 text-center text-xs text-forest font-mono">
-                        {priceBreakdown.bestCashback ? `-₹${priceBreakdown.bestCashback.appliedDiscount} (${priceBreakdown.bestCashback.provider})` : "—"}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr className="bg-coral/5 font-semibold">
-                    <td className="py-3 px-4 text-coral font-display">Total Savings</td>
-                    {data.map(({ product, priceBreakdown }) => (
-                      <td key={product.id} className="py-3 px-4 text-center font-mono text-coral text-base">
-                        ₹{priceBreakdown.totalDiscount.toLocaleString("en-IN")}
-                      </td>
-                    ))}
-                  </tr>
-                  <tr className="bg-paper font-bold text-base">
-                    <td className="py-4 px-4 font-display text-ink">Final Payable Price</td>
+                  <tr className="bg-forest/10 font-bold text-base">
+                    <td className="py-4 px-4 font-display text-forest">Effective Final Cost</td>
                     {data.map(({ product, priceBreakdown }) => (
                       <td key={product.id} className="py-4 px-4 text-center font-mono text-forest text-lg">
-                        ₹{priceBreakdown.finalPrice.toLocaleString("en-IN")}
+                        ₹{(priceBreakdown.effectiveCost || priceBreakdown.effectivePrice || priceBreakdown.finalPrice).toLocaleString("en-IN")}
                       </td>
                     ))}
                   </tr>

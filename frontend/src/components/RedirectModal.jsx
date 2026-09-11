@@ -90,47 +90,83 @@ export default function RedirectModal({ product, deal, onClose, user }) {
 
           {/* Savings Summary Card */}
           <div className="bg-white border border-line rounded-xl p-4 space-y-2 text-xs shadow-sm">
-            <h4 className="font-display font-bold text-xs uppercase font-mono text-muted tracking-wider border-b border-line pb-1.5">
-              Your Savings Summary
+            <h4 className="font-display font-bold text-xs uppercase font-mono text-muted tracking-wider border-b border-line pb-1.5 flex items-center justify-between">
+              <span>Your Savings Breakdown</span>
+              <span className="text-[10px] font-normal text-forest lowercase">verified combinable</span>
             </h4>
 
             <div className="flex justify-between font-mono py-1">
-              <span className="text-muted">Original List Price:</span>
-              <span className="text-ink">₹{basePrice.toLocaleString("en-IN")}</span>
+              <span className="text-muted">Original Listed Price:</span>
+              <span className="text-ink font-semibold">₹{basePrice.toLocaleString("en-IN")}</span>
             </div>
 
-            {bestCoupon && (
+            {bestCoupon && bestCoupon.applied !== false && (
               <div className="flex justify-between font-mono py-1 text-forest font-semibold">
-                <span>Coupon ({bestCoupon.code}):</span>
+                <span className="flex items-center gap-1">
+                  <span>✓</span> Coupon ({bestCoupon.code}):
+                </span>
                 <span>-₹{bestCoupon.appliedDiscount.toLocaleString("en-IN")}</span>
               </div>
             )}
 
-            {bestBankOffer && (
+            {bestBankOffer && bestBankOffer.applied !== false && (
               <div className="flex justify-between font-mono py-1 text-forest font-semibold">
-                <span>Bank Offer ({bestBankOffer.bank}):</span>
+                <span className="flex items-center gap-1">
+                  <span>✓</span> Bank Offer ({bestBankOffer.bank}):
+                </span>
                 <span>-₹{bestBankOffer.appliedDiscount.toLocaleString("en-IN")}</span>
               </div>
             )}
 
-            {bestUpiOffer && (
+            {bestUpiOffer && bestUpiOffer.applied !== false && (
               <div className="flex justify-between font-mono py-1 text-forest font-semibold">
-                <span>UPI Offer ({bestUpiOffer.app}):</span>
+                <span className="flex items-center gap-1">
+                  <span>✓</span> UPI Offer ({bestUpiOffer.app}):
+                </span>
                 <span>-₹{bestUpiOffer.appliedDiscount.toLocaleString("en-IN")}</span>
               </div>
             )}
 
-            {bestCashback && (
-              <div className="flex justify-between font-mono py-1 text-forest font-semibold">
-                <span>Cashback Perks ({bestCashback.provider}):</span>
-                <span>-₹{bestCashback.appliedDiscount.toLocaleString("en-IN")}</span>
+            {/* Non-applied mutually exclusive payment option note */}
+            {bestUpiOffer && bestUpiOffer.applied === false && bestBankOffer && bestBankOffer.applied !== false && (
+              <div className="flex justify-between font-mono py-0.5 text-[11px] text-muted line-through opacity-70">
+                <span className="flex items-center gap-1">
+                  <span>✗</span> UPI ({bestUpiOffer.app}):
+                </span>
+                <span>-₹{bestUpiOffer.appliedDiscount.toLocaleString("en-IN")} (card selected)</span>
               </div>
             )}
 
+            {bestBankOffer && bestBankOffer.applied === false && bestUpiOffer && bestUpiOffer.applied !== false && (
+              <div className="flex justify-between font-mono py-0.5 text-[11px] text-muted line-through opacity-70">
+                <span className="flex items-center gap-1">
+                  <span>✗</span> Bank ({bestBankOffer.bank}):
+                </span>
+                <span>-₹{bestBankOffer.appliedDiscount.toLocaleString("en-IN")} (UPI selected)</span>
+              </div>
+            )}
+
+            {/* Payable Amount at Checkout */}
             <div className="flex justify-between font-mono py-2 text-sm font-bold text-ink border-t border-line mt-1 bg-paper px-2 rounded">
-              <span className="font-display text-forest">Final Payable Price:</span>
-              <span className="text-forest text-base">₹{finalPrice.toLocaleString("en-IN")}</span>
+              <span className="font-display text-ink">Payable at Checkout:</span>
+              <span className="text-forest text-base">₹{(priceBreakdown.payablePrice || finalPrice).toLocaleString("en-IN")}</span>
             </div>
+
+            {/* Post-Purchase Cashback */}
+            {bestCashback && bestCashback.applied !== false && (
+              <div className="pt-1.5 border-t border-dashed border-line space-y-1">
+                <div className="flex justify-between font-mono text-[11px] text-coral font-medium">
+                  <span className="flex items-center gap-1">
+                    <span>🎁</span> Cashback ({bestCashback.provider}):
+                  </span>
+                  <span>-₹{bestCashback.appliedDiscount.toLocaleString("en-IN")} (post-purchase)</span>
+                </div>
+                <div className="flex justify-between font-mono text-xs font-bold text-coral bg-coral/10 px-2 py-1 rounded">
+                  <span>Effective Final Cost:</span>
+                  <span>₹{(priceBreakdown.effectiveCost || priceBreakdown.effectivePrice || (finalPrice - (bestCashback.appliedDiscount || 0))).toLocaleString("en-IN")}</span>
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Disclaimer Note */}

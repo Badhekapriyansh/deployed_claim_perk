@@ -86,5 +86,16 @@
     "value": 300,
     "status": "approved",
     "createdAt": "2026-09-11T10:47:38.842Z"
+  },
+  {
+    "id": "a5cdc268-c328-45d4-a54b-23a0d06e70a7",
+    "businessId": "2e5903ed-37f8-4a25-88ba-383732b9c068",
+    "businessName": "SuperDeals Ltd",
+    "productId": "p89",
+    "code": "OFFER7719",
+    "type": "flat",
+    "value": 300,
+    "status": "approved",
+    "createdAt": "2026-09-11T12:46:39.768Z"
   }
 ]

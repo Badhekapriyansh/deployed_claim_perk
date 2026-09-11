@@ -9,7 +9,6 @@ import AuthModal from "./components/AuthModal.jsx";
 import CompareModal from "./components/CompareModal.jsx";
 import RedirectModal from "./components/RedirectModal.jsx";
 import UserProfileModal from "./components/UserProfileModal.jsx";
-import AiAssistantModal from "./components/AiAssistantModal.jsx";
 import WalletModal from "./components/WalletModal.jsx";
 import Toast from "./components/Toast.jsx";
 import Dashboard from "./components/Dashboard.jsx";
@@ -59,7 +58,6 @@ function AppInner() {
   const [showCompareModal, setShowCompareModal] = useState(false);
   const [redirectDeal, setRedirectDeal] = useState(null); // { product, deal }
   const [showProfileModal, setShowProfileModal] = useState(false);
-  const [showAiModal, setShowAiModal] = useState(false);
   const [showWalletModal, setShowWalletModal] = useState(false);
   const [toast, setToast] = useState(null);
 
@@ -183,7 +181,6 @@ function AppInner() {
         onDashboardClick={handleDashboardClick}
         onHomeClick={handleGoHome}
         onProfileClick={() => setShowProfileModal(true)}
-        onOpenAi={() => setShowAiModal(true)}
         onOpenWallet={() => setShowWalletModal(true)}
         currentView={view}
       />
@@ -384,13 +381,6 @@ function AppInner() {
           onProfileUpdated={() => {
             showToast("Profile & Bank preferences saved successfully!");
           }}
-        />
-      )}
-
-      {showAiModal && (
-        <AiAssistantModal
-          onClose={() => setShowAiModal(false)}
-          onSelectProduct={handleSelect}
         />
       )}
 

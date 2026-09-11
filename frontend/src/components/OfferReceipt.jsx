@@ -89,6 +89,11 @@ export default function OfferReceipt({
                 </h4>
                 <p className="text-xs text-forest font-semibold mt-0.5">
                   Save ₹{bestDeal.priceBreakdown.totalDiscount.toLocaleString("en-IN")} ({bestDeal.priceBreakdown.savingsPercent}% OFF)
+                  {bestDeal.priceBreakdown.cashbackAmount > 0 && (
+                    <span className="text-[11px] text-coral ml-1.5 font-mono">
+                      (incl. ₹{bestDeal.priceBreakdown.cashbackAmount} Cashback)
+                    </span>
+                  )}
                 </p>
               </div>
               <button
